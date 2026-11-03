@@ -1,0 +1,37 @@
+{
+  "youth-rent/2025/example-original.pdf": {
+    "source_page_url": null,
+    "download_url": null,
+    "document_title": null,
+    "announcement_title": null,
+    "published_at": null,
+    "effective_from": null,
+    "effective_to": null,
+    "organization": null,
+    "document_role": "PRIMARY_NOTICE",
+    "program_name": null,
+    "announcement_id": null,
+    "application_term": null,
+    "related_documents": []
+  },
+  "youth-rent/2025/example-correction.pdf": {
+    "source_page_url": null,
+    "download_url": null,
+    "document_title": null,
+    "announcement_title": null,
+    "published_at": null,
+    "effective_from": null,
+    "effective_to": null,
+    "organization": null,
+    "document_role": "CORRECTION_NOTICE",
+    "program_name": null,
+    "announcement_id": null,
+    "application_term": null,
+    "related_documents": [
+      {
+        "relation_type": "CORRECTS",
+        "target_raw_path": "youth-rent/2025/example-original.pdf"
+      }
+    ]
+  }
+}

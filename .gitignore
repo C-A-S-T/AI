@@ -1,0 +1,23 @@
+# Python environment
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# PDF corpus: keep originals locally, do not accidentally commit documents
+/data/raw/**/*.pdf
+/data/raw/**/*.PDF
+
+# Generated data/results
+/data/parsed/*.json
+/data/cleaned/*.json
+/data/chunks/*.json
+/metadata/documents.json
+/metadata/sources.json
+/reports/*.json
+
+# OS / IDE
+.DS_Store
+.idea/
+.vscode/
+/metadata/document_relations.json
