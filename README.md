@@ -1,3 +1,6 @@
+# AI
+C.A.S.T 프로젝트의 AI 레포지토리입니다.
+
 # C.A.S.T. AI - PDF data preparation
 
 AI/data-processing **only**. The Spring Boot backend and PostgreSQL/JPA project are
