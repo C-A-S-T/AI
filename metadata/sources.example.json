@@ -33,5 +33,45 @@
         "target_raw_path": "youth-rent/2025/example-original.pdf"
       }
     ]
+  },
+  "youth-rent/2025/example-attachment.hwp": {
+    "source_page_url": null,
+    "download_url": null,
+    "document_title": null,
+    "announcement_title": null,
+    "published_at": null,
+    "effective_from": null,
+    "effective_to": null,
+    "organization": null,
+    "document_role": "ATTACHMENT",
+    "program_name": null,
+    "announcement_id": null,
+    "application_term": null,
+    "related_documents": [
+      {
+        "relation_type": "ATTACHMENT_OF",
+        "target_raw_path": "youth-rent/2025/example-original.pdf"
+      }
+    ]
+  },
+  "youth-rent/2025/example-attachment.hwpx": {
+    "source_page_url": null,
+    "download_url": null,
+    "document_title": null,
+    "announcement_title": null,
+    "published_at": null,
+    "effective_from": null,
+    "effective_to": null,
+    "organization": null,
+    "document_role": "ATTACHMENT",
+    "program_name": null,
+    "announcement_id": null,
+    "application_term": null,
+    "related_documents": [
+      {
+        "relation_type": "ATTACHMENT_OF",
+        "target_raw_path": "youth-rent/2025/example-original.pdf"
+      }
+    ]
   }
 }

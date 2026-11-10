@@ -19,6 +19,7 @@ def clean_document(parsed: dict) -> dict:
             "page_number": page["page_number"],
             "text": normalize_text(page["text"]),
             "tables": page["tables"],
+            **{key: page[key] for key in ("table_details", "table_quality") if key in page},
             "text_char_count": page.get("text_char_count", len(page["text"].strip())),
             "cleaned_text_char_count": len(normalize_text(page["text"])),
             "table_count": page.get("table_count", len(page["tables"])),
@@ -36,4 +37,6 @@ def clean_document(parsed: dict) -> dict:
         "quality_status": parsed["quality_status"],
         "warnings": parsed["warnings"],
         "pages": pages,
+        # Preserve the exact conversion used to produce HWP/HWPX page contents.
+        **{key: parsed[key] for key in ("source_format", "converted_sha256", "extraction_version", "source_tables") if key in parsed},
     }

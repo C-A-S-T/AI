@@ -4,9 +4,10 @@ __pycache__/
 *.py[cod]
 .pytest_cache/
 
-# PDF corpus: keep originals locally, do not accidentally commit documents
-/data/raw/**/*.pdf
-/data/raw/**/*.PDF
+# Source document corpus: keep originals locally, do not accidentally commit documents
+/data/raw/**/*.[pP][dD][fF]
+/data/raw/**/*.[hH][wW][pP]
+/data/raw/**/*.[hH][wW][pP][xX]
 
 # Generated data/results
 /data/parsed/*.json
@@ -21,3 +22,8 @@ __pycache__/
 .idea/
 .vscode/
 /metadata/document_relations.json
+
+# HWP/HWPX conversion outputs, private working copies and journal
+/data/converted/*
+!/data/converted/.gitkeep
+/metadata/conversions.json

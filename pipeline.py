@@ -1,11 +1,12 @@
-"""C.A.S.T. AI - source-preserving, local PDF ingestion and parsing.
+"""C.A.S.T. AI - source-preserving, local PDF/HWP/HWPX ingestion and parsing.
 
 Run from the project root: python pipeline.py
-This script never changes or deletes source PDFs under data/raw/.
+This script never changes or deletes source documents under data/raw/.
 """
 
 from __future__ import annotations
 
+import argparse
 import hashlib
 import json
 import os
@@ -13,8 +14,10 @@ import tempfile
 from datetime import datetime, timezone
 from pathlib import Path, PurePosixPath
 
+from src.preprocessing.convert_hwp import ConversionManager
 from src.preprocessing.clean_text import clean_document
-from src.preprocessing.parse_pdf import parse_pdf
+from src.preprocessing.parse_pdf import EXTRACTION_VERSION, parse_pdf
+from src.preprocessing.parse_hwpx import read_source_tables
 
 ROOT = Path(__file__).resolve().parent
 RAW = ROOT / "data" / "raw"
@@ -22,6 +25,7 @@ PARSED = ROOT / "data" / "parsed"
 CLEANED = ROOT / "data" / "cleaned"
 METADATA = ROOT / "metadata"
 REPORTS = ROOT / "reports"
+SUPPORTED_FORMATS = {".pdf", ".hwp", ".hwpx"}
 
 CATEGORY_YEARS = {
     "youth-rent": {"2024", "2025", "2026"},
@@ -98,7 +102,7 @@ def load_sources() -> dict:
         return {}
     contents = read_json(path)
     if any(not isinstance(v, dict) for v in contents.values()):
-        raise ValueError("metadata/sources.json must map relative PDF paths to metadata objects")
+        raise ValueError("metadata/sources.json must map relative source-document paths to metadata objects")
     return contents
 
 
@@ -108,11 +112,11 @@ def document_id_for(raw_relative_path: str) -> str:
     return f"DOC-{key}"
 
 
-def collect_pdf_paths() -> list[Path]:
+def collect_document_paths() -> list[Path]:
     if not RAW.is_dir():
         raise FileNotFoundError("data/raw folder does not exist")
     return sorted(
-        (p for p in RAW.rglob("*") if p.is_file() and not p.is_symlink() and p.suffix.lower() == ".pdf"),
+        (p for p in RAW.rglob("*") if p.is_file() and not p.is_symlink() and p.suffix.lower() in SUPPORTED_FORMATS),
         key=lambda p: p.relative_to(RAW).as_posix().lower(),
     )
 
@@ -142,23 +146,31 @@ def validate_source_metadata(source_info: dict) -> tuple[dict, list[dict], list[
         parts = PurePosixPath(target).parts
         if PurePosixPath(target).is_absolute() or any(p in (".", "..") for p in parts):
             raise ValueError("target_raw_path must not leave data/raw")
-        if not target.lower().endswith(".pdf"):
-            raise ValueError("target_raw_path must identify a PDF")
+        if PurePosixPath(target).suffix.lower() not in SUPPORTED_FORMATS:
+            raise ValueError("target_raw_path must identify a PDF, HWP or HWPX")
     return metadata, relations, warnings
 
 
 def check_existing_extraction(data: dict, document_id: str, file_hash: str, path: Path) -> None:
+    """Reject stale processing versions without overwriting previously extracted data."""
+    if data.get("extraction_version") != EXTRACTION_VERSION:
+        raise ValueError(f"REEXTRACTION_REQUIRED: {path}; existing output preserved; "
+                         "review a new extraction in an isolated output directory")
+    if data.get("source_format") == "hwpx" and not isinstance(data.get("source_tables"), list):
+        raise ValueError(f"HWPX source table structure missing: {path}; preserved for review")
     if data.get("document_id") != document_id or data.get("file_hash_sha256") != file_hash:
         raise ValueError(f"Existing extraction does not match source: {path}; preserved for review")
     if not isinstance(data.get("pages"), list) or data.get("page_count") != len(data["pages"]):
         raise ValueError(f"Existing extraction has inconsistent pages: {path}; preserved for review")
 
 
-def process_document(path: Path, source_info: dict) -> dict:
+def process_document(path: Path, source_info: dict,
+                     conversions: ConversionManager | None = None) -> dict:
+    """Keep original identity while parsing a PDF directly or a verified conversion."""
     raw_relative_path = path.relative_to(RAW).as_posix()
     parts = PurePosixPath(raw_relative_path).parts
     if len(parts) < 3 or parts[0] not in CATEGORY_YEARS or parts[1] not in CATEGORY_YEARS[parts[0]]:
-        raise ValueError("PDF path must be raw/<category>/<supported-year>/<filename>.pdf")
+        raise ValueError("Source path must be raw/<category>/<supported-year>/<filename>")
 
     metadata, _, metadata_warnings = validate_source_metadata(source_info)
     category, year = parts[:2]
@@ -169,6 +181,28 @@ def process_document(path: Path, source_info: dict) -> dict:
 
     if cleaned_path.exists() and not parsed_path.exists():
         raise ValueError("Cleaned output exists without parsed output: preserved for manual review")
+
+    source_format = path.suffix.lower()[1:]
+    if path.suffix.lower() not in SUPPORTED_FORMATS:
+        raise ValueError("Unsupported source format")
+    parse_path = path
+    conversion_fields = {}
+    if source_format in {"hwp", "hwpx"}:
+        # Reject stale original identities before launching any converter.
+        for existing in (parsed_path, cleaned_path):
+            if existing.exists():
+                check_existing_extraction(read_json(existing), document_id, file_hash, existing)
+        if conversions is None:
+            conversions = ConversionManager(ROOT)
+        parse_path, converted_hash = conversions.prepare(
+            path, document_id, file_hash, has_extraction=parsed_path.exists(),
+        )
+        conversion_fields = {"source_format": source_format, "converted_sha256": converted_hash}
+        for existing in (parsed_path, cleaned_path):
+            if existing.exists():
+                cached = read_json(existing)
+                if any(cached.get(k) != v for k, v in conversion_fields.items()):
+                    raise ValueError("Extraction/conversion identity mismatch; preserved for review")
 
     if parsed_path.exists():
         parsed = read_json(parsed_path)
@@ -184,7 +218,16 @@ def process_document(path: Path, source_info: dict) -> dict:
             write_json_atomic(cleaned_path, clean_document(parsed))
             action = "RECOVERED_CLEANED"
     else:
-        parsed = parse_pdf(path, document_id, file_hash)
+        parsed = parse_pdf(parse_path, document_id, file_hash)
+        parsed.update(conversion_fields)
+        if source_format == "hwpx":
+            # XML table order is not a PDF page map; keep it at document scope.
+            parsed["source_tables"] = read_source_tables(path)
+            if sha256_file(path) != file_hash:
+                raise ValueError("HWPX source changed during source-table extraction")
+            if parsed["source_tables"]:
+                parsed["warnings"].append("HWPX source tables are not mapped to PDF pages; review before combining")
+                parsed["quality_status"] = "REVIEW_REQUIRED"
         cleaned = clean_document(parsed)  # Compute both before publishing either output.
         staged_parsed = stage_json(parsed_path, parsed)
         staged_cleaned = None
@@ -215,6 +258,7 @@ def process_document(path: Path, source_info: dict) -> dict:
         "processing_action": action,
         "warnings": warnings,
         **metadata,
+        **({"source_format": source_format} if conversion_fields else {}),
     }
 
 
@@ -229,7 +273,7 @@ def create_relations(records: list[dict], sources: dict) -> list[dict]:
                 record["warnings"].append("Document relation refers to itself: review required")
                 continue
             if target not in by_relative_path:
-                record["warnings"].append(f"Related PDF unavailable or failed processing: {target}")
+                record["warnings"].append(f"Related document unavailable or failed processing: {target}")
                 continue
             relations.append({
                 "from_document_id": record["document_id"],
@@ -240,7 +284,10 @@ def create_relations(records: list[dict], sources: dict) -> list[dict]:
     return relations
 
 
-def report_and_exit(records: list[dict], failures: list[dict], *, fatal_error: str | None = None) -> int:
+def report_and_exit(records: list[dict], failures: list[dict], *, fatal_error: str | None = None,
+                    paths: list[Path] | None = None,
+                    conversions: ConversionManager | None = None) -> int:
+    """Separate source counts, conversion outcomes and final processing outcomes."""
     scanned = len(records) + len(failures)
     if fatal_error or not records:
         status, exit_code = "FAILED", 2
@@ -251,7 +298,9 @@ def report_and_exit(records: list[dict], failures: list[dict], *, fatal_error: s
     report = {
         "generated_at_utc": datetime.now(timezone.utc).isoformat(),
         "pipeline_status": status,
-        "scanned_pdf_count": scanned,
+        "scanned_pdf_count": sum(p.suffix.lower() == ".pdf" for p in paths) if paths is not None else scanned,
+        "scanned_hwp_count": sum(p.suffix.lower() == ".hwp" for p in (paths or [])),
+        "scanned_hwpx_count": sum(p.suffix.lower() == ".hwpx" for p in (paths or [])),
         "registered_count": len(records),
         "newly_parsed_count": sum(r["processing_action"] == "PARSED" for r in records),
         "recovered_cleaned_count": sum(r["processing_action"] == "RECOVERED_CLEANED" for r in records),
@@ -262,41 +311,65 @@ def report_and_exit(records: list[dict], failures: list[dict], *, fatal_error: s
         "fatal_error": fatal_error,
         "failures": failures,
     }
+    if paths is not None:
+        outcomes = conversions.outcomes if conversions else {}
+        for extension in ("hwp", "hwpx"):
+            document_ids = [document_id_for(p.relative_to(RAW).as_posix())
+                            for p in paths if p.suffix.lower() == f".{extension}"]
+            for label, outcome in (("success", "SUCCESS"), ("failed", "FAILED"),
+                                   ("reused", "REUSED"), ("recovered", "RECOVERED"),
+                                   ("skipped", "SKIPPED")):
+                report[f"{extension}_conversion_{label}_count"] = sum(
+                    outcomes.get(doc_id, "SKIPPED") == outcome for doc_id in document_ids)
     write_json_atomic(REPORTS / "ingestion_report.json", report, overwrite=True)
     print(json.dumps(report, ensure_ascii=False, indent=2))
     return exit_code
 
 
-def main() -> int:
+def main(argv: list[str] | None = None) -> int:
+    """Process all supported originals sequentially; conversion is Windows-only."""
+    arguments = argparse.ArgumentParser(description=__doc__)
+    arguments.add_argument("--conversion-timeout", type=float, default=120,
+                           help="Seconds per HWP/HWPX COM job, including security prompts")
+    options = arguments.parse_args(argv)
+    if not 0 < options.conversion_timeout < float("inf"):
+        arguments.error("--conversion-timeout must be finite and positive")
+    conversions = ConversionManager(ROOT, timeout=options.conversion_timeout)
     try:
         sources = load_sources()
-        pdf_paths = collect_pdf_paths()
+        document_paths = collect_document_paths()
     except (OSError, ValueError, json.JSONDecodeError) as exc:
         return report_and_exit([], [], fatal_error=f"{type(exc).__name__}: {exc}")
 
     records: list[dict] = []
     failures: list[dict] = []
     seen_hashes: dict[str, str] = {}
-    for path in pdf_paths:
+    for path in document_paths:
         relative = path.relative_to(RAW).as_posix()
         try:
-            record = process_document(path, sources.get(relative, {}))
+            record = process_document(path, sources.get(relative, {}), conversions)
             previous = seen_hashes.get(record["file_hash_sha256"])
             if previous:
                 record["duplicate_of"] = previous
-                record["warnings"].append(f"Same PDF content as {previous}")
+                record["warnings"].append(f"Same source content as {previous}")
             else:
                 seen_hashes[record["file_hash_sha256"]] = record["document_id"]
             records.append(record)
         except Exception as exc:
-            failures.append({"raw_path": f"data/raw/{relative}", "error": f"{type(exc).__name__}: {exc}"})
+            document_id = document_id_for(relative)
+            outcome = conversions.outcomes.get(document_id)
+            stage = ("conversion" if outcome in {"FAILED", "SKIPPED"}
+                     else "parsing_or_cache" if outcome else "source_or_processing")
+            failures.append({"raw_path": f"data/raw/{relative}", "stage": stage,
+                             "error": f"{type(exc).__name__}: {exc}"})
 
     relations = create_relations(records, sources)
     write_json_atomic(METADATA / "documents.json", {"schema_version": 1, "documents": records}, overwrite=True)
     write_json_atomic(METADATA / "document_relations.json", {"schema_version": 1, "relations": relations}, overwrite=True)
-    if not pdf_paths:
-        return report_and_exit(records, failures, fatal_error="No PDF files found under data/raw")
-    return report_and_exit(records, failures)
+    if not document_paths:
+        return report_and_exit(records, failures, fatal_error="No PDF/HWP/HWPX files found under data/raw",
+                               paths=document_paths, conversions=conversions)
+    return report_and_exit(records, failures, paths=document_paths, conversions=conversions)
 
 
 if __name__ == "__main__":

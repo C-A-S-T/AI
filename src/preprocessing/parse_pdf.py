@@ -5,6 +5,10 @@ from __future__ import annotations
 from pathlib import Path
 import pdfplumber
 
+from src.preprocessing.table_quality import extract_tables_with_quality
+
+EXTRACTION_VERSION = 2
+
 MIN_TEXT_CHARS_FOR_AUTOMATIC_REVIEW = 40
 
 
@@ -22,12 +26,8 @@ def parse_pdf(path: Path, document_id: str, sha256: str) -> dict:
                 extraction_failed = True
                 page_warnings.append(f"Text extraction failed ({type(exc).__name__})")
 
-            try:
-                tables = page.extract_tables() or []
-            except Exception as exc:
-                tables = []
-                extraction_failed = True
-                page_warnings.append(f"Table extraction failed ({type(exc).__name__})")
+            tables, table_details, table_quality, table_warnings = extract_tables_with_quality(page)
+            page_warnings.extend(table_warnings)
 
             image_count = len(page.images)
             text_char_count = len(text.strip())
@@ -39,8 +39,6 @@ def parse_pdf(path: Path, document_id: str, sha256: str) -> dict:
                     page_warnings.append("No extractable text or table")
             elif text_char_count < MIN_TEXT_CHARS_FOR_AUTOMATIC_REVIEW:
                 page_warnings.append("Very short extracted text: check for missing content")
-            if table_count:
-                page_warnings.append("Extracted table row/column alignment requires review")
             if image_count and text_char_count < MIN_TEXT_CHARS_FOR_AUTOMATIC_REVIEW:
                 page_warnings.append("Images with little text: check whether text was missed")
 
@@ -56,6 +54,8 @@ def parse_pdf(path: Path, document_id: str, sha256: str) -> dict:
                 "page_number": page_number,
                 "text": text,
                 "tables": tables,
+                "table_details": table_details,
+                "table_quality": table_quality,
                 "text_char_count": text_char_count,
                 "table_count": table_count,
                 "image_count": image_count,
@@ -75,6 +75,7 @@ def parse_pdf(path: Path, document_id: str, sha256: str) -> dict:
 
     return {
         "schema_version": 1,
+        "extraction_version": EXTRACTION_VERSION,
         "document_id": document_id,
         "file_hash_sha256": sha256,
         "parser": "pdfplumber",
