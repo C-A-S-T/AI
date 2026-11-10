@@ -1,5 +1,9 @@
-# Python environment
+# Python virtual environments
 .venv/
+.venv]/
+venv/
+
+# Python cache
 __pycache__/
 *.py[cod]
 .pytest_cache/
@@ -9,19 +13,28 @@ __pycache__/
 /data/raw/**/*.[hH][wW][pP]
 /data/raw/**/*.[hH][wW][pP][xX]
 
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Original policy documents
+/data/raw/
+/data/raw.zip
+
 # Generated data/results
 /data/parsed/*.json
 /data/cleaned/*.json
 /data/chunks/*.json
 /metadata/documents.json
 /metadata/sources.json
+/metadata/document_relations.json
 /reports/*.json
 
 # OS / IDE
 .DS_Store
 .idea/
 .vscode/
-/metadata/document_relations.json
 
 # HWP/HWPX conversion outputs, private working copies and journal
 /data/converted/*
