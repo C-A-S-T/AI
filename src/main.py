@@ -1,3 +1,37 @@
+import asyncio
+import logging
+from contextlib import asynccontextmanager, suppress
+
+from src.services.research_job_processor import process_next_research_job
+
+logger = logging.getLogger(__name__)
+
+
+async def research_job_worker():
+    while True:
+        try:
+            processed = await asyncio.to_thread(process_next_research_job)
+            if not processed:
+                await asyncio.sleep(5)
+        except asyncio.CancelledError:
+            raise
+        except Exception:
+            logger.exception("Research job worker error")
+            await asyncio.sleep(5)
+
+
+@asynccontextmanager
+async def lifespan(app):
+    worker = asyncio.create_task(research_job_worker())
+    try:
+        yield
+    finally:
+        worker.cancel()
+        with suppress(asyncio.CancelledError):
+            await worker
+
+
+from src.routers.research_jobs import router as research_jobs_router
 
 from fastapi import FastAPI
 from pydantic import BaseModel, Field
@@ -17,7 +51,8 @@ from src.schemas.retrieval import (
 )
 
 
-app = FastAPI(title="C.A.S.T. AI Server")
+app = FastAPI(title="C.A.S.T. AI Server", lifespan=lifespan)
+app.include_router(research_jobs_router)
 
 
 # ==========================================
