@@ -3,11 +3,17 @@ from fastapi import FastAPI
 from pydantic import BaseModel, Field
 
 from src.services.generation_service import run_generation
+from src.retrieval.pipeline import retrieve_evidence
 
 from src.schemas.generation import (
     GenerateResponse,
     ClaimResult,
     RetrievedChunk,
+)
+
+from src.schemas.retrieval import (
+    RetrieveRequest,
+    RetrieveResponse,
 )
 
 
@@ -105,7 +111,34 @@ def generate_answer(request: GenerateRequest):
 
 
 # ==========================================
-# 4. AI 응답 구조 테스트
+# 4. Hybrid RAG 검색 API
+# ==========================================
+
+@app.post(
+    "/retrieve",
+    response_model=RetrieveResponse,
+)
+def retrieve_documents(request: RetrieveRequest):
+
+    # Hybrid Search + Reranking 실행
+    results = retrieve_evidence(
+        question=request.question,
+        document_id=request.document_id,
+        top_k=request.top_k,
+        candidate_k=max(10, request.top_k),
+    )
+
+    # 검색 결과 반환
+    return RetrieveResponse(
+        question=request.question,
+        document_id=request.document_id,
+        total_results=len(results),
+        retrieved_chunks=results,
+    )
+
+
+# ==========================================
+# 5. AI 응답 구조 테스트
 # ==========================================
 
 @app.get(
