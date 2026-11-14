@@ -40,3 +40,6 @@ __pycache__/
 /data/converted/*
 !/data/converted/.gitkeep
 /metadata/conversions.json
+
+# Generated embedding data
+/data/embeddings/

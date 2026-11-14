@@ -1,0 +1,31 @@
+
+{
+  "schema_version": 1,
+  "document_id": "DOC-TEST-001",
+  "file_hash_sha256": "test-fixture-only",
+  "page_count": 4,
+  "quality_status": "OK",
+  "warnings": [],
+  "pages": [
+    {
+      "page_number": 1,
+      "text": "2026년 가상 청년월세지원 사업의 지원 대상은 만 19세부터 39세까지의 무주택 청년입니다. 신청자는 소득 및 거주 요건을 충족해야 합니다.",
+      "tables": []
+    },
+    {
+      "page_number": 2,
+      "text": "2026년 가상 청년월세지원 사업의 지원 금액은 월 최대 20만 원이며, 최대 12개월 동안 지원합니다.",
+      "tables": []
+    },
+    {
+      "page_number": 3,
+      "text": "2026년 가상 청년월세지원 사업의 신청 기간은 2026년 3월 1일부터 2026년 3월 31일까지입니다.",
+      "tables": []
+    },
+    {
+      "page_number": 4,
+      "text": "2026년 가상 청년월세지원 사업은 주택 소유자를 지원 대상에서 제외합니다.",
+      "tables": []
+    }
+  ]
+}
