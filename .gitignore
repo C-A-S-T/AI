@@ -43,3 +43,6 @@ __pycache__/
 
 # Generated embedding data
 /data/embeddings/
+
+# Human-reviewed policy comparison pair manifest (local data)
+/metadata/policy_compare_pairs.json
