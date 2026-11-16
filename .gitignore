@@ -43,3 +43,4 @@ __pycache__/
 
 # Generated embedding data
 /data/embeddings/
+!.env.integration.example
