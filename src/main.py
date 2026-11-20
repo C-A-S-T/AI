@@ -14,6 +14,7 @@ from src.services.research_job_processor import (
 from src.routers.research_jobs import (
     router as research_jobs_router,
 )
+from src.routers.policy_compare import router as policy_compare_router
 
 from src.services.generation_service import run_generation
 from src.retrieval.pipeline import retrieve_evidence
@@ -157,6 +158,7 @@ app = FastAPI(
 app.include_router(
     research_jobs_router
 )
+app.include_router(policy_compare_router)
 
 
 # ==========================================
