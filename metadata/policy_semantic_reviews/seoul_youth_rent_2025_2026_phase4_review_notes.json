@@ -1,0 +1,296 @@
+{
+  "schema_version": 1,
+  "artifact_type": "POLICY_REVIEW_PROJECTION_NOTES_DRAFT",
+  "status": "DRAFT_REVIEW_REQUIRED",
+  "human_approved": false,
+  "java_import_ready": false,
+  "policy_key": "seoul-youth-rent",
+  "previous_document_id": "DOC-211f45df17b98569c5f1",
+  "current_document_id": "DOC-543adbc0ebc09e5ce628",
+  "phase3_result_sha256": "65713d53c0b77906c6bb96998df1a1cdf5cce4185310df6bf81f05be2090b906",
+  "supplemental_evidence_sha256": "7e10ff77b725c01e30a66bfa07447bbeec46e30aa9ca29937621b942982863ef",
+  "expected_counts": {
+    "original_semantic_items": 75,
+    "review_items": 82,
+    "review_groups": 57,
+    "summary_change_keys": 19,
+    "supplemental_evidence": 35,
+    "unresolved": 22
+  },
+  "fill_only_maintained_ids": [
+    "SHARE_HOUSE_SUPPORT",
+    "HOUSING_TYPES",
+    "EXCLUDE_JEONSE",
+    "PREPAID_RENT",
+    "OTHER_EXCLUSION",
+    "AWARDEE_BANK_ACCOUNT_EXISTING",
+    "LEASE_CHANGE_EFFECT",
+    "OBJECTION_PERIOD"
+  ],
+  "compound_rules": [
+    {
+      "parent_id": "DOC_LEASE_ALTERNATIVES",
+      "child_ids": [
+        "SUBLET_DOC_REQUIRED_ITEMS",
+        "DORMITORY_CONFIRMATION"
+      ],
+      "parent_summary_role": "REVIEW_ONLY",
+      "display_warning": "주택·고시원·전대차·기숙사의 대체증빙을 혼합하지 않습니다. 2026 목록에 없는 자료를 모든 경우에 폐지된 것으로 해석하지 않습니다."
+    },
+    {
+      "parent_id": "SUSPENSION_EFFECT",
+      "child_ids": [
+        "SIMILAR_SUPPORT_SAME_MONTH_STOP",
+        "SUSPENSION_NO_RESUME"
+      ],
+      "parent_summary_role": "REVIEW_ONLY",
+      "display_warning": "일반적인 익월 중단 규칙과 유사사업 동시 수혜 발생월 중단 및 재개·재신청 불가 규정을 따로 표시합니다."
+    }
+  ],
+  "review_tasks": [
+    {
+      "comparison_id": "VETERAN_AGE_EXTENSION",
+      "reason": "ONE_SIDED_UNCONFIRMED_CHANGE_CANDIDATE",
+      "review_status": "PENDING_REVIEW",
+      "priority": "P1",
+      "pdf_visual_review_required": true,
+      "action": "2025년 대응 규정 부재를 원본 PDF로 확인하고 2026년 최대 42세 조건·증빙을 연결",
+      "source_review_note": "2026년 의무복무 제대군인 최대 42세 상한 연장. 2025년 정제 공고에는 대응 조항 없음 (재판정 권장안, 원본 PDF 시각 검토 전)"
+    },
+    {
+      "comparison_id": "PREVIOUS_BENEFICIARY_RESTRICTION",
+      "reason": "OPEN_SUBSTANTIVE_REVIEW",
+      "review_status": "PENDING_REVIEW",
+      "priority": "P0",
+      "pdf_visual_review_required": true,
+      "action": "2025 자치구 선정자와 2026 수혜 중인 자 및 종료 예외의 적용 범위 분리",
+      "source_review_note": "서울시 기수혜 제한은 공통이나 자치구 사업의 선정자/수혜중 기준 차이 확인 필요. 2025년에도 국토부 지원 종료 시 신청 가능 (재판정 권장안, 원본 PDF 시각 검토 전)"
+    },
+    {
+      "comparison_id": "RENT_BELOW_CAP_PAYMENT",
+      "reason": "OPEN_SUBSTANTIVE_REVIEW",
+      "review_status": "PENDING_REVIEW",
+      "priority": "P0",
+      "pdf_visual_review_required": true,
+      "action": "2025년 108,000원→100,000원 예시와 천원 단위 절사 문구의 모순을 원본 PDF·운영 기준으로 확인",
+      "source_review_note": "월세액 지급 원칙은 동일. 2025년 지원액 천원 절사 표현이 2026년 지원액 문단에는 없음. 2026년 p.4 천원 절사는 환산 예시와 구분 (재판정 권장안, 원본 PDF 시각 검토 전)"
+    },
+    {
+      "comparison_id": "PAYMENT_CADENCE",
+      "reason": "OPEN_SUBSTANTIVE_REVIEW",
+      "review_status": "PENDING_REVIEW",
+      "priority": "P2",
+      "pdf_visual_review_required": true,
+      "action": "25일 전후와 25일 확정 표기의 실제 지급일 운영상 차이 여부 확인",
+      "source_review_note": "2025년 격월 25일 전후 vs 2026년 격월 25일. 단순 표현인지 지급일의 운영상 차이인지 미확정 (재판정 권장안, 원본 PDF 시각 검토 전)"
+    },
+    {
+      "comparison_id": "NONYOUTH_CORESIDENT_RULE",
+      "reason": "OPEN_SUBSTANTIVE_REVIEW",
+      "review_status": "PENDING_REVIEW",
+      "priority": "P1",
+      "pdf_visual_review_required": true,
+      "action": "비청년 동거 제한과 청년 형제자매·동거인 예외 및 2026 특별가구 요건을 별도로 비교",
+      "source_review_note": "2025년 비청년 세대원 제외와 2026년 청년 형제자매·동거인 허용은 서로 다른 범위. 2025년에도 청년 동거인 허용 문구 있음 (재판정 권장안, 원본 PDF 시각 검토 전)"
+    },
+    {
+      "comparison_id": "HEALTH_INSURANCE_NURSING_FEE",
+      "reason": "OPEN_SUBSTANTIVE_REVIEW",
+      "review_status": "PENDING_REVIEW",
+      "priority": "P1",
+      "pdf_visual_review_required": true,
+      "action": "보험료 기준과 소득증명원 기준이 서로 다른 측정 방식임을 설명하고 삭제로 단정 금지",
+      "source_review_note": "2025년 건강보험료 산정에서 장기요양보험료 제외. 2026년 소득금액증명원 방식에는 직접 대응 항목 없어 삭제 단정 불가 (재판정 권장안, 원본 PDF 시각 검토 전)"
+    },
+    {
+      "comparison_id": "ONE_PERSON_INCOME_THRESHOLDS",
+      "reason": "OPEN_SUBSTANTIVE_REVIEW",
+      "review_status": "PENDING_REVIEW",
+      "priority": "P0",
+      "pdf_visual_review_required": true,
+      "action": "2025 보험료 127,230원과 2026 월 소득액을 직접 비교하지 않도록 원본 표와 단위 확인",
+      "source_review_note": "2025년 보험료 127,230원과 2026년 소득 기준 1,230,834원 등은 측정 지표와 목적이 달라 직접 금액 비교 불가 (재판정 권장안, 원본 PDF 시각 검토 전)"
+    },
+    {
+      "comparison_id": "SIMILAR_SUPPORT_EXCLUSION",
+      "reason": "OPEN_SUBSTANTIVE_REVIEW",
+      "review_status": "PENDING_REVIEW",
+      "priority": "P0",
+      "pdf_visual_review_required": true,
+      "action": "선정자·수혜 중·종료자 구분 및 이전 수혜 제한 항목과 중복 설명 제거",
+      "source_review_note": "중복 수혜 금지 공통이나 2025년 자치구 사업 선정자와 2026년 수혜 중인 자의 적용 범위 차이 남음. #5와 연계 (재판정 권장안, 원본 PDF 시각 검토 전)"
+    },
+    {
+      "comparison_id": "DOC_LEASE_ALTERNATIVES",
+      "reason": "COMPOUND_RULE_SPLIT_REVIEW",
+      "review_status": "PENDING_REVIEW",
+      "priority": "P0",
+      "pdf_visual_review_required": true,
+      "action": "주택·고시원·전대차·기숙사 증빙을 독립 검토하고 상위 변경으로 중복 집계하지 않기",
+      "source_review_note": "기본 대체서류 원칙은 유지. 2025 전대차 증빙 3종 → 2026 전대차 목록 2종, 기숙사 별도 요건 명시. 각각 독립 검토 권장 (재판정 권장안, 원본 PDF 시각 검토 전)"
+    },
+    {
+      "comparison_id": "DOC_ADMIN_CONSENT",
+      "reason": "ONE_SIDED_UNCONFIRMED_CHANGE_CANDIDATE",
+      "review_status": "PENDING_REVIEW",
+      "priority": "P0",
+      "pdf_visual_review_required": true,
+      "action": "2026 제4필수서류와 비동의 시 대체 서류 안내를 함께 표시",
+      "source_review_note": "2026년 행정정보 공동이용 사전동의서가 필수서류 4번째에 추가. 비동의 시 대체서류 제출 예외도 반드시 같이 안내 (재판정 권장안, 원본 PDF 시각 검토 전)"
+    },
+    {
+      "comparison_id": "DOC_SPECIAL_SINGLE_PARENT",
+      "reason": "ONE_SIDED_UNCONFIRMED_CHANGE_CANDIDATE",
+      "review_status": "PENDING_REVIEW",
+      "priority": "P1",
+      "pdf_visual_review_required": true,
+      "action": "한부모 특별 신청유형의 부속 증빙으로 연결; 독립 제도 신설로 이중 집계 금지",
+      "source_review_note": "2026년 한부모가족 특별 신청유형 증명서. #72와 연계해 표시 (재판정 권장안, 원본 PDF 시각 검토 전)"
+    },
+    {
+      "comparison_id": "DOC_SPECIAL_FRAUD",
+      "reason": "ONE_SIDED_UNCONFIRMED_CHANGE_CANDIDATE",
+      "review_status": "PENDING_REVIEW",
+      "priority": "P1",
+      "pdf_visual_review_required": true,
+      "action": "전세사기피해자 특별 신청유형의 부속 증빙으로 연결; 이중 집계 금지",
+      "source_review_note": "2026년 전세사기피해자 특별 신청유형 결정문. #72와 연계해 표시 (재판정 권장안, 원본 PDF 시각 검토 전)"
+    },
+    {
+      "comparison_id": "DOC_SPECIAL_VETERAN",
+      "reason": "ONE_SIDED_UNCONFIRMED_CHANGE_CANDIDATE",
+      "review_status": "PENDING_REVIEW",
+      "priority": "P1",
+      "pdf_visual_review_required": true,
+      "action": "제대군인 연령 상한 연장의 조건부 증빙과 연결",
+      "source_review_note": "2026년 제대군인 연령 연장 증빙 필요. #3의 세부 제출조건 (재판정 권장안, 원본 PDF 시각 검토 전)"
+    },
+    {
+      "comparison_id": "SUSPENSION_EFFECT",
+      "reason": "COMPOUND_RULE_SPLIT_REVIEW",
+      "review_status": "PENDING_REVIEW",
+      "priority": "P0",
+      "pdf_visual_review_required": true,
+      "action": "일반 익월 중단은 상위 유지 규칙으로, 동시 수혜 발생월 중단·재개 제한은 각각 자식 후보로 표시",
+      "source_review_note": "다음 달 중지 일반 원칙은 유지. 2026년 재개·재신청 불가 및 잔여금 소멸 문구는 신설 후보. 유사사업 중복 수혜 발생월 중지 예외도 별도 (재판정 권장안, 원본 PDF 시각 검토 전)"
+    },
+    {
+      "comparison_id": "NEW_SPECIAL_APPLICATION_GROUPS",
+      "reason": "ONE_SIDED_UNCONFIRMED_CHANGE_CANDIDATE",
+      "review_status": "PENDING_REVIEW",
+      "priority": "P0",
+      "pdf_visual_review_required": true,
+      "action": "2026 특별유형 4종 및 정원과 기존 민간임대 지원 가능 자체를 구분",
+      "source_review_note": "2026년 한부모·전세사기피해자·신혼부부·청년안심주택 민간임대 별도 신청유형 및 배정. 기존 민간임대 신청 가능 자체는 신규가 아님 (재판정 권장안, 원본 PDF 시각 검토 전)"
+    },
+    {
+      "comparison_id": "NEWLYWED_RESIDENCE",
+      "reason": "ONE_SIDED_UNCONFIRMED_CHANGE_CANDIDATE",
+      "review_status": "PENDING_REVIEW",
+      "priority": "P1",
+      "pdf_visual_review_required": true,
+      "action": "혼인신고·무자녀·동일 주소·본인 명의·중복 신청 제한을 각 요건별로 대조",
+      "source_review_note": "2026년 신혼부부 양측 청년·같은 주소·무자녀·혼인신고 및 중복신청 제한의 유형별 요건. #72 세부 조건 (재판정 권장안, 원본 PDF 시각 검토 전)"
+    },
+    {
+      "comparison_id": "OBJECTION_DOCUMENT_LIMITATION",
+      "reason": "ONE_SIDED_UNCONFIRMED_CHANGE_CANDIDATE",
+      "review_status": "PENDING_REVIEW",
+      "priority": "P0",
+      "pdf_visual_review_required": true,
+      "action": "2025 일반 소명 기한과 2026 필수서류 4종 누락 보완 금지를 분리",
+      "source_review_note": "2026년 필수서류 누락 시 이의신청에서 추가 보완 불가 명시. 2025년의 10일 소명 기한 규정과 동일하지 않음 (재판정 권장안, 원본 PDF 시각 검토 전)"
+    },
+    {
+      "comparison_id": "GOV_SUPPORT_REFUND_ON_OVERLAP",
+      "reason": "ONE_SIDED_UNCONFIRMED_CHANGE_CANDIDATE",
+      "review_status": "PENDING_REVIEW",
+      "priority": "P0",
+      "pdf_visual_review_required": true,
+      "action": "국토부 지원 중복 선정 시 서울 기지급금 환수와 2025 일반 부정수급 환수 구분",
+      "source_review_note": "2025 동일 문구 부재 여부는 최종 공고 PDF 확인 필요 / 원문 정제본 근거 검토 후보, PDF 미검증"
+    },
+    {
+      "comparison_id": "SIMILAR_SUPPORT_SAME_MONTH_STOP",
+      "reason": "ONE_SIDED_UNCONFIRMED_CHANGE_CANDIDATE",
+      "review_status": "PENDING_REVIEW",
+      "priority": "P0",
+      "pdf_visual_review_required": true,
+      "action": "유사사업 동시 수혜 당월 중단은 일반 익월 중단 규칙과 분리",
+      "source_review_note": "일반 중단 규칙(익월)과 예외 규칙을 분리 / 원문 정제본 근거 검토 후보, PDF 미검증"
+    },
+    {
+      "comparison_id": "SUSPENSION_NO_RESUME",
+      "reason": "ONE_SIDED_UNCONFIRMED_CHANGE_CANDIDATE",
+      "review_status": "PENDING_REVIEW",
+      "priority": "P0",
+      "pdf_visual_review_required": true,
+      "action": "2026 재개·재신청 불가·잔여 지원금 소멸 규정의 2025 대응 여부 확인",
+      "source_review_note": "일반 중단 시점 유지와 새 규정 후보를 분리 / 원문 정제본 근거 검토 후보, PDF 미검증"
+    },
+    {
+      "comparison_id": "DORMITORY_CONFIRMATION",
+      "reason": "ONE_SIDED_UNCONFIRMED_CHANGE_CANDIDATE",
+      "review_status": "PENDING_REVIEW",
+      "priority": "P1",
+      "pdf_visual_review_required": true,
+      "action": "2026 기관 날인 입실확인서의 2025 대응 조건 확인; 미기재를 과거 불인정으로 해석 금지",
+      "source_review_note": "2025 대응 조항 여부 PDF 확인 필요 / 원문 정제본 근거 검토 후보, PDF 미검증"
+    },
+    {
+      "comparison_id": "ADMIN_CONSENT_ALTERNATIVES",
+      "reason": "ONE_SIDED_UNCONFIRMED_CHANGE_CANDIDATE",
+      "review_status": "PENDING_REVIEW",
+      "priority": "P0",
+      "pdf_visual_review_required": true,
+      "action": "사전동의서 비동의자의 건강보험·소득·주민등록 대체서류 경로 동시 표시",
+      "source_review_note": "동의서 의무만 표시하지 말고 대체 경로 함께 안내 / 원문 정제본 근거 검토 후보, PDF 미검증"
+    }
+  ],
+  "pdf_review_targets": [
+    {
+      "document_id": "DOC-211f45df17b98569c5f1",
+      "page": 1,
+      "priority": "P0",
+      "topic": "20만원 미만 월세 지급액 천원 단위 절사 표현과 108,000원→100,000원 예시"
+    },
+    {
+      "document_id": "DOC-211f45df17b98569c5f1",
+      "page": 8,
+      "priority": "P0",
+      "topic": "2025년 선정 구간별 인원 6,750/4,500/2,250/1,500명 및 비율 표"
+    },
+    {
+      "document_id": "DOC-543adbc0ebc09e5ce628",
+      "page": 5,
+      "priority": "P0",
+      "topic": "2026년 48%·120%·150% 중위소득 금액 표와 단위"
+    },
+    {
+      "document_id": "DOC-543adbc0ebc09e5ce628",
+      "page": 9,
+      "priority": "P0",
+      "topic": "2026년 1인가구 12,000명을 분모로 하는 선정 구간별 35/30/20/15% 표"
+    },
+    {
+      "document_id": "DOC-543adbc0ebc09e5ce628",
+      "page": 8,
+      "priority": "P0",
+      "topic": "행정정보 공동이용 비동의 대체서류, 임대인 성명·계좌번호 마스킹 금지 원문"
+    }
+  ],
+  "additional_review_candidates": [
+    {
+      "candidate_id": "RENT_TRANSFER_UNMASKED_DETAILS",
+      "label": "월세 이체확인증 임대인 성명 또는 계좌번호 전체 표기",
+      "current_document_id": "DOC-543adbc0ebc09e5ce628",
+      "current_page": 8,
+      "current_quote": "※ 임대인 성명 또는 계좌번호 명시될 경우, 마스킹 없이 전체 표기",
+      "previous_document_verification": "NOT_COMPLETED",
+      "review_status": "PENDING_REVIEW",
+      "pdf_visual_review_required": true,
+      "must_not_append_to_review_items": true,
+      "reason": "2026년 공고에는 있으나 2025년 대응 조건을 확정하지 않았으므로 별도 정책 변경으로 집계하지 않음"
+    }
+  ]
+}

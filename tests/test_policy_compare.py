@@ -264,7 +264,12 @@ class PolicyCompareTests(unittest.TestCase):
                 "--cleaned-dir", str(self.root / "data/cleaned"),
                 "--output", str(output), "--allow-llm",
             ]), 0)
-            fake_adapter.assert_called_once_with()
+            self.assertEqual(fake_adapter.call_count, 2)
+            for invocation in fake_adapter.call_args_list:
+                self.assertEqual(invocation.args, ())
+                self.assertEqual(set(invocation.kwargs), {"model", "save_response"})
+                self.assertEqual(invocation.kwargs["model"], "gpt-4.1-mini")
+                self.assertTrue(callable(invocation.kwargs["save_response"]))
         result = json.loads(output.read_text(encoding="utf-8"))
         self.assertEqual(result["status"], "REVIEW_REQUIRED")
         self.assertIs(result["java_import_ready"], False)
@@ -312,7 +317,12 @@ class PolicyCompareTests(unittest.TestCase):
                 "--cleaned-dir", str(self.root / "data/cleaned"),
                 "--output", str(output), "--allow-llm",
             ]), 0)
-            adapter.assert_called_once_with()
+            self.assertEqual(adapter.call_count, 3)
+            for invocation in adapter.call_args_list:
+                self.assertEqual(invocation.args, ())
+                self.assertEqual(set(invocation.kwargs), {"model", "save_response"})
+                self.assertEqual(invocation.kwargs["model"], "gpt-4.1-mini")
+                self.assertTrue(callable(invocation.kwargs["save_response"]))
         self.assertEqual(len(calls), 3)
         comparisons = json.loads(output.read_text(encoding="utf-8"))["comparisons"]
         self.assertEqual(len(comparisons), 2)

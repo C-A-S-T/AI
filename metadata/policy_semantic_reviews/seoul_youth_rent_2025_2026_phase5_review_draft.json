@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "artifact_type": "POLICY_REVIEW_DECISIONS_DRAFT",
+  "status": "DRAFT_REVIEW_REQUIRED",
+  "policy_key": "seoul-youth-rent",
+  "phase4_result_sha256": "250363ecfec5934df1cb621034609b7a796a37e2add530506dbbe332dd8a61a3",
+  "human_approved": false,
+  "java_import_ready": false,
+  "pdf_sources": [
+    {
+      "document_id": "DOC-211f45df17b98569c5f1",
+      "pdf_sha256": null,
+      "source_url": null,
+      "page_reviews": []
+    },
+    {
+      "document_id": "DOC-543adbc0ebc09e5ce628",
+      "pdf_sha256": null,
+      "source_url": null,
+      "page_reviews": []
+    }
+  ],
+  "review_events": []
+}

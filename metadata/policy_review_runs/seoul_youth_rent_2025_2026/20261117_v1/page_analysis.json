@@ -1,0 +1,1196 @@
+{
+  "schema_version": 1,
+  "artifact_type": "POLICY_PDF_LINEAGE_ANALYSIS",
+  "run_id": "seoul_youth_rent_2025_2026_20261117_v1",
+  "policy_key": "seoul-youth-rent",
+  "source_manifest_sha256": "a916e643d17b56b24ebf21e3fa0c3ba27b0cab65fa889bfc2752efb15e2ef9f9",
+  "status": "REVIEW_REQUIRED",
+  "input_bindings": [
+    {
+      "role": "PDF",
+      "document_id": "DOC-211f45df17b98569c5f1",
+      "path_base": "PROJECT",
+      "path": "data/raw/youth-rent/2025/2025년 서울시 청년월세지원 모집 공고문.pdf",
+      "sha256": "6288e029484140bff4e7a3a5de64691d8230f07b04bae47d7dbcb25300cd0df4"
+    },
+    {
+      "role": "PARSED",
+      "document_id": "DOC-211f45df17b98569c5f1",
+      "path_base": "PROJECT",
+      "path": "data/parsed/DOC-211f45df17b98569c5f1.json",
+      "sha256": "6675d8e06bd04ebb9afb09cd94f946721ca244e1fb145f2a9d8fc102289e0f94"
+    },
+    {
+      "role": "CLEANED",
+      "document_id": "DOC-211f45df17b98569c5f1",
+      "path_base": "PROJECT",
+      "path": "data/cleaned/DOC-211f45df17b98569c5f1.json",
+      "sha256": "fe7dc7afb0c64886683e0eee96f6557c473edd367ceece5f93b8a5f41ba692b2"
+    },
+    {
+      "role": "REVIEWED",
+      "document_id": "DOC-211f45df17b98569c5f1",
+      "path_base": "LOCALAPPDATA",
+      "path": "CAST_AI/policy_compare_reviews/2025/DOC-211f45df17b98569c5f1_v2_REVIEWED.json",
+      "sha256": "2fb59881bb0e4c28e49cf5a042654600b8046d35b8f2b01c9103934a04609de7"
+    },
+    {
+      "role": "APPROVAL_MANIFEST",
+      "document_id": "DOC-211f45df17b98569c5f1",
+      "path_base": "LOCALAPPDATA",
+      "path": "CAST_AI/policy_compare_reviews/2025/DOC-211f45df17b98569c5f1_v2_approved_manifest.json",
+      "sha256": "82ea65ae193f28865075386757ceb3da0a959eddf1f0311a345957b830f0a070"
+    },
+    {
+      "role": "PDF",
+      "document_id": "DOC-543adbc0ebc09e5ce628",
+      "path_base": "PROJECT",
+      "path": "data/raw/youth-rent/2026/1. 26년 서울시 청년월세지원 모집 공고.pdf",
+      "sha256": "80de4494292b3d7526749bddf12509843d4ffd9a8ae2d944a32cb33c008e0f1d"
+    },
+    {
+      "role": "PARSED",
+      "document_id": "DOC-543adbc0ebc09e5ce628",
+      "path_base": "PROJECT",
+      "path": "data/parsed/DOC-543adbc0ebc09e5ce628.json",
+      "sha256": "42d0808af04863d2cb3433aeef7e9d55674b49ce91053f2770fe70146bf363ff"
+    },
+    {
+      "role": "CLEANED",
+      "document_id": "DOC-543adbc0ebc09e5ce628",
+      "path_base": "PROJECT",
+      "path": "data/cleaned/DOC-543adbc0ebc09e5ce628.json",
+      "sha256": "46972707cc2c7be0f414a8bbe3e30629ccaa31fc7868e34dda40c3c0a0f73be9"
+    },
+    {
+      "role": "REVIEWED",
+      "document_id": "DOC-543adbc0ebc09e5ce628",
+      "path_base": "LOCALAPPDATA",
+      "path": "CAST_AI/policy_compare_reviews/2026/DOC-543adbc0ebc09e5ce628_v2_REVIEWED.json",
+      "sha256": "6bd2e2d72f87f25d7099271f24bfb7ba26236de268df3886f031e6880a3a4a93"
+    },
+    {
+      "role": "APPROVAL_MANIFEST",
+      "document_id": "DOC-543adbc0ebc09e5ce628",
+      "path_base": "LOCALAPPDATA",
+      "path": "CAST_AI/policy_compare_reviews/2026/DOC-543adbc0ebc09e5ce628_v2_approved_manifest.json",
+      "sha256": "09fd9a466be891f067297a20d9ddd7aec1c39ac71e4ae6d263e3f605ff2f2612"
+    },
+    {
+      "role": "SEMANTIC_MAPPING",
+      "document_id": null,
+      "path_base": "PROJECT",
+      "path": "metadata/policy_semantic_mappings/seoul_youth_rent_2025_2026.json",
+      "sha256": "6f798d103b87b0dc00ba2c8bd6b3f4253f53ee6c09449e04947bcf028ad49652"
+    },
+    {
+      "role": "RECLASSIFICATION",
+      "document_id": null,
+      "path_base": "PROJECT",
+      "path": "metadata/policy_semantic_reviews/seoul_youth_rent_2025_2026_reclassification_draft.json",
+      "sha256": "66db42aac9029318db8c6246ebec513d922476db52ba30fa98ce37b0a4575c8f"
+    },
+    {
+      "role": "SUPPLEMENTAL",
+      "document_id": null,
+      "path_base": "PROJECT",
+      "path": "metadata/policy_semantic_reviews/seoul_youth_rent_2025_2026_supplemental_evidence.json",
+      "sha256": "7e10ff77b725c01e30a66bfa07447bbeec46e30aa9ca29937621b942982863ef"
+    },
+    {
+      "role": "PHASE4_NOTES",
+      "document_id": null,
+      "path_base": "PROJECT",
+      "path": "metadata/policy_semantic_reviews/seoul_youth_rent_2025_2026_phase4_review_notes.json",
+      "sha256": "a8b769e7a8e7c9afddd9a879449ae3532b226df12de6472e2764243d43bf7146"
+    },
+    {
+      "role": "PHASE5_DRAFT",
+      "document_id": null,
+      "path_base": "PROJECT",
+      "path": "metadata/policy_semantic_reviews/seoul_youth_rent_2025_2026_phase5_review_draft.json",
+      "sha256": "8c7d566ee9a105ad1b9416f9df458e4d0db8e33838c500a9ed5b082c9128e37b"
+    },
+    {
+      "role": "DOCUMENTS",
+      "document_id": null,
+      "path_base": "PROJECT",
+      "path": "metadata/documents.json",
+      "sha256": "b3bfba3d1f2e71fac5c8f98629732547b3c64fa6ffe9f2192695dd13848546e1"
+    },
+    {
+      "role": "SOURCES",
+      "document_id": null,
+      "path_base": "PROJECT",
+      "path": "metadata/sources.json",
+      "sha256": "b1d9d266044192cf9ee313479a066cc25fb23e7d871082fee027c5ad44d6002e"
+    },
+    {
+      "role": "PHASE3",
+      "document_id": null,
+      "path_base": "LOCALAPPDATA",
+      "path": "CAST_AI/policy_compare_reviews/2026/seoul_youth_rent_2025_2026_SEMANTIC_ADJUDICATION_REVIEW_REQUIRED.json",
+      "sha256": "65713d53c0b77906c6bb96998df1a1cdf5cce4185310df6bf81f05be2090b906"
+    },
+    {
+      "role": "PHASE4",
+      "document_id": null,
+      "path_base": "LOCALAPPDATA",
+      "path": "CAST_AI/policy_compare_reviews/2026/seoul_youth_rent_2025_2026_PRESENTATION_REVIEW_REQUIRED.json",
+      "sha256": "250363ecfec5934df1cb621034609b7a796a37e2add530506dbbe332dd8a61a3"
+    },
+    {
+      "role": "PHASE5_REPORT",
+      "document_id": null,
+      "path_base": "LOCALAPPDATA",
+      "path": "CAST_AI/policy_compare_reviews/2026/seoul_youth_rent_2025_2026_POLICY_APPROVAL_GATE_REPORT.json",
+      "sha256": "4c1a10c6eb586b14335c5aae77cfcf59a195e60a9c2dfed16e82aca4a6365f33"
+    }
+  ],
+  "page_analyses": [
+    {
+      "document_id": "DOC-211f45df17b98569c5f1",
+      "reference_year": 2025,
+      "page": 4,
+      "pdf_text_sha256": "18df9499e71b45372effd0b065b2bc3e801c942f5b33a684e46f300ab6a64d91",
+      "parsed_text_sha256": "18df9499e71b45372effd0b065b2bc3e801c942f5b33a684e46f300ab6a64d91",
+      "cleaned_text_sha256": "18df9499e71b45372effd0b065b2bc3e801c942f5b33a684e46f300ab6a64d91",
+      "pdf_text_matches_parsed": true,
+      "parsed_cleaned_equivalent": true,
+      "parsed_table_count": 1,
+      "parsed_warnings": [
+        "Table 0: TABLE_TEXT_NOT_FULLY_CAPTURED",
+        "Table region 0: SUSPECTED_TABLE_NOT_EXTRACTED",
+        "Extracted table row/column alignment requires review"
+      ],
+      "reviewed_field_keys": [
+        "HEALTH_INSURANCE_PREMIUM_EXCLUDE_NURSING_FEE",
+        "HEALTH_INSURANCE_PREMIUM_LIMITS_1PERSON_150PERCENT"
+      ],
+      "direct_comparison_ids": [
+        "HEALTH_INSURANCE_NURSING_FEE",
+        "ONE_PERSON_INCOME_THRESHOLDS"
+      ]
+    },
+    {
+      "document_id": "DOC-211f45df17b98569c5f1",
+      "reference_year": 2025,
+      "page": 8,
+      "pdf_text_sha256": "6dcb076cbe96dfa2c9e3e8425ac417abb22158955df8b8b69700be8cf9580706",
+      "parsed_text_sha256": "6dcb076cbe96dfa2c9e3e8425ac417abb22158955df8b8b69700be8cf9580706",
+      "cleaned_text_sha256": "6dcb076cbe96dfa2c9e3e8425ac417abb22158955df8b8b69700be8cf9580706",
+      "pdf_text_matches_parsed": true,
+      "parsed_cleaned_equivalent": true,
+      "parsed_table_count": 1,
+      "parsed_warnings": [
+        "Table 0: TABLE_TEXT_NOT_FULLY_CAPTURED",
+        "Table region 0: SUSPECTED_TABLE_REGION_INCOMPLETE",
+        "Table region 1: SUSPECTED_TABLE_NOT_EXTRACTED",
+        "Extracted table row/column alignment requires review"
+      ],
+      "reviewed_field_keys": [
+        "ANNOUNCEMENT_RESULT_DATE",
+        "FINAL_SELECTION_ANNOUNCEMENT_DATE",
+        "SELECTION_TIER_1_QUOTA",
+        "SELECTION_TIER_1_RENT_CONDITION",
+        "SELECTION_TIER_1_TO_3_INCOME",
+        "SELECTION_TIER_2_QUOTA",
+        "SELECTION_TIER_2_RENT_CONDITION",
+        "SELECTION_TIER_3_QUOTA",
+        "SELECTION_TIER_3_RENT_CONDITION",
+        "SELECTION_TIER_4_INCOME",
+        "SELECTION_TIER_4_QUOTA",
+        "SELECTION_TIER_4_RENT_CONDITION",
+        "SELECTION_TIER_4_RENT_EXCEPTION"
+      ],
+      "direct_comparison_ids": [
+        "FINAL_ANNOUNCEMENT",
+        "REVIEW_ANNOUNCEMENT",
+        "TIER_DISTRIBUTION",
+        "TIER_FOUR_EXCEPTION",
+        "TIER_FOUR_INCOME",
+        "TIER_FOUR_RENT",
+        "TIER_ONE_RENT",
+        "TIER_ONE_TO_THREE_INCOME",
+        "TIER_THREE_RENT",
+        "TIER_TWO_RENT"
+      ]
+    },
+    {
+      "document_id": "DOC-211f45df17b98569c5f1",
+      "reference_year": 2025,
+      "page": 10,
+      "pdf_text_sha256": "7b4d31c9eaf358be7b2d5b13f32ae791776c28d12a25a900bad8a267e31afbc5",
+      "parsed_text_sha256": "7b4d31c9eaf358be7b2d5b13f32ae791776c28d12a25a900bad8a267e31afbc5",
+      "cleaned_text_sha256": "7b4d31c9eaf358be7b2d5b13f32ae791776c28d12a25a900bad8a267e31afbc5",
+      "pdf_text_matches_parsed": true,
+      "parsed_cleaned_equivalent": true,
+      "parsed_table_count": 5,
+      "parsed_warnings": [
+        "Extracted table row/column alignment requires review"
+      ],
+      "reviewed_field_keys": [
+        "APPLICATION_PROCESS_STEPS"
+      ],
+      "direct_comparison_ids": [
+        "ANNUAL_PROCESS_TIMELINE"
+      ]
+    },
+    {
+      "document_id": "DOC-543adbc0ebc09e5ce628",
+      "reference_year": 2026,
+      "page": 5,
+      "pdf_text_sha256": "0838bfff37fd88aaa03650278d65a93e1c537a2896651d75f910a2d15bb4d6b5",
+      "parsed_text_sha256": "0838bfff37fd88aaa03650278d65a93e1c537a2896651d75f910a2d15bb4d6b5",
+      "cleaned_text_sha256": "0838bfff37fd88aaa03650278d65a93e1c537a2896651d75f910a2d15bb4d6b5",
+      "pdf_text_matches_parsed": true,
+      "parsed_cleaned_equivalent": true,
+      "parsed_table_count": 1,
+      "parsed_warnings": [
+        "Table 0: TABLE_TEXT_NOT_FULLY_CAPTURED",
+        "Table region 0: SUSPECTED_TABLE_REGION_INCOMPLETE",
+        "Extracted table row/column alignment requires review"
+      ],
+      "reviewed_field_keys": [
+        "INCOME_DEPENDENT_SPONSOR",
+        "INCOME_LIMIT_1PERSON_100",
+        "INCOME_LIMIT_1PERSON_120",
+        "INCOME_LIMIT_1PERSON_150",
+        "INCOME_LIMIT_1PERSON_48",
+        "INCOME_REQUIREMENT",
+        "INCOME_VERIFICATION_METHOD"
+      ],
+      "direct_comparison_ids": [
+        "INCOME_ASSESSMENT_METHOD",
+        "INCOME_DEPENDENT_PARENT",
+        "INCOME_ELIGIBILITY",
+        "ONE_PERSON_INCOME_THRESHOLDS"
+      ]
+    },
+    {
+      "document_id": "DOC-543adbc0ebc09e5ce628",
+      "reference_year": 2026,
+      "page": 9,
+      "pdf_text_sha256": "f2754690696bb7436ad582f5f0370b262abecb724eb69a725cf2c541028b5e63",
+      "parsed_text_sha256": "f2754690696bb7436ad582f5f0370b262abecb724eb69a725cf2c541028b5e63",
+      "cleaned_text_sha256": "f2754690696bb7436ad582f5f0370b262abecb724eb69a725cf2c541028b5e63",
+      "pdf_text_matches_parsed": true,
+      "parsed_cleaned_equivalent": true,
+      "parsed_table_count": 1,
+      "parsed_warnings": [
+        "Table 0: TABLE_TEXT_NOT_FULLY_CAPTURED",
+        "Table region 0: SUSPECTED_TABLE_REGION_INCOMPLETE",
+        "Extracted table row/column alignment requires review"
+      ],
+      "reviewed_field_keys": [
+        "ADDITIONAL_DOC_FRAUD_VICTIM",
+        "ADDITIONAL_DOC_SINGLE_PARENT",
+        "ADDITIONAL_DOC_VETERAN",
+        "SELECTION_CRITERIA_1",
+        "SELECTION_CRITERIA_2",
+        "SELECTION_CRITERIA_3",
+        "SELECTION_CRITERIA_4",
+        "SELECTION_CRITERIA_4_INCOME",
+        "SELECTION_CRITERIA_4_RATE",
+        "SELECTION_INCOME_RANGE_1TO3"
+      ],
+      "direct_comparison_ids": [
+        "DOC_SPECIAL_FRAUD",
+        "DOC_SPECIAL_SINGLE_PARENT",
+        "DOC_SPECIAL_VETERAN",
+        "SELECTION_METHOD",
+        "TIER_DISTRIBUTION",
+        "TIER_FOUR_EXCEPTION",
+        "TIER_FOUR_INCOME",
+        "TIER_FOUR_RENT",
+        "TIER_ONE_RENT",
+        "TIER_ONE_TO_THREE_INCOME",
+        "TIER_THREE_RENT",
+        "TIER_TWO_RENT"
+      ]
+    },
+    {
+      "document_id": "DOC-543adbc0ebc09e5ce628",
+      "reference_year": 2026,
+      "page": 12,
+      "pdf_text_sha256": "5f970f5fe5436b568d6c870e41df7e5388bb5d5b4b730580fa6e252e87e43bbe",
+      "parsed_text_sha256": "5f970f5fe5436b568d6c870e41df7e5388bb5d5b4b730580fa6e252e87e43bbe",
+      "cleaned_text_sha256": "5f970f5fe5436b568d6c870e41df7e5388bb5d5b4b730580fa6e252e87e43bbe",
+      "pdf_text_matches_parsed": true,
+      "parsed_cleaned_equivalent": true,
+      "parsed_table_count": 5,
+      "parsed_warnings": [
+        "Extracted table row/column alignment requires review"
+      ],
+      "reviewed_field_keys": [],
+      "direct_comparison_ids": []
+    },
+    {
+      "document_id": "DOC-543adbc0ebc09e5ce628",
+      "reference_year": 2026,
+      "page": 13,
+      "pdf_text_sha256": "b8479beddfd5118c9c031b27e324559cf197feaebb426efb9b59edb46aa1ca8c",
+      "parsed_text_sha256": "b8479beddfd5118c9c031b27e324559cf197feaebb426efb9b59edb46aa1ca8c",
+      "cleaned_text_sha256": "b8479beddfd5118c9c031b27e324559cf197feaebb426efb9b59edb46aa1ca8c",
+      "pdf_text_matches_parsed": true,
+      "parsed_cleaned_equivalent": true,
+      "parsed_table_count": 1,
+      "parsed_warnings": [
+        "Table 0: TABLE_TEXT_NOT_FULLY_CAPTURED",
+        "Table region 0: SUSPECTED_TABLE_NOT_EXTRACTED",
+        "Table region 1: SUSPECTED_TABLE_NOT_EXTRACTED",
+        "Extracted table row/column alignment requires review"
+      ],
+      "reviewed_field_keys": [],
+      "direct_comparison_ids": []
+    }
+  ],
+  "findings": [
+    {
+      "finding_id": "B-FINDING-001",
+      "document_id": "DOC-211f45df17b98569c5f1",
+      "reference_year": 2025,
+      "page": 4,
+      "issue_type": "TABLE_CELL_LOSS",
+      "source_observation": {
+        "original_fact": "2025년 120% 이하 2인 가구 혼합가입자 보험료는 170,193원이며 120% 혼합 열은 PDF 원문에 존재한다.",
+        "original_quote": "2인 4,720,000 168,410 105,787 170,193",
+        "verification_status": "PDF_TEXT_OBSERVED_VISUAL_UNATTESTED"
+      },
+      "lineage": {
+        "parsed": {
+          "text_present": true,
+          "table_issue": "120% 혼합보험료 열이 구조화 표에서 None; 150% 혼합 값은 존재",
+          "notes": "Parsed text에서 120% 혼합가입자 행 2~10인 수치 확인; Parsed tables의 해당 병합 셀은 None."
+        },
+        "cleaned": {
+          "equals_parsed_text": true,
+          "equals_parsed_tables": true
+        },
+        "reviewed": {
+          "status": "PARTIAL_OR_CONTEXT_ONLY",
+          "references": [
+            {
+              "field_key": "HEALTH_INSURANCE_PREMIUM_LIMITS_1PERSON_150PERCENT",
+              "evidence_page": 4
+            }
+          ],
+          "notes": "해당 연도 REVIEWED 필드 1개와 연결. 문자열 존재와 정책 의미의 정확성은 별도 판단."
+        },
+        "phase3": {
+          "comparison_ids": [
+            "ONE_PERSON_INCOME_THRESHOLDS"
+          ],
+          "notes": "ONE_PERSON_INCOME_THRESHOLDS는 1인 150% 보험료와 2026년 중위소득 금액 비교를 INCONCLUSIVE로 분류."
+        },
+        "phase4": {
+          "comparison_ids": [
+            "ONE_PERSON_INCOME_THRESHOLDS"
+          ],
+          "notes": "Phase 4에서도 1인 기준만 표시하며 다인 가구 120% 혼합값은 미표시."
+        }
+      },
+      "first_observed_loss_stage": "PARSED_TABLE_STRUCTURE",
+      "affected_comparison_ids": [
+        "ONE_PERSON_INCOME_THRESHOLDS"
+      ],
+      "assessment": {
+        "severity": null,
+        "candidate_severity": "HIGH",
+        "assessment_status": "STRUCTURE_CONFIRMED_IMPACT_PENDING",
+        "reason": "다인 가구 보험료 표의 구조화 누락이 확인됨. 현 비교는 1인·150%에 집중되어 있어 실제 판정 오류는 미확인."
+      },
+      "human_review_required": true
+    },
+    {
+      "finding_id": "B-FINDING-002",
+      "document_id": "DOC-211f45df17b98569c5f1",
+      "reference_year": 2025,
+      "page": 8,
+      "issue_type": "TABLE_CELL_LOSS",
+      "source_observation": {
+        "original_fact": "2025년 선정 4구간별 인원은 6,750·4,500·2,250·1,500명(45·30·15·10%)이다.",
+        "original_quote": "6,750명\n1 임차보증금 5백만원 이하이고, 월세 40만원 이하",
+        "verification_status": "PDF_TEXT_OBSERVED_VISUAL_UNATTESTED"
+      },
+      "lineage": {
+        "parsed": {
+          "text_present": true,
+          "table_issue": "구간 번호와 선정인원 열의 네 값이 구조화 표에서 None",
+          "notes": "Parsed text에서 인원/구간을 확인. 표에서는 선정인원 열 전부 None."
+        },
+        "cleaned": {
+          "equals_parsed_text": true,
+          "equals_parsed_tables": true
+        },
+        "reviewed": {
+          "status": "DIRECT_FIELDS_PRESENT",
+          "references": [
+            {
+              "field_key": "SELECTION_TIER_1_QUOTA",
+              "evidence_page": 8
+            },
+            {
+              "field_key": "SELECTION_TIER_2_QUOTA",
+              "evidence_page": 8
+            },
+            {
+              "field_key": "SELECTION_TIER_3_QUOTA",
+              "evidence_page": 8
+            },
+            {
+              "field_key": "SELECTION_TIER_4_QUOTA",
+              "evidence_page": 8
+            }
+          ],
+          "notes": "해당 연도 REVIEWED 필드 4개와 연결. 문자열 존재와 정책 의미의 정확성은 별도 판단."
+        },
+        "phase3": {
+          "comparison_ids": [
+            "TIER_DISTRIBUTION"
+          ],
+          "notes": "TIER_DISTRIBUTION은 전체 15,000명이라는 2025년 분모를 사용."
+        },
+        "phase4": {
+          "comparison_ids": [
+            "TIER_DISTRIBUTION"
+          ],
+          "notes": "2025년 인원과 2026년 1인 가구의 비율은 적용 분모가 다르므로 안내 필요."
+        }
+      },
+      "first_observed_loss_stage": "PARSED_TABLE_STRUCTURE",
+      "affected_comparison_ids": [
+        "TIER_DISTRIBUTION"
+      ],
+      "assessment": {
+        "severity": null,
+        "candidate_severity": "MEDIUM",
+        "assessment_status": "CROSS_PAGE_PRESERVED_MEANING_PENDING",
+        "reason": "인원 값은 REVIEWED와 Phase 4에 보존되나 구간·분모·소득조건의 의미 관계 확인은 필요."
+      },
+      "human_review_required": true
+    },
+    {
+      "finding_id": "B-FINDING-003",
+      "document_id": "DOC-211f45df17b98569c5f1",
+      "reference_year": 2025,
+      "page": 10,
+      "issue_type": "TABLE_RELATION_SPLIT",
+      "source_observation": {
+        "original_fact": "2025년 추진 절차는 신청·접수(6월)→자격심사(6~8월)→결과통보(8월)→최종발표(9월 초)→지급(10월 말)의 5단계다.",
+        "original_quote": "신청·접수 자격심사 심사결과 통보 최종선정자 발표 지원금 지급",
+        "verification_status": "PDF_TEXT_OBSERVED_VISUAL_UNATTESTED"
+      },
+      "lineage": {
+        "parsed": {
+          "text_present": true,
+          "table_issue": "5단계 연결 화살표 관계가 별도 단열 표 5개로 분할",
+          "notes": "5개 박스 텍스트는 보존. 박스 간 연결의 구조 표현은 분리됨."
+        },
+        "cleaned": {
+          "equals_parsed_text": true,
+          "equals_parsed_tables": true
+        },
+        "reviewed": {
+          "status": "DIRECT_FIELDS_PRESENT",
+          "references": [
+            {
+              "field_key": "APPLICATION_PROCESS_STEPS",
+              "evidence_page": 10
+            }
+          ],
+          "notes": "해당 연도 REVIEWED 필드 1개와 연결. 문자열 존재와 정책 의미의 정확성은 별도 판단."
+        },
+        "phase3": {
+          "comparison_ids": [
+            "ANNUAL_PROCESS_TIMELINE"
+          ],
+          "notes": "2025년 5단계 전체 절차를 비교 기준으로 사용."
+        },
+        "phase4": {
+          "comparison_ids": [
+            "ANNUAL_PROCESS_TIMELINE"
+          ],
+          "notes": "2025년 절차는 완전하지만 2026년은 다른 근거 페이지를 조합함."
+        }
+      },
+      "first_observed_loss_stage": "PARSED_TABLE_STRUCTURE",
+      "affected_comparison_ids": [
+        "ANNUAL_PROCESS_TIMELINE"
+      ],
+      "assessment": {
+        "severity": null,
+        "candidate_severity": "MEDIUM",
+        "assessment_status": "CROSS_PAGE_PRESERVED_MEANING_PENDING",
+        "reason": "원문의 5단계 순서는 REVIEWED와 Phase 4에서 보존됨. 2026년 비교 대상 표현 수준은 상이함."
+      },
+      "human_review_required": true
+    },
+    {
+      "finding_id": "B-FINDING-004",
+      "document_id": "DOC-543adbc0ebc09e5ce628",
+      "reference_year": 2026,
+      "page": 5,
+      "issue_type": "TABLE_CELL_LOSS",
+      "source_observation": {
+        "original_fact": "2026년 7인 가구 중위소득 48·100·120·150% 금액은 각각 4,567,272·9,515,150·11,418,180·14,272,725원이다.",
+        "original_quote": "중위 48% 1,230,834 2,015,660 2,572,337 3,117,474 3,627,225 4,106,857 4,567,272",
+        "verification_status": "PDF_TEXT_OBSERVED_VISUAL_UNATTESTED"
+      },
+      "lineage": {
+        "parsed": {
+          "text_present": true,
+          "table_issue": "48/100/120/150% 구간 라벨과 7인 가구 수치 4개가 구조화 표에서 None",
+          "notes": "Parsed text에는 7인 금액 네 개가 존재하지만 tables에는 None."
+        },
+        "cleaned": {
+          "equals_parsed_text": true,
+          "equals_parsed_tables": true
+        },
+        "reviewed": {
+          "status": "PARTIAL_OR_CONTEXT_ONLY",
+          "references": [
+            {
+              "field_key": "INCOME_LIMIT_1PERSON_100",
+              "evidence_page": 5
+            },
+            {
+              "field_key": "INCOME_LIMIT_1PERSON_120",
+              "evidence_page": 5
+            },
+            {
+              "field_key": "INCOME_LIMIT_1PERSON_150",
+              "evidence_page": 5
+            },
+            {
+              "field_key": "INCOME_LIMIT_1PERSON_48",
+              "evidence_page": 5
+            }
+          ],
+          "notes": "해당 연도 REVIEWED 필드 4개와 연결. 문자열 존재와 정책 의미의 정확성은 별도 판단."
+        },
+        "phase3": {
+          "comparison_ids": [
+            "INCOME_ELIGIBILITY",
+            "ONE_PERSON_INCOME_THRESHOLDS"
+          ],
+          "notes": "소득 자격/1인 기준 비교에 연결. 다인 가구 전체 표는 독립 비교 필드에 없음."
+        },
+        "phase4": {
+          "comparison_ids": [
+            "INCOME_ELIGIBILITY",
+            "ONE_PERSON_INCOME_THRESHOLDS"
+          ],
+          "notes": "Phase 4의 1인 기준 금액은 남아 있으나 7인 기준은 표시되지 않음."
+        }
+      },
+      "first_observed_loss_stage": "PARSED_TABLE_STRUCTURE",
+      "affected_comparison_ids": [
+        "INCOME_ELIGIBILITY",
+        "ONE_PERSON_INCOME_THRESHOLDS"
+      ],
+      "assessment": {
+        "severity": null,
+        "candidate_severity": "HIGH",
+        "assessment_status": "STRUCTURE_CONFIRMED_IMPACT_PENDING",
+        "reason": "소득기준표 7인 가구 수치가 표 구조에서 소실됨. REVIEWED에는 1인 기준만 있어 서비스 지원 범위 확인 필요."
+      },
+      "human_review_required": true
+    },
+    {
+      "finding_id": "B-FINDING-005",
+      "document_id": "DOC-543adbc0ebc09e5ce628",
+      "reference_year": 2026,
+      "page": 9,
+      "issue_type": "TABLE_CELL_LOSS",
+      "source_observation": {
+        "original_fact": "2026년 청년 1인 가구의 구간별 선정비율은 35·30·20·15%다.",
+        "original_quote": "1 임차보증금 5백만원 이하이고, 월세 40만원 이하 35%",
+        "verification_status": "PDF_TEXT_OBSERVED_VISUAL_UNATTESTED"
+      },
+      "lineage": {
+        "parsed": {
+          "text_present": true,
+          "table_issue": "구간 번호와 선정비율 35/30/20/15가 구조화 표에서 None",
+          "notes": "Parsed 텍스트에서 네 구간 비율 확인, 표 비율 열에서는 모두 None."
+        },
+        "cleaned": {
+          "equals_parsed_text": true,
+          "equals_parsed_tables": true
+        },
+        "reviewed": {
+          "status": "DIRECT_FIELDS_PRESENT",
+          "references": [
+            {
+              "field_key": "SELECTION_CRITERIA_1",
+              "evidence_page": 9
+            },
+            {
+              "field_key": "SELECTION_CRITERIA_2",
+              "evidence_page": 9
+            },
+            {
+              "field_key": "SELECTION_CRITERIA_3",
+              "evidence_page": 9
+            },
+            {
+              "field_key": "SELECTION_CRITERIA_4_RATE",
+              "evidence_page": 9
+            }
+          ],
+          "notes": "해당 연도 REVIEWED 필드 4개와 연결. 문자열 존재와 정책 의미의 정확성은 별도 판단."
+        },
+        "phase3": {
+          "comparison_ids": [
+            "TIER_DISTRIBUTION"
+          ],
+          "notes": "2026년 청년 1인 가구 12,000명 분모와 35/30/20/15를 사용."
+        },
+        "phase4": {
+          "comparison_ids": [
+            "TIER_DISTRIBUTION"
+          ],
+          "notes": "Phase 4에 네 비율 모두 존재하나 2025와 분모 다름."
+        }
+      },
+      "first_observed_loss_stage": "PARSED_TABLE_STRUCTURE",
+      "affected_comparison_ids": [
+        "TIER_DISTRIBUTION"
+      ],
+      "assessment": {
+        "severity": null,
+        "candidate_severity": "MEDIUM",
+        "assessment_status": "CROSS_PAGE_PRESERVED_MEANING_PENDING",
+        "reason": "비율은 REVIEWED와 Phase 4에 보존되어 있음. 2025년 전체 모집단과의 비교 방식은 확인 대상."
+      },
+      "human_review_required": true
+    },
+    {
+      "finding_id": "B-FINDING-006",
+      "document_id": "DOC-543adbc0ebc09e5ce628",
+      "reference_year": 2026,
+      "page": 12,
+      "issue_type": "TABLE_RELATION_SPLIT",
+      "source_observation": {
+        "original_fact": "2026년 추진 절차는 신청·접수(5월)→자격심사(5~6월)→결과통보(7월 초)→최종발표(7월 말)→지급(8월 말)이다.",
+        "original_quote": "신청·접수 자격심사 심사결과 통보 최종 발표 지원금 지급",
+        "verification_status": "PDF_TEXT_OBSERVED_VISUAL_UNATTESTED"
+      },
+      "lineage": {
+        "parsed": {
+          "text_present": true,
+          "table_issue": "5단계 연결 화살표 관계가 단열 표 5개로 분할",
+          "notes": "각 단계의 문구는 Parsed text/table에 남지만 흐름 연결은 보존되지 않음."
+        },
+        "cleaned": {
+          "equals_parsed_text": true,
+          "equals_parsed_tables": true
+        },
+        "reviewed": {
+          "status": "NO_DIRECT_PAGE_FIELDS",
+          "references": [],
+          "notes": "해당 연도 REVIEWED 필드 0개와 연결. 문자열 존재와 정책 의미의 정확성은 별도 판단."
+        },
+        "phase3": {
+          "comparison_ids": [
+            "ANNUAL_PROCESS_TIMELINE"
+          ],
+          "notes": "2026년 p.12의 전체 절차는 직접 근거로 사용되지 않음."
+        },
+        "phase4": {
+          "comparison_ids": [
+            "ANNUAL_PROCESS_TIMELINE"
+          ],
+          "notes": "ANNUAL_PROCESS_TIMELINE 2026 표시값에 심사기간(5~6월), 결과 통보(7월 초) 없음."
+        }
+      },
+      "first_observed_loss_stage": "PARSED_TABLE_STRUCTURE",
+      "affected_comparison_ids": [
+        "ANNUAL_PROCESS_TIMELINE"
+      ],
+      "assessment": {
+        "severity": null,
+        "candidate_severity": "HIGH",
+        "assessment_status": "DISPLAY_GAP_CONFIRMED_IMPACT_PENDING",
+        "reason": "2026년 p.12는 REVIEWED 직접 인용이 없으며 Phase 4는 p.2·p.10 일정을 사용해 자격심사·7월 초 통보가 표시되지 않음."
+      },
+      "human_review_required": true
+    },
+    {
+      "finding_id": "B-FINDING-007",
+      "document_id": "DOC-543adbc0ebc09e5ce628",
+      "reference_year": 2026,
+      "page": 13,
+      "issue_type": "TABLE_MERGED_CELL_LOSS",
+      "source_observation": {
+        "original_fact": "2026년 신청유형 요약표에는 거주·소득·재산 공통 요건과 유형별 제출서류가 병합 셀로 제시되어 있다.",
+        "original_quote": "소득 기준 중위소득 48% 초과 ~ 150% 이하",
+        "verification_status": "PDF_TEXT_OBSERVED_VISUAL_UNATTESTED"
+      },
+      "lineage": {
+        "parsed": {
+          "text_present": true,
+          "table_issue": "공통 거주·소득·재산의 병합 셀 값 및 신청유형 마지막 열 일부 누락",
+          "notes": "Parsed text는 요건을 담지만 tables의 요건 행에는 여러 None이 있음."
+        },
+        "cleaned": {
+          "equals_parsed_text": true,
+          "equals_parsed_tables": true
+        },
+        "reviewed": {
+          "status": "NO_DIRECT_PAGE_FIELDS",
+          "references": [],
+          "notes": "해당 연도 REVIEWED 필드 0개와 연결. 문자열 존재와 정책 의미의 정확성은 별도 판단."
+        },
+        "phase3": {
+          "comparison_ids": [
+            "DOC_SPECIAL_FRAUD",
+            "DOC_SPECIAL_SINGLE_PARENT",
+            "INCOME_ELIGIBILITY",
+            "TARGET_GROUP_QUOTA"
+          ],
+          "notes": "p.13 자체는 Phase 3 직접 근거가 아니며 일부 조건은 다른 페이지의 필드로만 연결됨."
+        },
+        "phase4": {
+          "comparison_ids": [
+            "DOC_SPECIAL_FRAUD",
+            "DOC_SPECIAL_SINGLE_PARENT",
+            "INCOME_ELIGIBILITY",
+            "TARGET_GROUP_QUOTA"
+          ],
+          "notes": "Phase 4의 관련 항목 존재만으로 다섯 유형의 공통 요건 및 서류가 정확히 매핑됐다고 볼 수 없음."
+        }
+      },
+      "first_observed_loss_stage": "PARSED_TABLE_STRUCTURE",
+      "affected_comparison_ids": [
+        "DOC_SPECIAL_FRAUD",
+        "DOC_SPECIAL_SINGLE_PARENT",
+        "INCOME_ELIGIBILITY",
+        "TARGET_GROUP_QUOTA"
+      ],
+      "assessment": {
+        "severity": null,
+        "candidate_severity": "HIGH",
+        "assessment_status": "STRUCTURE_CONFIRMED_IMPACT_PENDING",
+        "reason": "공통 요건의 적용 범위가 구조화 표에 보존되지 않음. 다른 페이지의 관련 필드가 존재해도 p.13 전체 관계는 확인되지 않음."
+      },
+      "human_review_required": true
+    },
+    {
+      "finding_id": "B-FINDING-008",
+      "document_id": "DOC-543adbc0ebc09e5ce628",
+      "reference_year": 2026,
+      "page": 13,
+      "issue_type": "TABLE_CELL_LOSS",
+      "source_observation": {
+        "original_fact": "2026년 선정 정원은 청년 1인 12,000명, 전세사기피해자 1,000명, 한부모 1,000명, 신혼부부 500명, 청년안심주택 500명이다.",
+        "original_quote": "인 원 12,000명 1,000명 1,000명 500명 500명",
+        "verification_status": "PDF_TEXT_OBSERVED_VISUAL_UNATTESTED"
+      },
+      "lineage": {
+        "parsed": {
+          "text_present": true,
+          "table_issue": "청년안심주택 마지막 정원 500명이 구조화 표에서 None",
+          "notes": "Parsed text에는 인원 5개가 모두 존재하나 테이블 마지막 셀이 None."
+        },
+        "cleaned": {
+          "equals_parsed_text": true,
+          "equals_parsed_tables": true
+        },
+        "reviewed": {
+          "status": "CROSS_PAGE_REFERENCE",
+          "references": [
+            {
+              "field_key": "SELECTION_NUMBER_1PERSON",
+              "evidence_page": 2
+            },
+            {
+              "field_key": "SELECTION_NUMBER_NEWCOUPLE",
+              "evidence_page": 2
+            },
+            {
+              "field_key": "SELECTION_NUMBER_SAFEHOUSE",
+              "evidence_page": 2
+            },
+            {
+              "field_key": "SELECTION_NUMBER_SINGLE_PARENT",
+              "evidence_page": 2
+            },
+            {
+              "field_key": "SELECTION_NUMBER_VICTIM",
+              "evidence_page": 2
+            }
+          ],
+          "notes": "해당 연도 REVIEWED 필드 5개와 연결. 문자열 존재와 정책 의미의 정확성은 별도 판단."
+        },
+        "phase3": {
+          "comparison_ids": [
+            "TARGET_GROUP_QUOTA"
+          ],
+          "notes": "p.2의 선정 정원 필드들을 사용하며 p.13의 직접 참조는 없음."
+        },
+        "phase4": {
+          "comparison_ids": [
+            "TARGET_GROUP_QUOTA"
+          ],
+          "notes": "TARGET_GROUP_QUOTA의 500명은 남아 있음. \"민간임대\" 축약으로 대상 혼동 가능성은 검토 필요."
+        }
+      },
+      "first_observed_loss_stage": "PARSED_TABLE_STRUCTURE",
+      "affected_comparison_ids": [
+        "TARGET_GROUP_QUOTA"
+      ],
+      "assessment": {
+        "severity": null,
+        "candidate_severity": "MEDIUM",
+        "assessment_status": "CROSS_PAGE_PRESERVED_MEANING_PENDING",
+        "reason": "p.13에서 마지막 정원은 누락됐지만 p.2에서 REVIEWED 및 Phase 4로 500명이 보존됨. 유형 명칭 연결은 수동 검토 필요."
+      },
+      "human_review_required": true
+    }
+  ],
+  "comparison_impacts": [
+    {
+      "comparison_id": "ANNUAL_PROCESS_TIMELINE",
+      "phase3_change_type": "ANNUAL_SCHEDULE",
+      "phase4_change_type": "ANNUAL_SCHEDULE",
+      "summary_role": "CONTEXT",
+      "direct_focused_pages": [
+        {
+          "document_id": "DOC-211f45df17b98569c5f1",
+          "page": 10
+        }
+      ],
+      "finding_ids": [
+        "B-FINDING-003",
+        "B-FINDING-006"
+      ]
+    },
+    {
+      "comparison_id": "DOC_SPECIAL_FRAUD",
+      "phase3_change_type": "ADDED_CANDIDATE",
+      "phase4_change_type": "ADDED_CANDIDATE",
+      "summary_role": "SUPPORTING",
+      "direct_focused_pages": [
+        {
+          "document_id": "DOC-543adbc0ebc09e5ce628",
+          "page": 9
+        }
+      ],
+      "finding_ids": [
+        "B-FINDING-007"
+      ]
+    },
+    {
+      "comparison_id": "DOC_SPECIAL_SINGLE_PARENT",
+      "phase3_change_type": "ADDED_CANDIDATE",
+      "phase4_change_type": "ADDED_CANDIDATE",
+      "summary_role": "SUPPORTING",
+      "direct_focused_pages": [
+        {
+          "document_id": "DOC-543adbc0ebc09e5ce628",
+          "page": 9
+        }
+      ],
+      "finding_ids": [
+        "B-FINDING-007"
+      ]
+    },
+    {
+      "comparison_id": "DOC_SPECIAL_VETERAN",
+      "phase3_change_type": "ADDED_CANDIDATE",
+      "phase4_change_type": "ADDED_CANDIDATE",
+      "summary_role": "SUPPORTING",
+      "direct_focused_pages": [
+        {
+          "document_id": "DOC-543adbc0ebc09e5ce628",
+          "page": 9
+        }
+      ],
+      "finding_ids": []
+    },
+    {
+      "comparison_id": "FINAL_ANNOUNCEMENT",
+      "phase3_change_type": "ANNUAL_SCHEDULE",
+      "phase4_change_type": "ANNUAL_SCHEDULE",
+      "summary_role": "CONTEXT",
+      "direct_focused_pages": [
+        {
+          "document_id": "DOC-211f45df17b98569c5f1",
+          "page": 8
+        }
+      ],
+      "finding_ids": []
+    },
+    {
+      "comparison_id": "HEALTH_INSURANCE_NURSING_FEE",
+      "phase3_change_type": "INCONCLUSIVE",
+      "phase4_change_type": "INCONCLUSIVE",
+      "summary_role": "REVIEW_ONLY",
+      "direct_focused_pages": [
+        {
+          "document_id": "DOC-211f45df17b98569c5f1",
+          "page": 4
+        }
+      ],
+      "finding_ids": []
+    },
+    {
+      "comparison_id": "INCOME_ASSESSMENT_METHOD",
+      "phase3_change_type": "UPDATED",
+      "phase4_change_type": "UPDATED",
+      "summary_role": "PRIMARY",
+      "direct_focused_pages": [
+        {
+          "document_id": "DOC-543adbc0ebc09e5ce628",
+          "page": 5
+        }
+      ],
+      "finding_ids": []
+    },
+    {
+      "comparison_id": "INCOME_DEPENDENT_PARENT",
+      "phase3_change_type": "UPDATED",
+      "phase4_change_type": "UPDATED",
+      "summary_role": "SUPPORTING",
+      "direct_focused_pages": [
+        {
+          "document_id": "DOC-543adbc0ebc09e5ce628",
+          "page": 5
+        }
+      ],
+      "finding_ids": []
+    },
+    {
+      "comparison_id": "INCOME_ELIGIBILITY",
+      "phase3_change_type": "UPDATED",
+      "phase4_change_type": "UPDATED",
+      "summary_role": "PRIMARY",
+      "direct_focused_pages": [
+        {
+          "document_id": "DOC-543adbc0ebc09e5ce628",
+          "page": 5
+        }
+      ],
+      "finding_ids": [
+        "B-FINDING-004",
+        "B-FINDING-007"
+      ]
+    },
+    {
+      "comparison_id": "ONE_PERSON_INCOME_THRESHOLDS",
+      "phase3_change_type": "INCONCLUSIVE",
+      "phase4_change_type": "INCONCLUSIVE",
+      "summary_role": "REVIEW_ONLY",
+      "direct_focused_pages": [
+        {
+          "document_id": "DOC-211f45df17b98569c5f1",
+          "page": 4
+        },
+        {
+          "document_id": "DOC-543adbc0ebc09e5ce628",
+          "page": 5
+        }
+      ],
+      "finding_ids": [
+        "B-FINDING-001",
+        "B-FINDING-004"
+      ]
+    },
+    {
+      "comparison_id": "REVIEW_ANNOUNCEMENT",
+      "phase3_change_type": "ANNUAL_SCHEDULE",
+      "phase4_change_type": "ANNUAL_SCHEDULE",
+      "summary_role": "CONTEXT",
+      "direct_focused_pages": [
+        {
+          "document_id": "DOC-211f45df17b98569c5f1",
+          "page": 8
+        }
+      ],
+      "finding_ids": []
+    },
+    {
+      "comparison_id": "SELECTION_METHOD",
+      "phase3_change_type": "UPDATED",
+      "phase4_change_type": "UPDATED",
+      "summary_role": "PRIMARY",
+      "direct_focused_pages": [
+        {
+          "document_id": "DOC-543adbc0ebc09e5ce628",
+          "page": 9
+        }
+      ],
+      "finding_ids": []
+    },
+    {
+      "comparison_id": "TARGET_GROUP_QUOTA",
+      "phase3_change_type": "UPDATED",
+      "phase4_change_type": "UPDATED",
+      "summary_role": "PRIMARY",
+      "direct_focused_pages": [],
+      "finding_ids": [
+        "B-FINDING-007",
+        "B-FINDING-008"
+      ]
+    },
+    {
+      "comparison_id": "TIER_DISTRIBUTION",
+      "phase3_change_type": "UPDATED",
+      "phase4_change_type": "UPDATED",
+      "summary_role": "PRIMARY",
+      "direct_focused_pages": [
+        {
+          "document_id": "DOC-211f45df17b98569c5f1",
+          "page": 8
+        },
+        {
+          "document_id": "DOC-543adbc0ebc09e5ce628",
+          "page": 9
+        }
+      ],
+      "finding_ids": [
+        "B-FINDING-002",
+        "B-FINDING-005"
+      ]
+    },
+    {
+      "comparison_id": "TIER_FOUR_EXCEPTION",
+      "phase3_change_type": "UPDATED",
+      "phase4_change_type": "UPDATED",
+      "summary_role": "SUPPORTING",
+      "direct_focused_pages": [
+        {
+          "document_id": "DOC-211f45df17b98569c5f1",
+          "page": 8
+        },
+        {
+          "document_id": "DOC-543adbc0ebc09e5ce628",
+          "page": 9
+        }
+      ],
+      "finding_ids": []
+    },
+    {
+      "comparison_id": "TIER_FOUR_INCOME",
+      "phase3_change_type": "UPDATED",
+      "phase4_change_type": "UPDATED",
+      "summary_role": "SUPPORTING",
+      "direct_focused_pages": [
+        {
+          "document_id": "DOC-211f45df17b98569c5f1",
+          "page": 8
+        },
+        {
+          "document_id": "DOC-543adbc0ebc09e5ce628",
+          "page": 9
+        }
+      ],
+      "finding_ids": []
+    },
+    {
+      "comparison_id": "TIER_FOUR_RENT",
+      "phase3_change_type": "MAINTAINED",
+      "phase4_change_type": "MAINTAINED",
+      "summary_role": "CONTEXT",
+      "direct_focused_pages": [
+        {
+          "document_id": "DOC-211f45df17b98569c5f1",
+          "page": 8
+        },
+        {
+          "document_id": "DOC-543adbc0ebc09e5ce628",
+          "page": 9
+        }
+      ],
+      "finding_ids": []
+    },
+    {
+      "comparison_id": "TIER_ONE_RENT",
+      "phase3_change_type": "MAINTAINED",
+      "phase4_change_type": "MAINTAINED",
+      "summary_role": "CONTEXT",
+      "direct_focused_pages": [
+        {
+          "document_id": "DOC-211f45df17b98569c5f1",
+          "page": 8
+        },
+        {
+          "document_id": "DOC-543adbc0ebc09e5ce628",
+          "page": 9
+        }
+      ],
+      "finding_ids": []
+    },
+    {
+      "comparison_id": "TIER_ONE_TO_THREE_INCOME",
+      "phase3_change_type": "UPDATED",
+      "phase4_change_type": "UPDATED",
+      "summary_role": "SUPPORTING",
+      "direct_focused_pages": [
+        {
+          "document_id": "DOC-211f45df17b98569c5f1",
+          "page": 8
+        },
+        {
+          "document_id": "DOC-543adbc0ebc09e5ce628",
+          "page": 9
+        }
+      ],
+      "finding_ids": []
+    },
+    {
+      "comparison_id": "TIER_THREE_RENT",
+      "phase3_change_type": "MAINTAINED",
+      "phase4_change_type": "MAINTAINED",
+      "summary_role": "CONTEXT",
+      "direct_focused_pages": [
+        {
+          "document_id": "DOC-211f45df17b98569c5f1",
+          "page": 8
+        },
+        {
+          "document_id": "DOC-543adbc0ebc09e5ce628",
+          "page": 9
+        }
+      ],
+      "finding_ids": []
+    },
+    {
+      "comparison_id": "TIER_TWO_RENT",
+      "phase3_change_type": "MAINTAINED",
+      "phase4_change_type": "MAINTAINED",
+      "summary_role": "CONTEXT",
+      "direct_focused_pages": [
+        {
+          "document_id": "DOC-211f45df17b98569c5f1",
+          "page": 8
+        },
+        {
+          "document_id": "DOC-543adbc0ebc09e5ce628",
+          "page": 9
+        }
+      ],
+      "finding_ids": []
+    }
+  ],
+  "summary": {
+    "focused_problem_pages": 7,
+    "source_pages_checked_for_text_parity": 23,
+    "finding_count": 8,
+    "direct_comparison_count": 20,
+    "primary_direct_count": 4,
+    "contextual_or_direct_comparison_count": 21,
+    "phase3_item_count": 82,
+    "phase4_item_count": 82,
+    "human_attested_pages": 0,
+    "verified_policy_errors": 0
+  },
+  "trust_policy": {
+    "ai_analysis": "COMPLETED_UNAPPROVED",
+    "human_attestation": "NOT_RECORDED",
+    "authenticated_approval": "NOT_GRANTED"
+  },
+  "humanApproved": false,
+  "java_import_ready": false
+}

@@ -1,0 +1,222 @@
+{
+  "schema_version": 2,
+  "artifact_type": "POLICY_REVIEW_V2_DRAFT",
+  "status": "DRAFT_REVIEW_REQUIRED",
+  "run_id": "seoul_youth_rent_2025_2026_20261117_v1",
+  "policy_key": "seoul-youth-rent",
+  "source_bindings": {
+    "source_manifest_sha256": "a916e643d17b56b24ebf21e3fa0c3ba27b0cab65fa889bfc2752efb15e2ef9f9",
+    "page_analysis_sha256": "faa5970b4aa9bbf41cfdee0aad916a3dd806b61fd43ed7f94a3390bdfbb5d34e",
+    "phase3_result_sha256": "65713d53c0b77906c6bb96998df1a1cdf5cce4185310df6bf81f05be2090b906",
+    "phase4_result_sha256": "250363ecfec5934df1cb621034609b7a796a37e2add530506dbbe332dd8a61a3"
+  },
+  "review_scope": {
+    "pdf_pages": {
+      "DOC-211f45df17b98569c5f1": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "DOC-543adbc0ebc09e5ce628": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ]
+    },
+    "focused_pages": {
+      "DOC-211f45df17b98569c5f1": [
+        1,
+        4,
+        8,
+        10
+      ],
+      "DOC-543adbc0ebc09e5ce628": [
+        5,
+        8,
+        9,
+        10,
+        12,
+        13
+      ]
+    },
+    "finding_ids": [
+      "B-FINDING-001",
+      "B-FINDING-002",
+      "B-FINDING-003",
+      "B-FINDING-004",
+      "B-FINDING-005",
+      "B-FINDING-006",
+      "B-FINDING-007",
+      "B-FINDING-008"
+    ],
+    "comparison_ids": [
+      "ADMIN_CONSENT_ALTERNATIVES",
+      "ANNUAL_PROCESS_TIMELINE",
+      "APPLICATION_CHANNEL",
+      "APPLICATION_WINDOW",
+      "ASSET_EXCLUSION",
+      "AWARDEE_BANK_ACCOUNT",
+      "AWARDEE_BANK_ACCOUNT_EXISTING",
+      "BASIC_ELIGIBLE_AGE",
+      "BASIC_LIVELIHOOD_EXCLUSION",
+      "DOC_ADMIN_CONSENT",
+      "DOC_FAMILY_CERTIFICATE",
+      "DOC_LEASE_ALTERNATIVES",
+      "DOC_LEASE_CONTRACT",
+      "DOC_RENT_ALTERNATIVES",
+      "DOC_RENT_TRANSFER",
+      "DOC_SPECIAL_FRAUD",
+      "DOC_SPECIAL_SINGLE_PARENT",
+      "DOC_SPECIAL_VETERAN",
+      "DORMITORY_CONFIRMATION",
+      "EXCLUDE_JEONSE",
+      "FINAL_ANNOUNCEMENT",
+      "FOREIGN_NATIONAL_APPLICANT",
+      "GOV_SUPPORT_REFUND_ON_OVERLAP",
+      "HEALTH_INSURANCE_NURSING_FEE",
+      "HOME_OWNERSHIP_EXCLUSION",
+      "HOUSEHOLD_ELIGIBILITY",
+      "HOUSING_TYPES",
+      "HOUSING_VOUCHER_OFFSET",
+      "INCOME_ASSESSMENT_METHOD",
+      "INCOME_DEPENDENT_PARENT",
+      "INCOME_ELIGIBILITY",
+      "JOINT_TENANT_DUPLICATE",
+      "JOINT_TENANT_SHARE",
+      "LEASE_APPLICANT_IDENTITY",
+      "LEASE_CHANGE_EFFECT",
+      "LEASE_CHANGE_REPORT",
+      "LEASE_DEPOSIT_BASE",
+      "MANAGEMENT_FEE_EXCLUSION",
+      "MONTHLY_SUPPORT_CAP",
+      "NEWLYWED_RESIDENCE",
+      "NEW_SPECIAL_APPLICATION_GROUPS",
+      "NONYOUTH_CORESIDENT_RULE",
+      "OBJECTION_DOCUMENT_LIMITATION",
+      "OBJECTION_PERIOD",
+      "ONE_PERSON_INCOME_THRESHOLDS",
+      "OTHER_EXCLUSION",
+      "PAYMENT_CADENCE",
+      "PAYMENT_CALENDAR",
+      "PDF_UPLOAD_REQUIREMENT",
+      "PREPAID_RENT",
+      "PREVIOUS_BENEFICIARY_RESTRICTION",
+      "PROGRAM_TITLE",
+      "PUBLIC_RENTAL_EXCLUSION",
+      "RELATIVE_LANDLORD_EXCLUSION",
+      "RENT_BASE_MAX",
+      "RENT_BELOW_CAP_PAYMENT",
+      "RENT_CONVERSION_FORMULA",
+      "RENT_CONVERSION_RATE",
+      "RENT_CONVERSION_SUM_CAP",
+      "RESIDENCE_REGISTRATION",
+      "REVIEW_ANNOUNCEMENT",
+      "SELECTION_METHOD",
+      "SHARE_HOUSE_SUPPORT",
+      "SIMILAR_SUPPORT_EXCLUSION",
+      "SIMILAR_SUPPORT_SAME_MONTH_STOP",
+      "SUBLET_DOC_REQUIRED_ITEMS",
+      "SUPPORT_MONTHS",
+      "SUSPENSION_CONDITIONS",
+      "SUSPENSION_EFFECT",
+      "SUSPENSION_NO_RESUME",
+      "TARGET_GROUP_QUOTA",
+      "TIER_DISTRIBUTION",
+      "TIER_FOUR_EXCEPTION",
+      "TIER_FOUR_INCOME",
+      "TIER_FOUR_RENT",
+      "TIER_ONE_RENT",
+      "TIER_ONE_TO_THREE_INCOME",
+      "TIER_THREE_RENT",
+      "TIER_TWO_RENT",
+      "TOTAL_SELECTION_CAPACITY",
+      "VEHICLE_EXCLUSION",
+      "VETERAN_AGE_EXTENSION"
+    ],
+    "review_task_ids": [
+      "ADMIN_CONSENT_ALTERNATIVES",
+      "DOC_ADMIN_CONSENT",
+      "DOC_LEASE_ALTERNATIVES",
+      "DOC_SPECIAL_FRAUD",
+      "DOC_SPECIAL_SINGLE_PARENT",
+      "DOC_SPECIAL_VETERAN",
+      "DORMITORY_CONFIRMATION",
+      "GOV_SUPPORT_REFUND_ON_OVERLAP",
+      "HEALTH_INSURANCE_NURSING_FEE",
+      "NEWLYWED_RESIDENCE",
+      "NEW_SPECIAL_APPLICATION_GROUPS",
+      "NONYOUTH_CORESIDENT_RULE",
+      "OBJECTION_DOCUMENT_LIMITATION",
+      "ONE_PERSON_INCOME_THRESHOLDS",
+      "PAYMENT_CADENCE",
+      "PREVIOUS_BENEFICIARY_RESTRICTION",
+      "RENT_BELOW_CAP_PAYMENT",
+      "SIMILAR_SUPPORT_EXCLUSION",
+      "SIMILAR_SUPPORT_SAME_MONTH_STOP",
+      "SUSPENSION_EFFECT",
+      "SUSPENSION_NO_RESUME",
+      "VETERAN_AGE_EXTENSION"
+    ],
+    "split_relations": [
+      {
+        "parent_id": "DOC_LEASE_ALTERNATIVES",
+        "child_ids": [
+          "SUBLET_DOC_REQUIRED_ITEMS",
+          "DORMITORY_CONFIRMATION"
+        ]
+      },
+      {
+        "parent_id": "SUSPENSION_EFFECT",
+        "child_ids": [
+          "SIMILAR_SUPPORT_SAME_MONTH_STOP",
+          "SUSPENSION_NO_RESUME"
+        ]
+      }
+    ],
+    "additional_candidate_ids": [
+      "RENT_TRANSFER_UNMASKED_DETAILS"
+    ]
+  },
+  "pdf_source_checks": [
+    {
+      "document_id": "DOC-211f45df17b98569c5f1",
+      "local_pdf_sha256": "6288e029484140bff4e7a3a5de64691d8230f07b04bae47d7dbcb25300cd0df4",
+      "official_page_url": "https://housing.seoul.go.kr/site/main/board/notice/12478",
+      "official_download_url": "https://housing.seoul.go.kr/site/main/file/download/uu/8ae2302eaf1c4ef8bb378287786c3d9e",
+      "remote_status": "NOT_CHECKED",
+      "remote_sha256": null,
+      "remote_checked_at": null,
+      "remote_verifier_id": null
+    },
+    {
+      "document_id": "DOC-543adbc0ebc09e5ce628",
+      "local_pdf_sha256": "80de4494292b3d7526749bddf12509843d4ffd9a8ae2d944a32cb33c008e0f1d",
+      "official_page_url": "https://housing.seoul.go.kr/site/main/board/notice/12667",
+      "official_download_url": "https://housing.seoul.go.kr/site/main/file/download/uu/da39f9221c574254a6c8bc52327495f5",
+      "remote_status": "NOT_CHECKED",
+      "remote_sha256": null,
+      "remote_checked_at": null,
+      "remote_verifier_id": null
+    }
+  ],
+  "events": [],
+  "humanApproved": false,
+  "java_import_ready": false
+}

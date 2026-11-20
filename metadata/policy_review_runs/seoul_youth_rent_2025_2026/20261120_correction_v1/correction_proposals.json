@@ -1,0 +1,2570 @@
+{
+  "schema_version": 1,
+  "artifact_type": "POLICY_CORRECTION_PROPOSALS",
+  "proposal_run_id": "seoul_youth_rent_2025_2026_20261120_correction_v1",
+  "policy_key": "seoul-youth-rent",
+  "status": "AI_ANALYSIS_PROPOSAL",
+  "baseline_bindings": {
+    "source_manifest_sha256": "a916e643d17b56b24ebf21e3fa0c3ba27b0cab65fa889bfc2752efb15e2ef9f9",
+    "page_analysis_sha256": "faa5970b4aa9bbf41cfdee0aad916a3dd806b61fd43ed7f94a3390bdfbb5d34e",
+    "phase3_result_sha256": "65713d53c0b77906c6bb96998df1a1cdf5cce4185310df6bf81f05be2090b906",
+    "phase4_result_sha256": "250363ecfec5934df1cb621034609b7a796a37e2add530506dbbe332dd8a61a3",
+    "initial_draft_sha256": "7acc1dbf9c0e07034ec661c7fc90f8aa4835d8dae92af583086000060b6761db"
+  },
+  "trust": {
+    "ai_analysis": "PROPOSAL_ONLY",
+    "human_attestation": "NOT_RECORDED",
+    "authenticated_approval": "NOT_GRANTED",
+    "gate_trust_updated": false
+  },
+  "source_observations": [
+    {
+      "document_id": "DOC-211f45df17b98569c5f1",
+      "source_page_url": "https://housing.seoul.go.kr/site/main/board/notice/12478",
+      "download_url": "https://housing.seoul.go.kr/site/main/file/download/uu/8ae2302eaf1c4ef8bb378287786c3d9e",
+      "size_bytes": 395107,
+      "local_sha256": "6288e029484140bff4e7a3a5de64691d8230f07b04bae47d7dbcb25300cd0df4",
+      "remote_sha256": "6288e029484140bff4e7a3a5de64691d8230f07b04bae47d7dbcb25300cd0df4",
+      "status": "PRIOR_SESSION_BYTES_MATCH_REPORTED",
+      "recorded_from": "PRIOR_CONVERSATION_TOOL_RESULT",
+      "checked_at": null,
+      "time_status": "UNKNOWN",
+      "time_reason": "EXACT_TIMESTAMP_NOT_CAPTURED_IN_PRIOR_TOOL_RESULT"
+    },
+    {
+      "document_id": "DOC-543adbc0ebc09e5ce628",
+      "source_page_url": "https://housing.seoul.go.kr/site/main/board/notice/12667",
+      "download_url": "https://housing.seoul.go.kr/site/main/file/download/uu/da39f9221c574254a6c8bc52327495f5",
+      "size_bytes": 413817,
+      "local_sha256": "80de4494292b3d7526749bddf12509843d4ffd9a8ae2d944a32cb33c008e0f1d",
+      "remote_sha256": "80de4494292b3d7526749bddf12509843d4ffd9a8ae2d944a32cb33c008e0f1d",
+      "status": "PRIOR_SESSION_BYTES_MATCH_REPORTED",
+      "recorded_from": "PRIOR_CONVERSATION_TOOL_RESULT",
+      "checked_at": null,
+      "time_status": "UNKNOWN",
+      "time_reason": "EXACT_TIMESTAMP_NOT_CAPTURED_IN_PRIOR_TOOL_RESULT"
+    }
+  ],
+  "supplemental_sources": [
+    {
+      "source_id": "FAQ_2025",
+      "year": 2025,
+      "url": "https://housing.seoul.go.kr/site/main/file/download/uu/63d9bfeaf7c54c2c9eca09d9c5d77b38",
+      "sha256": "4f49dc33335e5a87a055d4fd6a4cf39cbd7c88a6ff728b2567403a4fe19b468f",
+      "size_bytes": 356063,
+      "page": 19,
+      "question": "Q45",
+      "quote": "예시) 월세 108,000원은 100,000원으로 입력",
+      "status": "PRIOR_SESSION_BYTES_OBSERVED_NOT_REVALIDATED",
+      "recorded_from": "PRIOR_CONVERSATION_TOOL_RESULT",
+      "checked_at": null,
+      "time_status": "UNKNOWN",
+      "time_reason": "EXACT_TIMESTAMP_NOT_CAPTURED_IN_PRIOR_TOOL_RESULT"
+    },
+    {
+      "source_id": "FAQ_2026",
+      "year": 2026,
+      "url": "https://housing.seoul.go.kr/site/main/file/download/uu/ba90cf52ce02456e9ce2f43303d81914",
+      "sha256": "749d68eab00c69096a33df572dac58b80d0cd40b88cd63f71d58449e0790f4dc",
+      "size_bytes": 361411,
+      "page": 25,
+      "question": "Q51",
+      "quote": "예시) 월세 108,000원은 100,000원으로 입력",
+      "status": "PRIOR_SESSION_BYTES_OBSERVED_NOT_REVALIDATED",
+      "recorded_from": "PRIOR_CONVERSATION_TOOL_RESULT",
+      "checked_at": null,
+      "time_status": "UNKNOWN",
+      "time_reason": "EXACT_TIMESTAMP_NOT_CAPTURED_IN_PRIOR_TOOL_RESULT"
+    }
+  ],
+  "p0_items": [
+    {
+      "comparison_id": "PREVIOUS_BENEFICIARY_RESTRICTION",
+      "baseline_snapshot": {
+        "comparison_id": "PREVIOUS_BENEFICIARY_RESTRICTION",
+        "label": "기존 수혜 이력·타 사업 중복지원",
+        "scope_id": "APPLICANT_ALL",
+        "proposed_change_type": "INCONCLUSIVE",
+        "review_status": "PENDING_REVIEW",
+        "human_approved": false,
+        "adjudication_reason": "서울시 기수혜 제한은 공통이나 자치구 사업의 선정자/수혜중 기준 차이 확인 필요. 2025년에도 국토부 지원 종료 시 신청 가능 (재판정 권장안, 원본 PDF 시각 검토 전)",
+        "change_group_id": "GROUP_PREVIOUS_BENEFICIARY_RESTRICTION",
+        "change_key": "PREVIOUS_BENEFICIARY_RESTRICTION",
+        "summary_role": "REVIEW_ONLY",
+        "parent_comparison_id": null,
+        "previous": {
+          "value": "서울시 청년월세지원 기수혜자 및 국토교통부 청년월세 한시 특별지원 수혜 중인 자, ’25년 자치구 자체 청년월세지원 사업 지원자 선정자 제외",
+          "source_type": "REVIEWED",
+          "document_id": "DOC-211f45df17b98569c5f1",
+          "source_cleaned_sha256": "fe7dc7afb0c64886683e0eee96f6557c473edd367ceece5f93b8a5f41ba692b2",
+          "reviewed_fields": [
+            {
+              "field_key": "EXCLUDED_PREVIOUS_BENEFICIARIES",
+              "label": "기수혜자 및 중복지원 제한",
+              "scope": "전체 신청자",
+              "value": "서울시 청년월세지원 기수혜자 및 국토교통부 청년월세 한시 특별지원 수혜 중인 자, ’25년 자치구 자체 청년월세지원 사업 지원자 선정자 제외",
+              "evidence": {
+                "page": 1,
+                "quote": "※ 서울시 청년월세지원 기수혜자 및 국토교통부 청년월세 한시 특별지원 수혜 중인 자,\n’25년 자치구 자체 청년월세지원 사업(은평, 광진 등) 지원자로 선정된 사람은 지원 불가"
+              }
+            }
+          ],
+          "supplemental_quotes": [],
+          "pdf_visual_reviewed": false,
+          "missing_reason": null
+        },
+        "current": {
+          "value": "국토교통부 청년월세 지원 수혜 중인 자는 신청 불가, 단 신청일 전 지원 종료 시 신청 가능 / 서울시 청년월세지원금 기선정자로 수급 이력이 있는 경우 신청 유형을 달리하여도 신청 불가 / 서울시 청년수당, 자치구 청년월세지원, 자립준비청년 월세·기숙사비 지원 등 유사 사업 수혜 중인 사람은 제외하나 신청 전 타 사업 수급 종료 시 신청 가능",
+          "source_type": "REVIEWED",
+          "document_id": "DOC-543adbc0ebc09e5ce628",
+          "source_cleaned_sha256": "46972707cc2c7be0f414a8bbe3e30629ccaa31fc7868e34dda40c3c0a0f73be9",
+          "reviewed_fields": [
+            {
+              "field_key": "EXCLUSION_NATIONAL_SUPPORT",
+              "label": "국토교통부 청년월세 지원 수혜자 제외 조건",
+              "scope": "전체 지원 대상",
+              "value": "국토교통부 청년월세 지원 수혜 중인 자는 신청 불가, 단 신청일 전 지원 종료 시 신청 가능",
+              "evidence": {
+                "page": 6,
+                "quote": "ㅇ 국토교통부 청년월세 지원을 수혜 중인 사람\n※ 신청일 전 지원 종료 시 신청 가능"
+              }
+            },
+            {
+              "field_key": "EXCLUSION_PREVIOUS_SEOUL_SUPPORT",
+              "label": "서울시 청년월세지원 기수혜자 제외",
+              "scope": "전체 지원 대상",
+              "value": "서울시 청년월세지원금 기선정자로 수급 이력이 있는 경우 신청 유형을 달리하여도 신청 불가",
+              "evidence": {
+                "page": 6,
+                "quote": "ㅇ 서울시 청년월세지원금 기선정자로 수급 이력이 있는 사람\n※ 신청유형을 달리하여도, 신청자 본인의 과거 선정 이력이 있으면 신청 불가"
+              }
+            },
+            {
+              "field_key": "EXCLUSION_SIMILAR_SUPPORT",
+              "label": "유사 사업 중복 수혜 제외",
+              "scope": "전체 지원 대상",
+              "value": "서울시 청년수당, 자치구 청년월세지원, 자립준비청년 월세·기숙사비 지원 등 유사 사업 수혜 중인 사람은 제외하나 신청 전 타 사업 수급 종료 시 신청 가능",
+              "evidence": {
+                "page": 6,
+                "quote": "ㅇ 서울시 청년수당을 받고 있는 사람, 자치구(은평, 광진 등) 청년월세지원을 수혜 중인\n사람, 자립준비청년 월세․기숙사비 지원 등 유사 사업 수혜를 받고 있는 사람\n※ 신청 전 타 사업 수급 등이 종료된 경우 신청 가능(예시 : 4월까지 수급, 5월 미수급일 경우 신청 가능)"
+              }
+            }
+          ],
+          "supplemental_quotes": [],
+          "pdf_visual_reviewed": false,
+          "missing_reason": null
+        }
+      },
+      "recommendation": {
+        "proposed_change_type": "INCONCLUSIVE",
+        "previous_value": "서울시 기선정·수급 이력 제한, 국토부 수혜 중 제한, 2025년 자치구 선정자 제한. 국토부·타 사업 종료 예외 존재.",
+        "current_value": "서울시 기선정·수급 이력 제한 및 유형 변경 불가, 국토부·자치구 수혜 중 제한과 종료 예외.",
+        "explanation": "2025년에도 종료 예외가 있으므로 자치구 선정자/수혜 중 표현 차이만으로 제한 완화를 확정하지 않는다.",
+        "scope_note": "전체 신청자 중 사업별 과거 이력·현재 수혜·종료 시점을 구분한다.",
+        "target_fields": [
+          "previous.value",
+          "current.value",
+          "adjudication_reason"
+        ],
+        "counting_policy": "PRESERVE_BASELINE_NO_ADDITIONAL_COUNT",
+        "unresolved_questions": [
+          "자치구 선정 후 미지급자·수급 종료자에 대한 2025 실무 적용 범위 확인 필요."
+        ]
+      },
+      "evidence": [
+        {
+          "document_id": "DOC-211f45df17b98569c5f1",
+          "year": 2025,
+          "pdf_sha256": "6288e029484140bff4e7a3a5de64691d8230f07b04bae47d7dbcb25300cd0df4",
+          "page": 1,
+          "quote": "’25년 자치구 자체 청년월세지원 사업(은평, 광진 등) 지원자로 선정된 사람은 지원 불가",
+          "verification": "AI_TEXT_OBSERVATION_NOT_HUMAN_ATTESTATION"
+        },
+        {
+          "document_id": "DOC-211f45df17b98569c5f1",
+          "year": 2025,
+          "pdf_sha256": "6288e029484140bff4e7a3a5de64691d8230f07b04bae47d7dbcb25300cd0df4",
+          "page": 5,
+          "quote": "※ 신청일 전 지원 종료 시 신청 가능",
+          "verification": "AI_TEXT_OBSERVATION_NOT_HUMAN_ATTESTATION"
+        },
+        {
+          "document_id": "DOC-211f45df17b98569c5f1",
+          "year": 2025,
+          "pdf_sha256": "6288e029484140bff4e7a3a5de64691d8230f07b04bae47d7dbcb25300cd0df4",
+          "page": 5,
+          "quote": "※ ‘사업 신청일’ 기준으로 타 사업 수급 등이 종료된 경우 신청 가능",
+          "verification": "AI_TEXT_OBSERVATION_NOT_HUMAN_ATTESTATION"
+        },
+        {
+          "document_id": "DOC-543adbc0ebc09e5ce628",
+          "year": 2026,
+          "pdf_sha256": "80de4494292b3d7526749bddf12509843d4ffd9a8ae2d944a32cb33c008e0f1d",
+          "page": 6,
+          "quote": "※ 신청유형을 달리하여도, 신청자 본인의 과거 선정 이력이 있으면 신청 불가",
+          "verification": "AI_TEXT_OBSERVATION_NOT_HUMAN_ATTESTATION"
+        },
+        {
+          "document_id": "DOC-543adbc0ebc09e5ce628",
+          "year": 2026,
+          "pdf_sha256": "80de4494292b3d7526749bddf12509843d4ffd9a8ae2d944a32cb33c008e0f1d",
+          "page": 6,
+          "quote": "※ 신청 전 타 사업 수급 등이 종료된 경우 신청 가능(예시 : 4월까지 수급, 5월 미수급일 경우 신청 가능)",
+          "verification": "AI_TEXT_OBSERVATION_NOT_HUMAN_ATTESTATION"
+        }
+      ],
+      "absence_analysis": {
+        "document_id": "DOC-211f45df17b98569c5f1",
+        "pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "method": "PRIOR_AI_FULL_DOCUMENT_TEXT_REVIEW",
+        "conclusion": "NOT_APPLICABLE",
+        "human_attested": false
+      },
+      "dependencies": {
+        "baseline_scope_id": "APPLICANT_ALL",
+        "change_group_id": "GROUP_PREVIOUS_BENEFICIARY_RESTRICTION",
+        "change_key": "PREVIOUS_BENEFICIARY_RESTRICTION",
+        "summary_role": "REVIEW_ONLY",
+        "parent_comparison_id": null,
+        "child_ids": [],
+        "same_change_key_ids": []
+      },
+      "related_comparison_ids": [
+        "SIMILAR_SUPPORT_EXCLUSION",
+        "GOV_SUPPORT_REFUND_ON_OVERLAP"
+      ],
+      "assessment": {
+        "disposition": "INSUFFICIENT_EVIDENCE",
+        "severity": "MEDIUM",
+        "verification_status": "AI_SOURCE_ANALYSIS_HUMAN_UNATTESTED",
+        "finalization": "NOT_FINAL"
+      },
+      "event_compatibility": {
+        "automatic_conversion": false,
+        "status": "INSUFFICIENT_EVIDENCE",
+        "prerequisites": [
+          "EXPLICIT_HUMAN_REVIEW",
+          "SEPARATE_EXECUTION_APPROVAL"
+        ],
+        "supplemental_source_ids": []
+      }
+    },
+    {
+      "comparison_id": "RENT_BELOW_CAP_PAYMENT",
+      "baseline_snapshot": {
+        "comparison_id": "RENT_BELOW_CAP_PAYMENT",
+        "label": "월세 20만원 미만 지급 산정",
+        "scope_id": "AWARDEES",
+        "proposed_change_type": "INCONCLUSIVE",
+        "review_status": "PENDING_REVIEW",
+        "human_approved": false,
+        "adjudication_reason": "월세액 지급 원칙은 동일. 2025년 지원액 천원 절사 표현이 2026년 지원액 문단에는 없음. 2026년 p.4 천원 절사는 환산 예시와 구분 (재판정 권장안, 원본 PDF 시각 검토 전)",
+        "change_group_id": "GROUP_RENT_BELOW_CAP_PAYMENT",
+        "change_key": "RENT_BELOW_CAP_PAYMENT",
+        "summary_role": "REVIEW_ONLY",
+        "parent_comparison_id": null,
+        "previous": {
+          "value": "20만원 미만 월세 계약은 임대차계약서에 표기된 월세 금액만 지원(천원 단위 절사)",
+          "source_type": "REVIEWED",
+          "document_id": "DOC-211f45df17b98569c5f1",
+          "source_cleaned_sha256": "fe7dc7afb0c64886683e0eee96f6557c473edd367ceece5f93b8a5f41ba692b2",
+          "reviewed_fields": [
+            {
+              "field_key": "SUPPORT_AMOUNT_MINIMUM_MONTHLY",
+              "label": "월세 20만원 미만 계약 지원금액",
+              "scope": "전체 선정자",
+              "value": "20만원 미만 월세 계약은 임대차계약서에 표기된 월세 금액만 지원(천원 단위 절사)",
+              "evidence": {
+                "page": 1,
+                "quote": "※ 20만원 미만 월세 계약은 임대차계약서에 표기된 월세 금액만 지원(천원 단위 절사)"
+              }
+            }
+          ],
+          "supplemental_quotes": [],
+          "pdf_visual_reviewed": false,
+          "missing_reason": null
+        },
+        "current": {
+          "value": "20만원 미만 월세 계약은 임대차계약서상 월세 금액만 지급하며 관리비는 제외",
+          "source_type": "REVIEWED",
+          "document_id": "DOC-543adbc0ebc09e5ce628",
+          "source_cleaned_sha256": "46972707cc2c7be0f414a8bbe3e30629ccaa31fc7868e34dda40c3c0a0f73be9",
+          "reviewed_fields": [
+            {
+              "field_key": "SUPPORT_AMOUNT_LIMIT",
+              "label": "월세 계약 금액 미만 지원",
+              "scope": "전체 지원 대상",
+              "value": "20만원 미만 월세 계약은 임대차계약서상 월세 금액만 지급하며 관리비는 제외",
+              "evidence": {
+                "page": 2,
+                "quote": "※ 20만원 미만 월세 계약은 임대차계약서에 표기된 월세 금액만 지원\n(관리비가 포함된 경우 관리비 제외하고 월세만 지급)"
+              }
+            }
+          ],
+          "supplemental_quotes": [],
+          "pdf_visual_reviewed": false,
+          "missing_reason": null
+        }
+      },
+      "recommendation": {
+        "proposed_change_type": "INCONCLUSIVE",
+        "previous_value": "20만원 미만 월세 지원(천원 단위 절사), 108,000원→월 100,000원 지원 예시.",
+        "current_value": "20만원 미만 월세 금액 지원, 관리비 제외. 지급액 문단에 절사 예시 없음.",
+        "explanation": "2025 공고의 지급 예시와 양 연도 FAQ의 입력 예시는 108,000원→100,000원이다. 공고 오류나 2026 지급 방식 변경을 확정하지 않는다.",
+        "scope_note": "신청 월세 입력, 지원금 지급, 자격 판정용 보증금 환산을 구분한다.",
+        "target_fields": [
+          "previous.value",
+          "current.value",
+          "adjudication_reason"
+        ],
+        "counting_policy": "PRESERVE_BASELINE_NO_ADDITIONAL_COUNT",
+        "unresolved_questions": [
+          "FAQ는 입력 안내이다. 2026 실제 지급 산식과 동일하다고 확정할 수 없으며 별도 정정문은 확인하지 못했다."
+        ]
+      },
+      "evidence": [
+        {
+          "document_id": "DOC-211f45df17b98569c5f1",
+          "year": 2025,
+          "pdf_sha256": "6288e029484140bff4e7a3a5de64691d8230f07b04bae47d7dbcb25300cd0df4",
+          "page": 1,
+          "quote": "※ 20만원 미만 월세 계약은 임대차계약서에 표기된 월세 금액만 지원(천원 단위 절사)",
+          "verification": "AI_TEXT_OBSERVATION_NOT_HUMAN_ATTESTATION"
+        },
+        {
+          "document_id": "DOC-211f45df17b98569c5f1",
+          "year": 2025,
+          "pdf_sha256": "6288e029484140bff4e7a3a5de64691d8230f07b04bae47d7dbcb25300cd0df4",
+          "page": 1,
+          "quote": "예시) 차임(월세) 108,000원은 월 10만원 지원/ 관리비가 포함된 경우 관리비 제외하고 월세만 지급",
+          "verification": "AI_TEXT_OBSERVATION_NOT_HUMAN_ATTESTATION"
+        },
+        {
+          "document_id": "DOC-543adbc0ebc09e5ce628",
+          "year": 2026,
+          "pdf_sha256": "80de4494292b3d7526749bddf12509843d4ffd9a8ae2d944a32cb33c008e0f1d",
+          "page": 2,
+          "quote": "※ 20만원 미만 월세 계약은 임대차계약서에 표기된 월세 금액만 지원",
+          "verification": "AI_TEXT_OBSERVATION_NOT_HUMAN_ATTESTATION"
+        }
+      ],
+      "absence_analysis": {
+        "document_id": "DOC-211f45df17b98569c5f1",
+        "pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "method": "PRIOR_AI_FULL_DOCUMENT_TEXT_REVIEW",
+        "conclusion": "NOT_APPLICABLE",
+        "human_attested": false
+      },
+      "dependencies": {
+        "baseline_scope_id": "AWARDEES",
+        "change_group_id": "GROUP_RENT_BELOW_CAP_PAYMENT",
+        "change_key": "RENT_BELOW_CAP_PAYMENT",
+        "summary_role": "REVIEW_ONLY",
+        "parent_comparison_id": null,
+        "child_ids": [],
+        "same_change_key_ids": []
+      },
+      "related_comparison_ids": [
+        "RENT_CONVERSION_FORMULA",
+        "MANAGEMENT_FEE_EXCLUSION"
+      ],
+      "assessment": {
+        "disposition": "INSUFFICIENT_EVIDENCE",
+        "severity": "MEDIUM",
+        "verification_status": "AI_SOURCE_ANALYSIS_HUMAN_UNATTESTED",
+        "finalization": "NOT_FINAL"
+      },
+      "event_compatibility": {
+        "automatic_conversion": false,
+        "status": "INSUFFICIENT_EVIDENCE",
+        "prerequisites": [
+          "EXPLICIT_HUMAN_REVIEW",
+          "SEPARATE_EXECUTION_APPROVAL"
+        ],
+        "supplemental_source_ids": [
+          "FAQ_2025",
+          "FAQ_2026"
+        ]
+      }
+    },
+    {
+      "comparison_id": "ONE_PERSON_INCOME_THRESHOLDS",
+      "baseline_snapshot": {
+        "comparison_id": "ONE_PERSON_INCOME_THRESHOLDS",
+        "label": "1인 가구 기준 금액 표",
+        "scope_id": "INCOME_TABLE",
+        "proposed_change_type": "INCONCLUSIVE",
+        "review_status": "PENDING_REVIEW",
+        "human_approved": false,
+        "adjudication_reason": "2025년 보험료 127,230원과 2026년 소득 기준 1,230,834원 등은 측정 지표와 목적이 달라 직접 금액 비교 불가 (재판정 권장안, 원본 PDF 시각 검토 전)",
+        "change_group_id": "GROUP_ONE_PERSON_INCOME_THRESHOLDS",
+        "change_key": "ONE_PERSON_INCOME_THRESHOLDS",
+        "summary_role": "REVIEW_ONLY",
+        "parent_comparison_id": null,
+        "previous": {
+          "value": "직장가입자(가구원수 1인)의 ’25년 3월~5월 건강보험료 납부액 평균 127,230원 이하",
+          "source_type": "REVIEWED",
+          "document_id": "DOC-211f45df17b98569c5f1",
+          "source_cleaned_sha256": "fe7dc7afb0c64886683e0eee96f6557c473edd367ceece5f93b8a5f41ba692b2",
+          "reviewed_fields": [
+            {
+              "field_key": "HEALTH_INSURANCE_PREMIUM_LIMITS_1PERSON_150PERCENT",
+              "label": "1인 가구 직장가입자 건강보험료 기준",
+              "scope": "건강보험 직장가입자(가구원수 1인)",
+              "value": "직장가입자(가구원수 1인)의 ’25년 3월~5월 건강보험료 납부액 평균 127,230원 이하",
+              "evidence": {
+                "page": 4,
+                "quote": "예시1) 신청인의 건강보험이 직장가입자(가구원수 1인)로 부과\n⇒ 신청인의 ’25년 3월~5월 건강보험료 납부액 평균이 127,230원 이하이면 요건 충족"
+              }
+            }
+          ],
+          "supplemental_quotes": [],
+          "pdf_visual_reviewed": false,
+          "missing_reason": null
+        },
+        "current": {
+          "value": "1,230,834 (단위: 원) / 3,846,357 (단위: 원) / 2,564,238 (단위: 원) / 3,077,086 (단위: 원)",
+          "source_type": "REVIEWED",
+          "document_id": "DOC-543adbc0ebc09e5ce628",
+          "source_cleaned_sha256": "46972707cc2c7be0f414a8bbe3e30629ccaa31fc7868e34dda40c3c0a0f73be9",
+          "reviewed_fields": [
+            {
+              "field_key": "INCOME_LIMIT_1PERSON_48",
+              "label": "1인 가구 기준 중위소득 48% 금액",
+              "scope": "1인 가구",
+              "value": "1,230,834 (단위: 원)",
+              "evidence": {
+                "page": 5,
+                "quote": "(단위 : 원)\n구분 1인 가구 2인 가구 3인 가구 4인 가구 5인 가구 6인 가구 7인 가구\n중위 48% 1,230,834 2,015,660 2,572,337 3,117,474 3,627,225 4,106,857 4,567,272"
+              }
+            },
+            {
+              "field_key": "INCOME_LIMIT_1PERSON_150",
+              "label": "1인 가구 기준 중위소득 150% 금액",
+              "scope": "1인 가구",
+              "value": "3,846,357 (단위: 원)",
+              "evidence": {
+                "page": 5,
+                "quote": "(단위 : 원)\n구분 1인 가구 2인 가구 3인 가구 4인 가구 5인 가구 6인 가구 7인 가구\n중위 48% 1,230,834 2,015,660 2,572,337 3,117,474 3,627,225 4,106,857 4,567,272\n중위 100% 2,564,238 4,199,292 5,359,036 6,494,738 7,556,719 8,555,952 9,515,150\n중위 120% 3,077,086 5,039,150 6,430,843 7,793,686 9,068,063 10,267,142 11,418,180\n중위 150% 3,846,357 6,298,938 8,038,554 9,742,107 11,335,079 12,833,928 14,272,725"
+              }
+            },
+            {
+              "field_key": "INCOME_LIMIT_1PERSON_100",
+              "label": "1인 가구 기준 중위소득 100% 금액",
+              "scope": "1인 가구",
+              "value": "2,564,238 (단위: 원)",
+              "evidence": {
+                "page": 5,
+                "quote": "(단위 : 원)\n구분 1인 가구 2인 가구 3인 가구 4인 가구 5인 가구 6인 가구 7인 가구\n중위 48% 1,230,834 2,015,660 2,572,337 3,117,474 3,627,225 4,106,857 4,567,272\n중위 100% 2,564,238 4,199,292 5,359,036 6,494,738 7,556,719 8,555,952 9,515,150"
+              }
+            },
+            {
+              "field_key": "INCOME_LIMIT_1PERSON_120",
+              "label": "1인 가구 기준 중위소득 120% 금액",
+              "scope": "1인 가구",
+              "value": "3,077,086 (단위: 원)",
+              "evidence": {
+                "page": 5,
+                "quote": "(단위 : 원)\n구분 1인 가구 2인 가구 3인 가구 4인 가구 5인 가구 6인 가구 7인 가구\n중위 48% 1,230,834 2,015,660 2,572,337 3,117,474 3,627,225 4,106,857 4,567,272\n중위 100% 2,564,238 4,199,292 5,359,036 6,494,738 7,556,719 8,555,952 9,515,150\n중위 120% 3,077,086 5,039,150 6,430,843 7,793,686 9,068,063 10,267,142 11,418,180"
+              }
+            }
+          ],
+          "supplemental_quotes": [],
+          "pdf_visual_reviewed": false,
+          "missing_reason": null
+        }
+      },
+      "recommendation": {
+        "proposed_change_type": "UPDATED",
+        "previous_value": "1인 직장가입자의 2025년 3~5월 건강보험료 납부액 평균 127,230원 이하 예시.",
+        "current_value": "최근 소득금액증명원 월평균 소득. 1인 기준 1,230,834원 초과~3,846,357원 이하.",
+        "explanation": "판정 방식과 적용 기준의 실질 변경이다. 보험료와 소득액은 직접 증감 비교 불가. 대표 변경은 소득 판정 방식·자격 항목에서 집계한다.",
+        "scope_note": "건강보험상 가구 기준. 피부양자는 주소 분리와 별개로 부양자 기준이다. 모든 1인 거주자에게 1인 표를 일괄 적용하지 않는다.",
+        "target_fields": [
+          "previous.value",
+          "current.value",
+          "adjudication_reason"
+        ],
+        "counting_policy": "PRESERVE_BASELINE_NO_ADDITIONAL_COUNT",
+        "unresolved_questions": [
+          "개별 신청인의 적용 가구원 수·피부양자 판단은 이 비교만으로 확정하지 않는다."
+        ]
+      },
+      "evidence": [
+        {
+          "document_id": "DOC-211f45df17b98569c5f1",
+          "year": 2025,
+          "pdf_sha256": "6288e029484140bff4e7a3a5de64691d8230f07b04bae47d7dbcb25300cd0df4",
+          "page": 4,
+          "quote": "⇒ 신청인의 ’25년 3월~5월 건강보험료 납부액 평균이 127,230원 이하이면 요건 충족",
+          "verification": "AI_TEXT_OBSERVATION_NOT_HUMAN_ATTESTATION"
+        },
+        {
+          "document_id": "DOC-543adbc0ebc09e5ce628",
+          "year": 2026,
+          "pdf_sha256": "80de4494292b3d7526749bddf12509843d4ffd9a8ae2d944a32cb33c008e0f1d",
+          "page": 5,
+          "quote": "- 건강보험상 신청인이 속한 가구의 최근 소득금액증명원상 월 평균 소득이",
+          "verification": "AI_TEXT_OBSERVATION_NOT_HUMAN_ATTESTATION"
+        },
+        {
+          "document_id": "DOC-543adbc0ebc09e5ce628",
+          "year": 2026,
+          "pdf_sha256": "80de4494292b3d7526749bddf12509843d4ffd9a8ae2d944a32cb33c008e0f1d",
+          "page": 5,
+          "quote": "중위 48% 1,230,834 2,015,660 2,572,337 3,117,474 3,627,225 4,106,857 4,567,272",
+          "verification": "AI_TEXT_OBSERVATION_NOT_HUMAN_ATTESTATION"
+        },
+        {
+          "document_id": "DOC-543adbc0ebc09e5ce628",
+          "year": 2026,
+          "pdf_sha256": "80de4494292b3d7526749bddf12509843d4ffd9a8ae2d944a32cb33c008e0f1d",
+          "page": 5,
+          "quote": "중위 150% 3,846,357 6,298,938 8,038,554 9,742,107 11,335,079 12,833,928 14,272,725",
+          "verification": "AI_TEXT_OBSERVATION_NOT_HUMAN_ATTESTATION"
+        }
+      ],
+      "absence_analysis": {
+        "document_id": "DOC-211f45df17b98569c5f1",
+        "pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "method": "PRIOR_AI_FULL_DOCUMENT_TEXT_REVIEW",
+        "conclusion": "NOT_APPLICABLE",
+        "human_attested": false
+      },
+      "dependencies": {
+        "baseline_scope_id": "INCOME_TABLE",
+        "change_group_id": "GROUP_ONE_PERSON_INCOME_THRESHOLDS",
+        "change_key": "ONE_PERSON_INCOME_THRESHOLDS",
+        "summary_role": "REVIEW_ONLY",
+        "parent_comparison_id": null,
+        "child_ids": [],
+        "same_change_key_ids": []
+      },
+      "related_comparison_ids": [
+        "INCOME_ASSESSMENT_METHOD",
+        "INCOME_ELIGIBILITY",
+        "INCOME_DEPENDENT_PARENT"
+      ],
+      "assessment": {
+        "disposition": "REVISE_PROPOSAL",
+        "severity": "MEDIUM",
+        "verification_status": "AI_SOURCE_ANALYSIS_HUMAN_UNATTESTED",
+        "finalization": "NOT_FINAL"
+      },
+      "event_compatibility": {
+        "automatic_conversion": false,
+        "status": "HUMAN_REVIEW_AND_STAGE_B_REQUIRED",
+        "prerequisites": [
+          "EXPLICIT_HUMAN_REVIEW",
+          "SEPARATE_EXECUTION_APPROVAL"
+        ],
+        "supplemental_source_ids": []
+      }
+    },
+    {
+      "comparison_id": "SIMILAR_SUPPORT_EXCLUSION",
+      "baseline_snapshot": {
+        "comparison_id": "SIMILAR_SUPPORT_EXCLUSION",
+        "label": "유사사업 동시 수혜 제한",
+        "scope_id": "APPLICANT_ALL",
+        "proposed_change_type": "INCONCLUSIVE",
+        "review_status": "PENDING_REVIEW",
+        "human_approved": false,
+        "adjudication_reason": "중복 수혜 금지 공통이나 2025년 자치구 사업 선정자와 2026년 수혜 중인 자의 적용 범위 차이 남음. #5와 연계 (재판정 권장안, 원본 PDF 시각 검토 전)",
+        "change_group_id": "GROUP_SIMILAR_SUPPORT_EXCLUSION",
+        "change_key": "SIMILAR_SUPPORT_EXCLUSION",
+        "summary_role": "REVIEW_ONLY",
+        "parent_comparison_id": null,
+        "previous": {
+          "value": "서울시 청년수당, 자립준비청년 월세․기숙사비 지원 등 유사 사업 수혜 중인 사람은 신청 제외. ‘사업 신청일’ 기준 타 사업 수급 등이 종료된 경우 신청 가능",
+          "source_type": "REVIEWED",
+          "document_id": "DOC-211f45df17b98569c5f1",
+          "source_cleaned_sha256": "fe7dc7afb0c64886683e0eee96f6557c473edd367ceece5f93b8a5f41ba692b2",
+          "reviewed_fields": [
+            {
+              "field_key": "EXCLUDE_SIMILAR_PROGRAMS",
+              "label": "유사 사업 수혜 중 신청 제외",
+              "scope": "전체 신청자",
+              "value": "서울시 청년수당, 자립준비청년 월세․기숙사비 지원 등 유사 사업 수혜 중인 사람은 신청 제외. ‘사업 신청일’ 기준 타 사업 수급 등이 종료된 경우 신청 가능",
+              "evidence": {
+                "page": 5,
+                "quote": "ㅇ 서울시 청년수당을 받고 있는 사람, ’25년 자치구 자체 청년월세지원 사업\n(은평, 광진 등) 지원자로 선정된 사람, 자립준비청년 월세․기숙사비 지원 등\n유사 사업 수혜를 받고 있는 사람\n※ ‘사업 신청일’ 기준으로 타 사업 수급 등이 종료된 경우 신청 가능"
+              }
+            }
+          ],
+          "supplemental_quotes": [],
+          "pdf_visual_reviewed": false,
+          "missing_reason": null
+        },
+        "current": {
+          "value": "국토교통부 청년월세 지원 수혜 중인 자는 신청 불가, 단 신청일 전 지원 종료 시 신청 가능 / 서울시 청년수당, 자치구 청년월세지원, 자립준비청년 월세·기숙사비 지원 등 유사 사업 수혜 중인 사람은 제외하나 신청 전 타 사업 수급 종료 시 신청 가능",
+          "source_type": "REVIEWED",
+          "document_id": "DOC-543adbc0ebc09e5ce628",
+          "source_cleaned_sha256": "46972707cc2c7be0f414a8bbe3e30629ccaa31fc7868e34dda40c3c0a0f73be9",
+          "reviewed_fields": [
+            {
+              "field_key": "EXCLUSION_NATIONAL_SUPPORT",
+              "label": "국토교통부 청년월세 지원 수혜자 제외 조건",
+              "scope": "전체 지원 대상",
+              "value": "국토교통부 청년월세 지원 수혜 중인 자는 신청 불가, 단 신청일 전 지원 종료 시 신청 가능",
+              "evidence": {
+                "page": 6,
+                "quote": "ㅇ 국토교통부 청년월세 지원을 수혜 중인 사람\n※ 신청일 전 지원 종료 시 신청 가능"
+              }
+            },
+            {
+              "field_key": "EXCLUSION_SIMILAR_SUPPORT",
+              "label": "유사 사업 중복 수혜 제외",
+              "scope": "전체 지원 대상",
+              "value": "서울시 청년수당, 자치구 청년월세지원, 자립준비청년 월세·기숙사비 지원 등 유사 사업 수혜 중인 사람은 제외하나 신청 전 타 사업 수급 종료 시 신청 가능",
+              "evidence": {
+                "page": 6,
+                "quote": "ㅇ 서울시 청년수당을 받고 있는 사람, 자치구(은평, 광진 등) 청년월세지원을 수혜 중인\n사람, 자립준비청년 월세․기숙사비 지원 등 유사 사업 수혜를 받고 있는 사람\n※ 신청 전 타 사업 수급 등이 종료된 경우 신청 가능(예시 : 4월까지 수급, 5월 미수급일 경우 신청 가능)"
+              }
+            }
+          ],
+          "supplemental_quotes": [],
+          "pdf_visual_reviewed": false,
+          "missing_reason": null
+        }
+      },
+      "recommendation": {
+        "proposed_change_type": "INCONCLUSIVE",
+        "previous_value": "청년수당·2025년 자치구 선정자·자립준비청년 등 유사사업 제한. 신청일 기준 수급 종료 예외.",
+        "current_value": "유사사업 수혜 중 제한. 신청 전 종료 예외 및 4월 수급·5월 미수급 예시.",
+        "explanation": "양 연도 모두 유사사업 제한과 종료 예외가 있다. 자치구 표현 차이의 실질적 적용 범위는 미확정이다.",
+        "scope_note": "신청 시점 제한을 사후 당월 중지·환수와 구분한다.",
+        "target_fields": [
+          "previous.value",
+          "current.value",
+          "adjudication_reason"
+        ],
+        "counting_policy": "PRESERVE_BASELINE_NO_ADDITIONAL_COUNT",
+        "unresolved_questions": [
+          "2025년 선정자 제한과 종료 예외의 실무 적용 범위는 별도 확인 필요."
+        ]
+      },
+      "evidence": [
+        {
+          "document_id": "DOC-211f45df17b98569c5f1",
+          "year": 2025,
+          "pdf_sha256": "6288e029484140bff4e7a3a5de64691d8230f07b04bae47d7dbcb25300cd0df4",
+          "page": 5,
+          "quote": "ㅇ 서울시 청년수당을 받고 있는 사람, ’25년 자치구 자체 청년월세지원 사업",
+          "verification": "AI_TEXT_OBSERVATION_NOT_HUMAN_ATTESTATION"
+        },
+        {
+          "document_id": "DOC-211f45df17b98569c5f1",
+          "year": 2025,
+          "pdf_sha256": "6288e029484140bff4e7a3a5de64691d8230f07b04bae47d7dbcb25300cd0df4",
+          "page": 5,
+          "quote": "※ ‘사업 신청일’ 기준으로 타 사업 수급 등이 종료된 경우 신청 가능",
+          "verification": "AI_TEXT_OBSERVATION_NOT_HUMAN_ATTESTATION"
+        },
+        {
+          "document_id": "DOC-543adbc0ebc09e5ce628",
+          "year": 2026,
+          "pdf_sha256": "80de4494292b3d7526749bddf12509843d4ffd9a8ae2d944a32cb33c008e0f1d",
+          "page": 6,
+          "quote": "ㅇ 서울시 청년수당을 받고 있는 사람, 자치구(은평, 광진 등) 청년월세지원을 수혜 중인",
+          "verification": "AI_TEXT_OBSERVATION_NOT_HUMAN_ATTESTATION"
+        },
+        {
+          "document_id": "DOC-543adbc0ebc09e5ce628",
+          "year": 2026,
+          "pdf_sha256": "80de4494292b3d7526749bddf12509843d4ffd9a8ae2d944a32cb33c008e0f1d",
+          "page": 6,
+          "quote": "※ 신청 전 타 사업 수급 등이 종료된 경우 신청 가능(예시 : 4월까지 수급, 5월 미수급일 경우 신청 가능)",
+          "verification": "AI_TEXT_OBSERVATION_NOT_HUMAN_ATTESTATION"
+        }
+      ],
+      "absence_analysis": {
+        "document_id": "DOC-211f45df17b98569c5f1",
+        "pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "method": "PRIOR_AI_FULL_DOCUMENT_TEXT_REVIEW",
+        "conclusion": "NOT_APPLICABLE",
+        "human_attested": false
+      },
+      "dependencies": {
+        "baseline_scope_id": "APPLICANT_ALL",
+        "change_group_id": "GROUP_SIMILAR_SUPPORT_EXCLUSION",
+        "change_key": "SIMILAR_SUPPORT_EXCLUSION",
+        "summary_role": "REVIEW_ONLY",
+        "parent_comparison_id": null,
+        "child_ids": [],
+        "same_change_key_ids": []
+      },
+      "related_comparison_ids": [
+        "PREVIOUS_BENEFICIARY_RESTRICTION",
+        "SIMILAR_SUPPORT_SAME_MONTH_STOP"
+      ],
+      "assessment": {
+        "disposition": "INSUFFICIENT_EVIDENCE",
+        "severity": "MEDIUM",
+        "verification_status": "AI_SOURCE_ANALYSIS_HUMAN_UNATTESTED",
+        "finalization": "NOT_FINAL"
+      },
+      "event_compatibility": {
+        "automatic_conversion": false,
+        "status": "INSUFFICIENT_EVIDENCE",
+        "prerequisites": [
+          "EXPLICIT_HUMAN_REVIEW",
+          "SEPARATE_EXECUTION_APPROVAL"
+        ],
+        "supplemental_source_ids": []
+      }
+    },
+    {
+      "comparison_id": "DOC_LEASE_ALTERNATIVES",
+      "baseline_snapshot": {
+        "comparison_id": "DOC_LEASE_ALTERNATIVES",
+        "label": "확정일자 대체 서류",
+        "scope_id": "SPECIAL_DOCUMENTS",
+        "proposed_change_type": "SPLIT_REQUIRED",
+        "review_status": "PENDING_REVIEW",
+        "human_approved": false,
+        "adjudication_reason": "기본 대체서류 원칙은 유지. 2025 전대차 증빙 3종 → 2026 전대차 목록 2종, 기숙사 별도 요건 명시. 각각 독립 검토 권장 (재판정 권장안, 원본 PDF 시각 검토 전)",
+        "change_group_id": "DOCUMENT_REQUIREMENTS",
+        "change_key": "DOC_LEASE_ALTERNATIVES",
+        "summary_role": "REVIEW_ONLY",
+        "parent_comparison_id": null,
+        "previous": {
+          "value": "원칙적으로 확정일자가 날인된 임대차계약서 전체 사본 1부를 제출하며, 확정일자 날인을 받을 수 없는 경우에는 공고에 명시된 별도 증빙자료 제출",
+          "source_type": "REVIEWED",
+          "document_id": "DOC-211f45df17b98569c5f1",
+          "source_cleaned_sha256": "fe7dc7afb0c64886683e0eee96f6557c473edd367ceece5f93b8a5f41ba692b2",
+          "reviewed_fields": [
+            {
+              "field_key": "APPLICATION_DOC_LEASE_CONTRACT",
+              "label": "임대차계약서 제출",
+              "scope": "전체 신청자",
+              "value": "원칙적으로 확정일자가 날인된 임대차계약서 전체 사본 1부를 제출하며, 확정일자 날인을 받을 수 없는 경우에는 공고에 명시된 별도 증빙자료 제출",
+              "evidence": {
+                "page": 6,
+                "quote": "ㅇ 확정일자가 날인된 임대차계약서 전체 사본 1부\n- 확정일자는 동주민센터 및 인터넷등기소(https://www.iros.go.kr)에서 부여\n- 임대차계약서상 다음 사항이 확인 가능하여야 함\n󰋻 임대인, 임차인의 성명 및 생년월일, 확정일자 또는 공인중개사 날인, 임차주택소재지,\n임대차 계약기간, 임차보증금, 월세금액 등\n- 확정일자 날인을 받을 수 없는 경우 아래의 증빙자료 제출"
+              }
+            }
+          ],
+          "supplemental_quotes": [
+            {
+              "evidence_id": "E25_HOUSE_ALTS",
+              "document_id": "DOC-211f45df17b98569c5f1",
+              "page": 6,
+              "quote": "- 확정일자 날인을 받을 수 없는 경우 아래의 증빙자료 제출\n1) 주택(원룸, 다가구주택, 무보증월세 등)은 아래 ① ~ ③ 중 하나 제출\n① 공인중개사가 날인 한 임대차계약서 사본\n② 임대차계약서와 임대차 건물 등기부등본 사본\n③ 임대차계약서와 주택 임대차 계약 신고필증(“확정일자 부여현황”은 신고필증이 아님)",
+              "source_cleaned_sha256": "fe7dc7afb0c64886683e0eee96f6557c473edd367ceece5f93b8a5f41ba692b2",
+              "text_verification": "CLEANED_TEXT_VERIFIED",
+              "pdf_visual_reviewed": false
+            },
+            {
+              "evidence_id": "E25_GOSIWON_DOCS",
+              "document_id": "DOC-211f45df17b98569c5f1",
+              "page": 6,
+              "quote": "2) 고시원, 게스트하우스 등은 아래 ①, ② 모두 제출\n① 입실확인서\n※ (임대차 계약사항) 임대인과 임차인의 성명, 생년월일, 도장 또는 서명 날인,\n임차보증금과 월세금액, 계약일자, 소재지 등이 기재되어 있어야 함\n※ 임대차계약사항이 기재된 입실확인서 등이 없는 경우 붙임양식(실거주 확인서) 참조\n② (임대)사업자등록증 사본",
+              "source_cleaned_sha256": "fe7dc7afb0c64886683e0eee96f6557c473edd367ceece5f93b8a5f41ba692b2",
+              "text_verification": "CLEANED_TEXT_VERIFIED",
+              "pdf_visual_reviewed": false
+            },
+            {
+              "evidence_id": "E25_SUBLET_DOCS",
+              "document_id": "DOC-211f45df17b98569c5f1",
+              "page": 7,
+              "quote": "3) 전대차 계약인 경우 아래 ①, ②, ③ 모두 제출\n① 전대차 계약서\n※ (전대차 계약사항) 전대인과 전차인의 성명, 생년월일, 도장 또는 서명 날인,\n임차보증금과 월세금액, 계약일자, 소재지 등이 기재되어 있어야 함\n② 전대인의 임대차 계약서\n③ 건축물대장, 건축물 현황도\n※ 건축물대장 등 해당 주택의 내부구조 파악이 가능한 자료",
+              "source_cleaned_sha256": "fe7dc7afb0c64886683e0eee96f6557c473edd367ceece5f93b8a5f41ba692b2",
+              "text_verification": "CLEANED_TEXT_VERIFIED",
+              "pdf_visual_reviewed": false
+            }
+          ],
+          "pdf_visual_reviewed": false,
+          "missing_reason": null
+        },
+        "current": {
+          "value": "확정일자 날인 불가 시 주택에 대해서는 공인중개사 날인 계약서, 계약서와 등기부등본, 계약서와 주택 임대차 계약 신고필증 중 하나 제출",
+          "source_type": "REVIEWED",
+          "document_id": "DOC-543adbc0ebc09e5ce628",
+          "source_cleaned_sha256": "46972707cc2c7be0f414a8bbe3e30629ccaa31fc7868e34dda40c3c0a0f73be9",
+          "reviewed_fields": [
+            {
+              "field_key": "APPLICATION_DOC_LEASE_ALTERNATIVES",
+              "label": "확정일자 날인 불가 시 대체서류",
+              "scope": "확정일자 날인 불가 신청인",
+              "value": "확정일자 날인 불가 시 주택에 대해서는 공인중개사 날인 계약서, 계약서와 등기부등본, 계약서와 주택 임대차 계약 신고필증 중 하나 제출",
+              "evidence": {
+                "page": 7,
+                "quote": "- 확정일자 날인을 받을 수 없는 경우 아래의 증빙자료 제출\n1) 주택(원룸, 다가구주택, 무보증월세 등)은 아래 ㉠ ~ ㉢ 중 하나 제출\n㉠ 공인중개사가 날인 한 임대차계약서 사본\n㉡ 임대차계약서와 임대차 건물 등기부등본 사본 ※ 공고일 이후 발급분\n㉢ 임대차계약서와 주택 임대차 계약 신고필증(“확정일자 부여현황”은 신고필증이 아님)"
+              }
+            }
+          ],
+          "supplemental_quotes": [
+            {
+              "evidence_id": "E26_HOUSE_ALTS",
+              "document_id": "DOC-543adbc0ebc09e5ce628",
+              "page": 7,
+              "quote": "- 확정일자 날인을 받을 수 없는 경우 아래의 증빙자료 제출\n1) 주택(원룸, 다가구주택, 무보증월세 등)은 아래 ㉠ ~ ㉢ 중 하나 제출\n㉠ 공인중개사가 날인 한 임대차계약서 사본\n㉡ 임대차계약서와 임대차 건물 등기부등본 사본 ※ 공고일 이후 발급분\n㉢ 임대차계약서와 주택 임대차 계약 신고필증(“확정일자 부여현황”은 신고필증이 아님)",
+              "source_cleaned_sha256": "46972707cc2c7be0f414a8bbe3e30629ccaa31fc7868e34dda40c3c0a0f73be9",
+              "text_verification": "CLEANED_TEXT_VERIFIED",
+              "pdf_visual_reviewed": false
+            },
+            {
+              "evidence_id": "E26_GOSIWON_DOCS",
+              "document_id": "DOC-543adbc0ebc09e5ce628",
+              "page": 8,
+              "quote": "2) 고시원, 고시텔, 게스트하우스 등은 아래 ㉠, ㉡ 모두 제출\n㉠ 입실확인서\n※ (임대차 계약사항) 임대인과 임차인의 성명, 생년월일, 도장 또는 서명 날인,\n임차보증금과 월세금액, 계약일자, 소재지 등이 기재되어 있어야 함\n※ 임대차계약사항이 기재된 입실확인서 등이 없는 경우 붙임양식(실거주 확인서) 참조\n㉡ (임대)사업자등록증 사본 ※ 사업자등록증 상 소재지와 계약서 상 소재지가 동일해야함",
+              "source_cleaned_sha256": "46972707cc2c7be0f414a8bbe3e30629ccaa31fc7868e34dda40c3c0a0f73be9",
+              "text_verification": "CLEANED_TEXT_VERIFIED",
+              "pdf_visual_reviewed": false
+            },
+            {
+              "evidence_id": "E26_SUBLET_DOCS",
+              "document_id": "DOC-543adbc0ebc09e5ce628",
+              "page": 8,
+              "quote": "3) 전대차 계약인 경우 아래 ㉠, ㉡ 모두 제출\n㉠ 전대차 계약서\n※ (전대차 계약사항) 전대인과 전차인의 성명, 생년월일, 도장 또는 서명 날인,\n임차보증금과 월세금액, 계약일자, 소재지 등이 기재되어 있어야 함\n㉡ 전대인의 임대차 계약서",
+              "source_cleaned_sha256": "46972707cc2c7be0f414a8bbe3e30629ccaa31fc7868e34dda40c3c0a0f73be9",
+              "text_verification": "CLEANED_TEXT_VERIFIED",
+              "pdf_visual_reviewed": false
+            },
+            {
+              "evidence_id": "E26_DORMITORY",
+              "document_id": "DOC-543adbc0ebc09e5ce628",
+              "page": 8,
+              "quote": "4) 기숙사의 경우 기관 날인된 입실확인서 제출",
+              "source_cleaned_sha256": "46972707cc2c7be0f414a8bbe3e30629ccaa31fc7868e34dda40c3c0a0f73be9",
+              "text_verification": "CLEANED_TEXT_VERIFIED",
+              "pdf_visual_reviewed": false
+            }
+          ],
+          "pdf_visual_reviewed": false,
+          "missing_reason": null
+        }
+      },
+      "recommendation": {
+        "proposed_change_type": "SPLIT_REQUIRED",
+        "previous_value": "주택 대체 조합 중 하나, 고시원 등 두 항목 모두, 전대차 계약서·전대인 계약서·건축물 자료 세 항목 모두.",
+        "current_value": "주택·고시원 조합, 전대차 두 계약서, 기숙사 기관 날인 입실확인서를 구분.",
+        "explanation": "대상별 선택·필수 조합을 분해하고 전대차 목록 변화와 기숙사 규정은 기존 자식 항목에서 검토한다.",
+        "scope_note": "주택·고시원·전대차·기숙사별 조건을 보존. 목록 부재를 모든 추가자료 요구의 폐지로 해석하지 않는다.",
+        "target_fields": [
+          "previous.value",
+          "current.value",
+          "adjudication_reason"
+        ],
+        "counting_policy": "PRESERVE_BASELINE_NO_ADDITIONAL_COUNT",
+        "unresolved_questions": [
+          "공고 밖 전년도 기숙사 안내 및 추가 증빙 가능성은 별도 확인한다."
+        ]
+      },
+      "evidence": [
+        {
+          "document_id": "DOC-211f45df17b98569c5f1",
+          "year": 2025,
+          "pdf_sha256": "6288e029484140bff4e7a3a5de64691d8230f07b04bae47d7dbcb25300cd0df4",
+          "page": 6,
+          "quote": "1) 주택(원룸, 다가구주택, 무보증월세 등)은 아래 ① ~ ③ 중 하나 제출",
+          "verification": "AI_TEXT_OBSERVATION_NOT_HUMAN_ATTESTATION"
+        },
+        {
+          "document_id": "DOC-211f45df17b98569c5f1",
+          "year": 2025,
+          "pdf_sha256": "6288e029484140bff4e7a3a5de64691d8230f07b04bae47d7dbcb25300cd0df4",
+          "page": 7,
+          "quote": "3) 전대차 계약인 경우 아래 ①, ②, ③ 모두 제출",
+          "verification": "AI_TEXT_OBSERVATION_NOT_HUMAN_ATTESTATION"
+        },
+        {
+          "document_id": "DOC-543adbc0ebc09e5ce628",
+          "year": 2026,
+          "pdf_sha256": "80de4494292b3d7526749bddf12509843d4ffd9a8ae2d944a32cb33c008e0f1d",
+          "page": 7,
+          "quote": "1) 주택(원룸, 다가구주택, 무보증월세 등)은 아래 ㉠ ~ ㉢ 중 하나 제출",
+          "verification": "AI_TEXT_OBSERVATION_NOT_HUMAN_ATTESTATION"
+        },
+        {
+          "document_id": "DOC-543adbc0ebc09e5ce628",
+          "year": 2026,
+          "pdf_sha256": "80de4494292b3d7526749bddf12509843d4ffd9a8ae2d944a32cb33c008e0f1d",
+          "page": 8,
+          "quote": "3) 전대차 계약인 경우 아래 ㉠, ㉡ 모두 제출",
+          "verification": "AI_TEXT_OBSERVATION_NOT_HUMAN_ATTESTATION"
+        },
+        {
+          "document_id": "DOC-543adbc0ebc09e5ce628",
+          "year": 2026,
+          "pdf_sha256": "80de4494292b3d7526749bddf12509843d4ffd9a8ae2d944a32cb33c008e0f1d",
+          "page": 8,
+          "quote": "4) 기숙사의 경우 기관 날인된 입실확인서 제출",
+          "verification": "AI_TEXT_OBSERVATION_NOT_HUMAN_ATTESTATION"
+        }
+      ],
+      "absence_analysis": {
+        "document_id": "DOC-211f45df17b98569c5f1",
+        "pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "method": "PRIOR_AI_FULL_DOCUMENT_TEXT_REVIEW",
+        "conclusion": "NOT_APPLICABLE",
+        "human_attested": false
+      },
+      "dependencies": {
+        "baseline_scope_id": "SPECIAL_DOCUMENTS",
+        "change_group_id": "DOCUMENT_REQUIREMENTS",
+        "change_key": "DOC_LEASE_ALTERNATIVES",
+        "summary_role": "REVIEW_ONLY",
+        "parent_comparison_id": null,
+        "child_ids": [
+          "SUBLET_DOC_REQUIRED_ITEMS",
+          "DORMITORY_CONFIRMATION"
+        ],
+        "same_change_key_ids": []
+      },
+      "related_comparison_ids": [
+        "SUBLET_DOC_REQUIRED_ITEMS",
+        "DORMITORY_CONFIRMATION",
+        "DOC_LEASE_CONTRACT"
+      ],
+      "assessment": {
+        "disposition": "SPLIT_PROPOSAL",
+        "severity": "MEDIUM",
+        "verification_status": "AI_SOURCE_ANALYSIS_HUMAN_UNATTESTED",
+        "finalization": "NOT_FINAL"
+      },
+      "event_compatibility": {
+        "automatic_conversion": false,
+        "status": "HUMAN_REVIEW_AND_STAGE_B_REQUIRED",
+        "prerequisites": [
+          "EXPLICIT_HUMAN_REVIEW",
+          "SEPARATE_EXECUTION_APPROVAL"
+        ],
+        "supplemental_source_ids": []
+      }
+    },
+    {
+      "comparison_id": "DOC_ADMIN_CONSENT",
+      "baseline_snapshot": {
+        "comparison_id": "DOC_ADMIN_CONSENT",
+        "label": "행정정보 공동이용 동의서",
+        "scope_id": "APPLICANT_ALL",
+        "proposed_change_type": "ADDED_CANDIDATE",
+        "review_status": "PENDING_REVIEW",
+        "human_approved": false,
+        "adjudication_reason": "2026년 행정정보 공동이용 사전동의서가 필수서류 4번째에 추가. 비동의 시 대체서류 제출 예외도 반드시 같이 안내 (재판정 권장안, 원본 PDF 시각 검토 전)",
+        "change_group_id": "DOCUMENT_REQUIREMENTS",
+        "change_key": "DOC_ADMIN_CONSENT",
+        "summary_role": "PRIMARY",
+        "parent_comparison_id": null,
+        "previous": {
+          "value": null,
+          "source_type": "UNAVAILABLE",
+          "document_id": "DOC-211f45df17b98569c5f1",
+          "source_cleaned_sha256": "fe7dc7afb0c64886683e0eee96f6557c473edd367ceece5f93b8a5f41ba692b2",
+          "reviewed_fields": [],
+          "supplemental_quotes": [],
+          "pdf_visual_reviewed": false,
+          "missing_reason": "UNVERIFIED_PREVIOUS_YEAR"
+        },
+        "current": {
+          "value": "행정정보 공동이용 사전동의서에 주민등록번호 전체 기재 및 서명 필수",
+          "source_type": "REVIEWED",
+          "document_id": "DOC-543adbc0ebc09e5ce628",
+          "source_cleaned_sha256": "46972707cc2c7be0f414a8bbe3e30629ccaa31fc7868e34dda40c3c0a0f73be9",
+          "reviewed_fields": [
+            {
+              "field_key": "APPLICATION_DOC_ADMIN_CONSENT",
+              "label": "필수서류: 행정정보 공동이용 동의서",
+              "scope": "전체 지원 대상",
+              "value": "행정정보 공동이용 사전동의서에 주민등록번호 전체 기재 및 서명 필수",
+              "evidence": {
+                "page": 8,
+                "quote": "④ 행정정보 공동이용 사전동의서 : 주민등록번호 전체 기재, 서명 필수"
+              }
+            }
+          ],
+          "supplemental_quotes": [
+            {
+              "evidence_id": "E26_ADMIN_CONSENT_ALTERNATIVES",
+              "document_id": "DOC-543adbc0ebc09e5ce628",
+              "page": 8,
+              "quote": "④ 행정정보 공동이용 사전동의서 : 주민등록번호 전체 기재, 서명 필수\n※ 비동의 시 공고일 기준 건강보험 자격 확인서, 최근 소득금액증명원, 주민등록등․초본 별도 제출",
+              "source_cleaned_sha256": "46972707cc2c7be0f414a8bbe3e30629ccaa31fc7868e34dda40c3c0a0f73be9",
+              "text_verification": "CLEANED_TEXT_VERIFIED",
+              "pdf_visual_reviewed": false
+            }
+          ],
+          "pdf_visual_reviewed": false,
+          "missing_reason": null
+        }
+      },
+      "recommendation": {
+        "proposed_change_type": "ADDED_CANDIDATE",
+        "previous_value": "일반 개인정보 동의 안내. 해당 행정정보 사전동의서 제출 항목은 모집 공고에서 확인되지 않음.",
+        "current_value": "필수서류 ④ 행정정보 공동이용 사전동의서. 전체 주민번호·서명 요건과 비동의 대체 경로 존재.",
+        "explanation": "사전동의서 표기와 비동의 대체 경로를 함께 표시한다. 동의 자체를 신청의 절대 조건으로 표시하지 않는다.",
+        "scope_note": "행정정보 공동이용 사전동의와 일반 개인정보 동의를 동일시하지 않는다. 식별정보는 제출 요건만 설명한다.",
+        "target_fields": [
+          "previous.value",
+          "current.value",
+          "adjudication_reason"
+        ],
+        "counting_policy": "PRESERVE_BASELINE_NO_ADDITIONAL_COUNT",
+        "unresolved_questions": [
+          "2025년 시스템·별지 동의 절차까지 최초 신설 여부를 확정하지 않는다."
+        ]
+      },
+      "evidence": [
+        {
+          "document_id": "DOC-211f45df17b98569c5f1",
+          "year": 2025,
+          "pdf_sha256": "6288e029484140bff4e7a3a5de64691d8230f07b04bae47d7dbcb25300cd0df4",
+          "page": 6,
+          "quote": "- 지원신청서, 개인정보 수집·이용 및 제3자 제공에 관한 동의서 작성․등록",
+          "verification": "AI_TEXT_OBSERVATION_NOT_HUMAN_ATTESTATION"
+        },
+        {
+          "document_id": "DOC-543adbc0ebc09e5ce628",
+          "year": 2026,
+          "pdf_sha256": "80de4494292b3d7526749bddf12509843d4ffd9a8ae2d944a32cb33c008e0f1d",
+          "page": 8,
+          "quote": "④ 행정정보 공동이용 사전동의서 : 주민등록번호 전체 기재, 서명 필수",
+          "verification": "AI_TEXT_OBSERVATION_NOT_HUMAN_ATTESTATION"
+        },
+        {
+          "document_id": "DOC-543adbc0ebc09e5ce628",
+          "year": 2026,
+          "pdf_sha256": "80de4494292b3d7526749bddf12509843d4ffd9a8ae2d944a32cb33c008e0f1d",
+          "page": 8,
+          "quote": "※ 비동의 시 공고일 기준 건강보험 자격 확인서, 최근 소득금액증명원, 주민등록등․초본 별도 제출",
+          "verification": "AI_TEXT_OBSERVATION_NOT_HUMAN_ATTESTATION"
+        }
+      ],
+      "absence_analysis": {
+        "document_id": "DOC-211f45df17b98569c5f1",
+        "pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "method": "PRIOR_AI_FULL_DOCUMENT_TEXT_REVIEW",
+        "conclusion": "NOT_IDENTIFIED_IN_MAIN_NOTICE_ONLY",
+        "human_attested": false
+      },
+      "dependencies": {
+        "baseline_scope_id": "APPLICANT_ALL",
+        "change_group_id": "DOCUMENT_REQUIREMENTS",
+        "change_key": "DOC_ADMIN_CONSENT",
+        "summary_role": "PRIMARY",
+        "parent_comparison_id": null,
+        "child_ids": [],
+        "same_change_key_ids": [
+          "ADMIN_CONSENT_ALTERNATIVES"
+        ]
+      },
+      "related_comparison_ids": [
+        "ADMIN_CONSENT_ALTERNATIVES",
+        "OBJECTION_DOCUMENT_LIMITATION"
+      ],
+      "assessment": {
+        "disposition": "REVISE_PROPOSAL",
+        "severity": "MEDIUM",
+        "verification_status": "AI_SOURCE_ANALYSIS_HUMAN_UNATTESTED",
+        "finalization": "NOT_FINAL"
+      },
+      "event_compatibility": {
+        "automatic_conversion": false,
+        "status": "HUMAN_REVIEW_AND_STAGE_B_REQUIRED",
+        "prerequisites": [
+          "EXPLICIT_HUMAN_REVIEW",
+          "SEPARATE_EXECUTION_APPROVAL"
+        ],
+        "supplemental_source_ids": []
+      }
+    },
+    {
+      "comparison_id": "SUSPENSION_EFFECT",
+      "baseline_snapshot": {
+        "comparison_id": "SUSPENSION_EFFECT",
+        "label": "지원 중단 시점과 재개",
+        "scope_id": "AWARDEES",
+        "proposed_change_type": "SPLIT_REQUIRED",
+        "review_status": "PENDING_REVIEW",
+        "human_approved": false,
+        "adjudication_reason": "다음 달 중지 일반 원칙은 유지. 2026년 재개·재신청 불가 및 잔여금 소멸 문구는 신설 후보. 유사사업 중복 수혜 발생월 중지 예외도 별도 (재판정 권장안, 원본 PDF 시각 검토 전)",
+        "change_group_id": "SUPPORT_TERMINATION",
+        "change_key": "SUSPENSION_EFFECT",
+        "summary_role": "REVIEW_ONLY",
+        "parent_comparison_id": null,
+        "previous": {
+          "value": "중지 사유 발생 다음 달부터 지급 중지",
+          "source_type": "REVIEWED",
+          "document_id": "DOC-211f45df17b98569c5f1",
+          "source_cleaned_sha256": "fe7dc7afb0c64886683e0eee96f6557c473edd367ceece5f93b8a5f41ba692b2",
+          "reviewed_fields": [
+            {
+              "field_key": "SUPPORT_SUSPENSION_EFFECTIVE_DATE",
+              "label": "지원 중지 시점",
+              "scope": "선정자",
+              "value": "중지 사유 발생 다음 달부터 지급 중지",
+              "evidence": {
+                "page": 9,
+                "quote": "※ 중지 사유가 발생한 다음 달부터 지급 중지됨"
+              }
+            }
+          ],
+          "supplemental_quotes": [
+            {
+              "evidence_id": "E25_STOP_NEXT_MONTH",
+              "document_id": "DOC-211f45df17b98569c5f1",
+              "page": 9,
+              "quote": "※ 중지 사유가 발생한 다음 달부터 지급 중지됨",
+              "source_cleaned_sha256": "fe7dc7afb0c64886683e0eee96f6557c473edd367ceece5f93b8a5f41ba692b2",
+              "text_verification": "CLEANED_TEXT_VERIFIED",
+              "pdf_visual_reviewed": false
+            }
+          ],
+          "pdf_visual_reviewed": false,
+          "missing_reason": null
+        },
+        "current": {
+          "value": "중지 사유 발생 다음 달부터 지급 중지, 지급 중지 이후 재개시 및 재신청 불가, 잔여 지원금 소멸",
+          "source_type": "REVIEWED",
+          "document_id": "DOC-543adbc0ebc09e5ce628",
+          "source_cleaned_sha256": "46972707cc2c7be0f414a8bbe3e30629ccaa31fc7868e34dda40c3c0a0f73be9",
+          "reviewed_fields": [
+            {
+              "field_key": "SUPPORT_STOP_EFFECT",
+              "label": "지원 중지 시 효과",
+              "scope": "선정자",
+              "value": "중지 사유 발생 다음 달부터 지급 중지, 지급 중지 이후 재개시 및 재신청 불가, 잔여 지원금 소멸",
+              "evidence": {
+                "page": 11,
+                "quote": "※ 중지 사유가 발생한 다음 달부터 지급 중지됨\n※ 지급 중지 이후 재개시, 재신청은 불가하며, 잔여 지원금은 소멸됨"
+              }
+            }
+          ],
+          "supplemental_quotes": [
+            {
+              "evidence_id": "E26_STOP_NEXT_MONTH",
+              "document_id": "DOC-543adbc0ebc09e5ce628",
+              "page": 11,
+              "quote": "※ 중지 사유가 발생한 다음 달부터 지급 중지됨",
+              "source_cleaned_sha256": "46972707cc2c7be0f414a8bbe3e30629ccaa31fc7868e34dda40c3c0a0f73be9",
+              "text_verification": "CLEANED_TEXT_VERIFIED",
+              "pdf_visual_reviewed": false
+            },
+            {
+              "evidence_id": "E26_STOP_NO_RESUME",
+              "document_id": "DOC-543adbc0ebc09e5ce628",
+              "page": 11,
+              "quote": "※ 지급 중지 이후 재개시, 재신청은 불가하며, 잔여 지원금은 소멸됨",
+              "source_cleaned_sha256": "46972707cc2c7be0f414a8bbe3e30629ccaa31fc7868e34dda40c3c0a0f73be9",
+              "text_verification": "CLEANED_TEXT_VERIFIED",
+              "pdf_visual_reviewed": false
+            }
+          ],
+          "pdf_visual_reviewed": false,
+          "missing_reason": null
+        }
+      },
+      "recommendation": {
+        "proposed_change_type": "SPLIT_REQUIRED",
+        "previous_value": "중지 사유 발생 다음 달부터 지급 중지.",
+        "current_value": "일반 익월 중지, 유사사업 동시 수혜 당월 중지, 중지 후 재개·재신청 불가 및 잔여금 소멸.",
+        "explanation": "일반 규칙 유지와 당월 예외·중지 후 효과를 기존 두 자식으로 분해한다. 부모를 실질 변경 건수에 더하지 않는다.",
+        "scope_note": "선정자의 중지 사유와 시점·사후 효과를 구분한다.",
+        "target_fields": [
+          "previous.value",
+          "current.value",
+          "adjudication_reason"
+        ],
+        "counting_policy": "PRESERVE_BASELINE_NO_ADDITIONAL_COUNT",
+        "unresolved_questions": [
+          "2025 공고 밖 운영 기준의 재개 제한까지 확인한 것은 아니다."
+        ]
+      },
+      "evidence": [
+        {
+          "document_id": "DOC-211f45df17b98569c5f1",
+          "year": 2025,
+          "pdf_sha256": "6288e029484140bff4e7a3a5de64691d8230f07b04bae47d7dbcb25300cd0df4",
+          "page": 9,
+          "quote": "※ 중지 사유가 발생한 다음 달부터 지급 중지됨",
+          "verification": "AI_TEXT_OBSERVATION_NOT_HUMAN_ATTESTATION"
+        },
+        {
+          "document_id": "DOC-543adbc0ebc09e5ce628",
+          "year": 2026,
+          "pdf_sha256": "80de4494292b3d7526749bddf12509843d4ffd9a8ae2d944a32cb33c008e0f1d",
+          "page": 11,
+          "quote": "※ 중지 사유가 발생한 다음 달부터 지급 중지됨",
+          "verification": "AI_TEXT_OBSERVATION_NOT_HUMAN_ATTESTATION"
+        },
+        {
+          "document_id": "DOC-543adbc0ebc09e5ce628",
+          "year": 2026,
+          "pdf_sha256": "80de4494292b3d7526749bddf12509843d4ffd9a8ae2d944a32cb33c008e0f1d",
+          "page": 11,
+          "quote": "※ 유사사업 동시 수혜의 경우, 동시 수혜 발생 월부터 지급 중지",
+          "verification": "AI_TEXT_OBSERVATION_NOT_HUMAN_ATTESTATION"
+        },
+        {
+          "document_id": "DOC-543adbc0ebc09e5ce628",
+          "year": 2026,
+          "pdf_sha256": "80de4494292b3d7526749bddf12509843d4ffd9a8ae2d944a32cb33c008e0f1d",
+          "page": 11,
+          "quote": "※ 지급 중지 이후 재개시, 재신청은 불가하며, 잔여 지원금은 소멸됨",
+          "verification": "AI_TEXT_OBSERVATION_NOT_HUMAN_ATTESTATION"
+        }
+      ],
+      "absence_analysis": {
+        "document_id": "DOC-211f45df17b98569c5f1",
+        "pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "method": "PRIOR_AI_FULL_DOCUMENT_TEXT_REVIEW",
+        "conclusion": "NOT_APPLICABLE",
+        "human_attested": false
+      },
+      "dependencies": {
+        "baseline_scope_id": "AWARDEES",
+        "change_group_id": "SUPPORT_TERMINATION",
+        "change_key": "SUSPENSION_EFFECT",
+        "summary_role": "REVIEW_ONLY",
+        "parent_comparison_id": null,
+        "child_ids": [
+          "SIMILAR_SUPPORT_SAME_MONTH_STOP",
+          "SUSPENSION_NO_RESUME"
+        ],
+        "same_change_key_ids": []
+      },
+      "related_comparison_ids": [
+        "SIMILAR_SUPPORT_SAME_MONTH_STOP",
+        "SUSPENSION_NO_RESUME",
+        "SUSPENSION_CONDITIONS"
+      ],
+      "assessment": {
+        "disposition": "SPLIT_PROPOSAL",
+        "severity": "MEDIUM",
+        "verification_status": "AI_SOURCE_ANALYSIS_HUMAN_UNATTESTED",
+        "finalization": "NOT_FINAL"
+      },
+      "event_compatibility": {
+        "automatic_conversion": false,
+        "status": "HUMAN_REVIEW_AND_STAGE_B_REQUIRED",
+        "prerequisites": [
+          "EXPLICIT_HUMAN_REVIEW",
+          "SEPARATE_EXECUTION_APPROVAL"
+        ],
+        "supplemental_source_ids": []
+      }
+    },
+    {
+      "comparison_id": "NEW_SPECIAL_APPLICATION_GROUPS",
+      "baseline_snapshot": {
+        "comparison_id": "NEW_SPECIAL_APPLICATION_GROUPS",
+        "label": "2026 신설 특별 신청 대상",
+        "scope_id": "SPECIAL_GROUPS",
+        "proposed_change_type": "ADDED_CANDIDATE",
+        "review_status": "PENDING_REVIEW",
+        "human_approved": false,
+        "adjudication_reason": "2026년 한부모·전세사기피해자·신혼부부·청년안심주택 민간임대 별도 신청유형 및 배정. 기존 민간임대 신청 가능 자체는 신규가 아님 (재판정 권장안, 원본 PDF 시각 검토 전)",
+        "change_group_id": "APPLICATION_GROUPS",
+        "change_key": "HOUSEHOLD_ELIGIBILITY",
+        "summary_role": "SUPPORTING",
+        "parent_comparison_id": null,
+        "previous": {
+          "value": null,
+          "source_type": "UNAVAILABLE",
+          "document_id": "DOC-211f45df17b98569c5f1",
+          "source_cleaned_sha256": "fe7dc7afb0c64886683e0eee96f6557c473edd367ceece5f93b8a5f41ba692b2",
+          "reviewed_fields": [],
+          "supplemental_quotes": [],
+          "pdf_visual_reviewed": false,
+          "missing_reason": "UNVERIFIED_PREVIOUS_YEAR"
+        },
+        "current": {
+          "value": "청년이면서 자녀가 있는 모자 또는 부자가족 (한부모가족증명서 필수 제출) / 서울 소재 주택에서 전세사기피해자등 결정을 받고 월세 주택으로 이사한 청년 1인 가구 (결정문 필수 제출) / 신청인과 배우자가 모두 청년이고 주민등록 주소지가 같은 무자녀 부부이며 신청일 기준 혼인신고 완료, 예비 신혼부부는 제외 / 청년안심주택 민간임대에 입주하고 해당 주소지에 주민등록이 되어 있는 1인 가구",
+          "source_type": "REVIEWED",
+          "document_id": "DOC-543adbc0ebc09e5ce628",
+          "source_cleaned_sha256": "46972707cc2c7be0f414a8bbe3e30629ccaa31fc7868e34dda40c3c0a0f73be9",
+          "reviewed_fields": [
+            {
+              "field_key": "APPLICATION_TYPE_SINGLE_PARENT",
+              "label": "한부모가족 신청 조건",
+              "scope": "한부모가족",
+              "value": "청년이면서 자녀가 있는 모자 또는 부자가족 (한부모가족증명서 필수 제출)",
+              "evidence": {
+                "page": 3,
+                "quote": "- 한부모가족 : 청년이면서 자녀가 있는 모자 또는 부자가족(한부모가족증명서 필수 제출)"
+              }
+            },
+            {
+              "field_key": "APPLICATION_TYPE_FRAUD_VICTIM",
+              "label": "전세사기피해자 신청 조건",
+              "scope": "전세사기피해자",
+              "value": "서울 소재 주택에서 전세사기피해자등 결정을 받고 월세 주택으로 이사한 청년 1인 가구 (결정문 필수 제출)",
+              "evidence": {
+                "page": 3,
+                "quote": "- 전세사기피해자 : 서울 소재 주택에서 전세사기피해자등 결정을 받고 월세\n주택으로 이사한 청년 1인 가구(전세사기피해자등 결정문 필수 제출)"
+              }
+            },
+            {
+              "field_key": "APPLICATION_TYPE_NEWLYWED",
+              "label": "청년 신혼부부 신청 조건",
+              "scope": "청년 신혼부부",
+              "value": "신청인과 배우자가 모두 청년이고 주민등록 주소지가 같은 무자녀 부부이며 신청일 기준 혼인신고 완료, 예비 신혼부부는 제외",
+              "evidence": {
+                "page": 3,
+                "quote": "- 청년 신혼부부 : 신청인, 배우자 모두 청년이며 주민등록상 주소지가 같은 무자녀 부부\n※ 신청일 기준 혼인신고 된 경우에 한함(예비 신혼부부 신청 불가)"
+              }
+            },
+            {
+              "field_key": "APPLICATION_TYPE_SAFEHOUSE_PRIVATE",
+              "label": "청년안심주택 민간임대 신청 조건",
+              "scope": "청년안심주택(민간임대) 거주자",
+              "value": "청년안심주택 민간임대에 입주하고 해당 주소지에 주민등록이 되어 있는 1인 가구",
+              "evidence": {
+                "page": 3,
+                "quote": "- 청년안심주택(민간임대) 거주자 : 청년안심주택 민간 임대에 입주하고, 해당\n주소지에 주민등록이 되어있는 1인 가구"
+              }
+            }
+          ],
+          "supplemental_quotes": [],
+          "pdf_visual_reviewed": false,
+          "missing_reason": null
+        }
+      },
+      "recommendation": {
+        "proposed_change_type": "ADDED_CANDIDATE",
+        "previous_value": "청년 1인 가구 중심. 민간임대 거주자 신청은 이미 가능.",
+        "current_value": "전세사기피해자·한부모가족 각 1,000명, 신혼부부·청년안심주택 민간임대 각 500명. 1인 가구 12,000명.",
+        "explanation": "신설 후보는 특별 신청유형·별도 정원이다. 민간임대 지원 가능 자체를 신규라고 표시하지 않는다.",
+        "scope_note": "한부모 증명, 서울 전세사기피해 결정 후 월세 이사, 청년 무자녀 부부 동일 주소·혼인신고, 민간임대 거주 1인 가구 조건 보존. 미달 정원은 1인 가구에서 추가 선정.",
+        "target_fields": [
+          "previous.value",
+          "current.value",
+          "adjudication_reason"
+        ],
+        "counting_policy": "PRESERVE_BASELINE_NO_ADDITIONAL_COUNT",
+        "unresolved_questions": [
+          "모든 개별 자격의 최초 신설·공고 밖 전년도 제도 부재를 포괄적으로 확정하지 않는다."
+        ]
+      },
+      "evidence": [
+        {
+          "document_id": "DOC-211f45df17b98569c5f1",
+          "year": 2025,
+          "pdf_sha256": "6288e029484140bff4e7a3a5de64691d8230f07b04bae47d7dbcb25300cd0df4",
+          "page": 5,
+          "quote": "※ 민간임대주택법에 따른 공공지원민간임대주택 등 민간임대주택 거주자는 신청 가능",
+          "verification": "AI_TEXT_OBSERVATION_NOT_HUMAN_ATTESTATION"
+        },
+        {
+          "document_id": "DOC-543adbc0ebc09e5ce628",
+          "year": 2026,
+          "pdf_sha256": "80de4494292b3d7526749bddf12509843d4ffd9a8ae2d944a32cb33c008e0f1d",
+          "page": 2,
+          "quote": "- 청년 1인 가구 : 12,000명",
+          "verification": "AI_TEXT_OBSERVATION_NOT_HUMAN_ATTESTATION"
+        },
+        {
+          "document_id": "DOC-543adbc0ebc09e5ce628",
+          "year": 2026,
+          "pdf_sha256": "80de4494292b3d7526749bddf12509843d4ffd9a8ae2d944a32cb33c008e0f1d",
+          "page": 2,
+          "quote": "- 전세사기피해자, 한부모가족 : 각각 1,000명",
+          "verification": "AI_TEXT_OBSERVATION_NOT_HUMAN_ATTESTATION"
+        },
+        {
+          "document_id": "DOC-543adbc0ebc09e5ce628",
+          "year": 2026,
+          "pdf_sha256": "80de4494292b3d7526749bddf12509843d4ffd9a8ae2d944a32cb33c008e0f1d",
+          "page": 2,
+          "quote": "- 청년 신혼부부, 청년안심주택(민간임대) 거주자 : 각각 500명",
+          "verification": "AI_TEXT_OBSERVATION_NOT_HUMAN_ATTESTATION"
+        },
+        {
+          "document_id": "DOC-543adbc0ebc09e5ce628",
+          "year": 2026,
+          "pdf_sha256": "80de4494292b3d7526749bddf12509843d4ffd9a8ae2d944a32cb33c008e0f1d",
+          "page": 3,
+          "quote": "※ 신청일 기준 혼인신고 된 경우에 한함(예비 신혼부부 신청 불가)",
+          "verification": "AI_TEXT_OBSERVATION_NOT_HUMAN_ATTESTATION"
+        }
+      ],
+      "absence_analysis": {
+        "document_id": "DOC-211f45df17b98569c5f1",
+        "pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "method": "PRIOR_AI_FULL_DOCUMENT_TEXT_REVIEW",
+        "conclusion": "NOT_IDENTIFIED_IN_MAIN_NOTICE_ONLY",
+        "human_attested": false
+      },
+      "dependencies": {
+        "baseline_scope_id": "SPECIAL_GROUPS",
+        "change_group_id": "APPLICATION_GROUPS",
+        "change_key": "HOUSEHOLD_ELIGIBILITY",
+        "summary_role": "SUPPORTING",
+        "parent_comparison_id": null,
+        "child_ids": [],
+        "same_change_key_ids": [
+          "DOC_SPECIAL_FRAUD",
+          "DOC_SPECIAL_SINGLE_PARENT",
+          "HOUSEHOLD_ELIGIBILITY",
+          "NEWLYWED_RESIDENCE"
+        ]
+      },
+      "related_comparison_ids": [
+        "HOUSEHOLD_ELIGIBILITY",
+        "TARGET_GROUP_QUOTA",
+        "SELECTION_METHOD",
+        "NEWLYWED_RESIDENCE"
+      ],
+      "assessment": {
+        "disposition": "REVISE_PROPOSAL",
+        "severity": "MEDIUM",
+        "verification_status": "AI_SOURCE_ANALYSIS_HUMAN_UNATTESTED",
+        "finalization": "NOT_FINAL"
+      },
+      "event_compatibility": {
+        "automatic_conversion": false,
+        "status": "HUMAN_REVIEW_AND_STAGE_B_REQUIRED",
+        "prerequisites": [
+          "EXPLICIT_HUMAN_REVIEW",
+          "SEPARATE_EXECUTION_APPROVAL"
+        ],
+        "supplemental_source_ids": []
+      }
+    },
+    {
+      "comparison_id": "OBJECTION_DOCUMENT_LIMITATION",
+      "baseline_snapshot": {
+        "comparison_id": "OBJECTION_DOCUMENT_LIMITATION",
+        "label": "필수서류 누락 시 이의신청 보완 제한",
+        "scope_id": "OBJECTORS",
+        "proposed_change_type": "ADDED_CANDIDATE",
+        "review_status": "PENDING_REVIEW",
+        "human_approved": false,
+        "adjudication_reason": "2026년 필수서류 누락 시 이의신청에서 추가 보완 불가 명시. 2025년의 10일 소명 기한 규정과 동일하지 않음 (재판정 권장안, 원본 PDF 시각 검토 전)",
+        "change_group_id": "DOCUMENT_REQUIREMENTS",
+        "change_key": "OBJECTION_DOCUMENT_LIMITATION",
+        "summary_role": "PRIMARY",
+        "parent_comparison_id": null,
+        "previous": {
+          "value": null,
+          "source_type": "UNAVAILABLE",
+          "document_id": "DOC-211f45df17b98569c5f1",
+          "source_cleaned_sha256": "fe7dc7afb0c64886683e0eee96f6557c473edd367ceece5f93b8a5f41ba692b2",
+          "reviewed_fields": [],
+          "supplemental_quotes": [],
+          "pdf_visual_reviewed": false,
+          "missing_reason": "UNVERIFIED_PREVIOUS_YEAR"
+        },
+        "current": {
+          "value": "필수 서류 미제출로 서류 심사 탈락 시 이의신청 시 자료 보완 불가능",
+          "source_type": "REVIEWED",
+          "document_id": "DOC-543adbc0ebc09e5ce628",
+          "source_cleaned_sha256": "46972707cc2c7be0f414a8bbe3e30629ccaa31fc7868e34dda40c3c0a0f73be9",
+          "reviewed_fields": [
+            {
+              "field_key": "OBJECTION_LIMITATION",
+              "label": "이의신청 제한",
+              "scope": "심사 탈락자",
+              "value": "필수 서류 미제출로 서류 심사 탈락 시 이의신청 시 자료 보완 불가능",
+              "evidence": {
+                "page": 10,
+                "quote": "※ 필수 서류(4종)를 미제출하여 서류 심사 탈락한 경우 이의신청 시 자료 보완 불가능"
+              }
+            }
+          ],
+          "supplemental_quotes": [
+            {
+              "evidence_id": "E26_OBJECTION_DOC_LIMIT",
+              "document_id": "DOC-543adbc0ebc09e5ce628",
+              "page": 10,
+              "quote": "※ 필수 서류(4종)를 미제출하여 서류 심사 탈락한 경우 이의신청 시 자료 보완 불가능",
+              "source_cleaned_sha256": "46972707cc2c7be0f414a8bbe3e30629ccaa31fc7868e34dda40c3c0a0f73be9",
+              "text_verification": "CLEANED_TEXT_VERIFIED",
+              "pdf_visual_reviewed": false
+            }
+          ],
+          "pdf_visual_reviewed": false,
+          "missing_reason": null
+        }
+      },
+      "recommendation": {
+        "proposed_change_type": "ADDED_CANDIDATE",
+        "previous_value": "10일 이의신청·필요시 소명자료 제출. 필수 4종 미제출 보완 금지 문구는 공고에서 확인되지 않음.",
+        "current_value": "필수서류 4종 미제출로 서류 심사 탈락한 경우 이의신청 자료 보완 불가.",
+        "explanation": "일반 이의신청 기간과 필수서류 미제출 제한을 분리한다. 모든 소명·소득 보완 금지로 확대하지 않는다.",
+        "scope_note": "필수서류 미제출로 탈락한 신청자. 최근 소득과 현재 소득 차이에 대한 보완 안내 보존.",
+        "target_fields": [
+          "previous.value",
+          "current.value",
+          "adjudication_reason"
+        ],
+        "counting_policy": "PRESERVE_BASELINE_NO_ADDITIONAL_COUNT",
+        "unresolved_questions": [
+          "경미한 오류와 미제출의 실무 구분은 원문만으로 확정하지 않는다."
+        ]
+      },
+      "evidence": [
+        {
+          "document_id": "DOC-211f45df17b98569c5f1",
+          "year": 2025,
+          "pdf_sha256": "6288e029484140bff4e7a3a5de64691d8230f07b04bae47d7dbcb25300cd0df4",
+          "page": 8,
+          "quote": "이의신청 등록 및 필요시 소명자료(주민등록등본 등) 제출",
+          "verification": "AI_TEXT_OBSERVATION_NOT_HUMAN_ATTESTATION"
+        },
+        {
+          "document_id": "DOC-543adbc0ebc09e5ce628",
+          "year": 2026,
+          "pdf_sha256": "80de4494292b3d7526749bddf12509843d4ffd9a8ae2d944a32cb33c008e0f1d",
+          "page": 10,
+          "quote": "※ 필수 서류(4종)를 미제출하여 서류 심사 탈락한 경우 이의신청 시 자료 보완 불가능",
+          "verification": "AI_TEXT_OBSERVATION_NOT_HUMAN_ATTESTATION"
+        },
+        {
+          "document_id": "DOC-543adbc0ebc09e5ce628",
+          "year": 2026,
+          "pdf_sha256": "80de4494292b3d7526749bddf12509843d4ffd9a8ae2d944a32cb33c008e0f1d",
+          "page": 5,
+          "quote": "※ 최근 소득금액증명원 상 소득이 현재와 현저히 다를 시, 이의신청 기간 중 보완 가능(FAQ 참조)",
+          "verification": "AI_TEXT_OBSERVATION_NOT_HUMAN_ATTESTATION"
+        }
+      ],
+      "absence_analysis": {
+        "document_id": "DOC-211f45df17b98569c5f1",
+        "pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "method": "PRIOR_AI_FULL_DOCUMENT_TEXT_REVIEW",
+        "conclusion": "NOT_IDENTIFIED_IN_MAIN_NOTICE_ONLY",
+        "human_attested": false
+      },
+      "dependencies": {
+        "baseline_scope_id": "OBJECTORS",
+        "change_group_id": "DOCUMENT_REQUIREMENTS",
+        "change_key": "OBJECTION_DOCUMENT_LIMITATION",
+        "summary_role": "PRIMARY",
+        "parent_comparison_id": null,
+        "child_ids": [],
+        "same_change_key_ids": []
+      },
+      "related_comparison_ids": [
+        "OBJECTION_PERIOD",
+        "DOC_ADMIN_CONSENT",
+        "INCOME_ASSESSMENT_METHOD"
+      ],
+      "assessment": {
+        "disposition": "REVISE_PROPOSAL",
+        "severity": "MEDIUM",
+        "verification_status": "AI_SOURCE_ANALYSIS_HUMAN_UNATTESTED",
+        "finalization": "NOT_FINAL"
+      },
+      "event_compatibility": {
+        "automatic_conversion": false,
+        "status": "HUMAN_REVIEW_AND_STAGE_B_REQUIRED",
+        "prerequisites": [
+          "EXPLICIT_HUMAN_REVIEW",
+          "SEPARATE_EXECUTION_APPROVAL"
+        ],
+        "supplemental_source_ids": []
+      }
+    },
+    {
+      "comparison_id": "GOV_SUPPORT_REFUND_ON_OVERLAP",
+      "baseline_snapshot": {
+        "comparison_id": "GOV_SUPPORT_REFUND_ON_OVERLAP",
+        "label": "국토부 사업 추가 선정 시 기지급 지원금 환수",
+        "scope_id": "APPLICANT_ALL",
+        "proposed_change_type": "ADDED_CANDIDATE",
+        "review_status": "PENDING_REVIEW",
+        "human_approved": false,
+        "adjudication_reason": "2025 동일 문구 부재 여부는 최종 공고 PDF 확인 필요 / 원문 정제본 근거 검토 후보, PDF 미검증",
+        "change_group_id": "SUPPORT_TERMINATION",
+        "change_key": "GOV_SUPPORT_REFUND_ON_OVERLAP",
+        "summary_role": "PRIMARY",
+        "parent_comparison_id": "PREVIOUS_BENEFICIARY_RESTRICTION",
+        "previous": {
+          "value": null,
+          "source_type": "UNAVAILABLE",
+          "document_id": "DOC-211f45df17b98569c5f1",
+          "source_cleaned_sha256": "fe7dc7afb0c64886683e0eee96f6557c473edd367ceece5f93b8a5f41ba692b2",
+          "reviewed_fields": [],
+          "supplemental_quotes": [],
+          "pdf_visual_reviewed": false,
+          "missing_reason": "UNVERIFIED_PREVIOUS_YEAR"
+        },
+        "current": {
+          "value": "서울시 지원금 수령 후 당해 국토부 청년월세 최종 선정 시 기존 서울시 지원금 전액 환수",
+          "source_type": "REVIEWED",
+          "document_id": "DOC-543adbc0ebc09e5ce628",
+          "source_cleaned_sha256": "46972707cc2c7be0f414a8bbe3e30629ccaa31fc7868e34dda40c3c0a0f73be9",
+          "reviewed_fields": [],
+          "supplemental_quotes": [
+            {
+              "evidence_id": "E26_GOV_REFUND",
+              "document_id": "DOC-543adbc0ebc09e5ce628",
+              "page": 6,
+              "quote": "※ ’26년 서울시 청년월세에 선정되고 지원금을 지급 받은 후 당해 국토부 청년월세에 최종 선정될 경우,\n기 지급된 서울시 청년월세지원금 전액 환수",
+              "source_cleaned_sha256": "46972707cc2c7be0f414a8bbe3e30629ccaa31fc7868e34dda40c3c0a0f73be9",
+              "text_verification": "CLEANED_TEXT_VERIFIED",
+              "pdf_visual_reviewed": false
+            }
+          ],
+          "pdf_visual_reviewed": false,
+          "missing_reason": null
+        }
+      },
+      "recommendation": {
+        "proposed_change_type": "ADDED_CANDIDATE",
+        "previous_value": "부적합·착오·부정 신청의 일반 취소·환수. 같은 순서·조건의 전액 환수 문구는 공고에서 확인되지 않음.",
+        "current_value": "2026 서울시 선정·지원금 수령 후 같은 해 국토부 청년월세 최종 선정 시 서울시 기지급금 전액 환수.",
+        "explanation": "대상을 모든 신청자가 아닌 서울시 선정·지급 후 당해 국토부 최종 선정된 경우로 한정한다.",
+        "scope_note": "선정→지급→같은 해 국토부 최종 선정 순서와 기지급금 전액 범위 보존. 새 scope_id Enum은 생성하지 않는다.",
+        "target_fields": [
+          "previous.value",
+          "current.value",
+          "adjudication_reason",
+          "scope_id"
+        ],
+        "counting_policy": "PRESERVE_BASELINE_NO_ADDITIONAL_COUNT",
+        "unresolved_questions": [
+          "역순 선정·지급이나 다른 연도로 확대하지 않는다."
+        ]
+      },
+      "evidence": [
+        {
+          "document_id": "DOC-211f45df17b98569c5f1",
+          "year": 2025,
+          "pdf_sha256": "6288e029484140bff4e7a3a5de64691d8230f07b04bae47d7dbcb25300cd0df4",
+          "page": 9,
+          "quote": "경우 월세 지원 취소 및 환수 조치됩니다.",
+          "verification": "AI_TEXT_OBSERVATION_NOT_HUMAN_ATTESTATION"
+        },
+        {
+          "document_id": "DOC-543adbc0ebc09e5ce628",
+          "year": 2026,
+          "pdf_sha256": "80de4494292b3d7526749bddf12509843d4ffd9a8ae2d944a32cb33c008e0f1d",
+          "page": 6,
+          "quote": "※ ’26년 서울시 청년월세에 선정되고 지원금을 지급 받은 후 당해 국토부 청년월세에 최종 선정될 경우,",
+          "verification": "AI_TEXT_OBSERVATION_NOT_HUMAN_ATTESTATION"
+        },
+        {
+          "document_id": "DOC-543adbc0ebc09e5ce628",
+          "year": 2026,
+          "pdf_sha256": "80de4494292b3d7526749bddf12509843d4ffd9a8ae2d944a32cb33c008e0f1d",
+          "page": 6,
+          "quote": "기 지급된 서울시 청년월세지원금 전액 환수",
+          "verification": "AI_TEXT_OBSERVATION_NOT_HUMAN_ATTESTATION"
+        }
+      ],
+      "absence_analysis": {
+        "document_id": "DOC-211f45df17b98569c5f1",
+        "pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "method": "PRIOR_AI_FULL_DOCUMENT_TEXT_REVIEW",
+        "conclusion": "NOT_IDENTIFIED_IN_MAIN_NOTICE_ONLY",
+        "human_attested": false
+      },
+      "dependencies": {
+        "baseline_scope_id": "APPLICANT_ALL",
+        "change_group_id": "SUPPORT_TERMINATION",
+        "change_key": "GOV_SUPPORT_REFUND_ON_OVERLAP",
+        "summary_role": "PRIMARY",
+        "parent_comparison_id": "PREVIOUS_BENEFICIARY_RESTRICTION",
+        "child_ids": [],
+        "same_change_key_ids": []
+      },
+      "related_comparison_ids": [
+        "PREVIOUS_BENEFICIARY_RESTRICTION",
+        "SIMILAR_SUPPORT_SAME_MONTH_STOP"
+      ],
+      "assessment": {
+        "disposition": "REVISE_PROPOSAL",
+        "severity": "MEDIUM",
+        "verification_status": "AI_SOURCE_ANALYSIS_HUMAN_UNATTESTED",
+        "finalization": "NOT_FINAL"
+      },
+      "event_compatibility": {
+        "automatic_conversion": false,
+        "status": "HUMAN_REVIEW_AND_STAGE_B_REQUIRED",
+        "prerequisites": [
+          "EXPLICIT_HUMAN_REVIEW",
+          "SEPARATE_EXECUTION_APPROVAL"
+        ],
+        "supplemental_source_ids": []
+      }
+    },
+    {
+      "comparison_id": "SIMILAR_SUPPORT_SAME_MONTH_STOP",
+      "baseline_snapshot": {
+        "comparison_id": "SIMILAR_SUPPORT_SAME_MONTH_STOP",
+        "label": "유사사업 동시수혜 발생 월 지원 중단",
+        "scope_id": "AWARDEES",
+        "proposed_change_type": "ADDED_CANDIDATE",
+        "review_status": "PENDING_REVIEW",
+        "human_approved": false,
+        "adjudication_reason": "일반 중단 규칙(익월)과 예외 규칙을 분리 / 원문 정제본 근거 검토 후보, PDF 미검증",
+        "change_group_id": "SUPPORT_TERMINATION",
+        "change_key": "SIMILAR_SUPPORT_SAME_MONTH_STOP",
+        "summary_role": "PRIMARY",
+        "parent_comparison_id": "SUSPENSION_EFFECT",
+        "previous": {
+          "value": null,
+          "source_type": "UNAVAILABLE",
+          "document_id": "DOC-211f45df17b98569c5f1",
+          "source_cleaned_sha256": "fe7dc7afb0c64886683e0eee96f6557c473edd367ceece5f93b8a5f41ba692b2",
+          "reviewed_fields": [],
+          "supplemental_quotes": [],
+          "pdf_visual_reviewed": false,
+          "missing_reason": "UNVERIFIED_PREVIOUS_YEAR"
+        },
+        "current": {
+          "value": "동시 수혜 발생 월부터 지급 중지",
+          "source_type": "REVIEWED",
+          "document_id": "DOC-543adbc0ebc09e5ce628",
+          "source_cleaned_sha256": "46972707cc2c7be0f414a8bbe3e30629ccaa31fc7868e34dda40c3c0a0f73be9",
+          "reviewed_fields": [],
+          "supplemental_quotes": [
+            {
+              "evidence_id": "E26_STOP_SAME_MONTH",
+              "document_id": "DOC-543adbc0ebc09e5ce628",
+              "page": 11,
+              "quote": "※ 유사사업 동시 수혜의 경우, 동시 수혜 발생 월부터 지급 중지",
+              "source_cleaned_sha256": "46972707cc2c7be0f414a8bbe3e30629ccaa31fc7868e34dda40c3c0a0f73be9",
+              "text_verification": "CLEANED_TEXT_VERIFIED",
+              "pdf_visual_reviewed": false
+            }
+          ],
+          "pdf_visual_reviewed": false,
+          "missing_reason": null
+        }
+      },
+      "recommendation": {
+        "proposed_change_type": "ADDED_CANDIDATE",
+        "previous_value": "유사사업 동시 참여도 중지 사유이며 일반적으로 다음 달 지급 중지.",
+        "current_value": "유사사업 동시 수혜 발생 월부터 지급 중지.",
+        "explanation": "당월 중지 예외를 일반 익월 중지와 구분하는 기존 제안을 유지한다.",
+        "scope_note": "유사사업 동시 수혜인 선정자에 대한 중지 시점 예외.",
+        "target_fields": [
+          "previous.value",
+          "current.value",
+          "adjudication_reason"
+        ],
+        "counting_policy": "PRESERVE_BASELINE_NO_ADDITIONAL_COUNT",
+        "unresolved_questions": [
+          "최종 ADDED 판단에는 사람의 전년도 전체 검토와 부재 확인이 필요하다."
+        ]
+      },
+      "evidence": [
+        {
+          "document_id": "DOC-211f45df17b98569c5f1",
+          "year": 2025,
+          "pdf_sha256": "6288e029484140bff4e7a3a5de64691d8230f07b04bae47d7dbcb25300cd0df4",
+          "page": 9,
+          "quote": "※ 중지 사유가 발생한 다음 달부터 지급 중지됨",
+          "verification": "AI_TEXT_OBSERVATION_NOT_HUMAN_ATTESTATION"
+        },
+        {
+          "document_id": "DOC-543adbc0ebc09e5ce628",
+          "year": 2026,
+          "pdf_sha256": "80de4494292b3d7526749bddf12509843d4ffd9a8ae2d944a32cb33c008e0f1d",
+          "page": 11,
+          "quote": "※ 유사사업 동시 수혜의 경우, 동시 수혜 발생 월부터 지급 중지",
+          "verification": "AI_TEXT_OBSERVATION_NOT_HUMAN_ATTESTATION"
+        }
+      ],
+      "absence_analysis": {
+        "document_id": "DOC-211f45df17b98569c5f1",
+        "pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "method": "PRIOR_AI_FULL_DOCUMENT_TEXT_REVIEW",
+        "conclusion": "NOT_IDENTIFIED_IN_MAIN_NOTICE_ONLY",
+        "human_attested": false
+      },
+      "dependencies": {
+        "baseline_scope_id": "AWARDEES",
+        "change_group_id": "SUPPORT_TERMINATION",
+        "change_key": "SIMILAR_SUPPORT_SAME_MONTH_STOP",
+        "summary_role": "PRIMARY",
+        "parent_comparison_id": "SUSPENSION_EFFECT",
+        "child_ids": [],
+        "same_change_key_ids": []
+      },
+      "related_comparison_ids": [
+        "SUSPENSION_EFFECT",
+        "SIMILAR_SUPPORT_EXCLUSION"
+      ],
+      "assessment": {
+        "disposition": "RETAIN_PROPOSAL",
+        "severity": "MEDIUM",
+        "verification_status": "AI_SOURCE_ANALYSIS_HUMAN_UNATTESTED",
+        "finalization": "NOT_FINAL"
+      },
+      "event_compatibility": {
+        "automatic_conversion": false,
+        "status": "HUMAN_REVIEW_AND_STAGE_B_REQUIRED",
+        "prerequisites": [
+          "EXPLICIT_HUMAN_REVIEW",
+          "SEPARATE_EXECUTION_APPROVAL"
+        ],
+        "supplemental_source_ids": []
+      }
+    },
+    {
+      "comparison_id": "SUSPENSION_NO_RESUME",
+      "baseline_snapshot": {
+        "comparison_id": "SUSPENSION_NO_RESUME",
+        "label": "지원 중단 후 재개 불가·잔여 지원금 소멸",
+        "scope_id": "AWARDEES",
+        "proposed_change_type": "ADDED_CANDIDATE",
+        "review_status": "PENDING_REVIEW",
+        "human_approved": false,
+        "adjudication_reason": "일반 중단 시점 유지와 새 규정 후보를 분리 / 원문 정제본 근거 검토 후보, PDF 미검증",
+        "change_group_id": "SUPPORT_TERMINATION",
+        "change_key": "SUSPENSION_NO_RESUME",
+        "summary_role": "PRIMARY",
+        "parent_comparison_id": "SUSPENSION_EFFECT",
+        "previous": {
+          "value": null,
+          "source_type": "UNAVAILABLE",
+          "document_id": "DOC-211f45df17b98569c5f1",
+          "source_cleaned_sha256": "fe7dc7afb0c64886683e0eee96f6557c473edd367ceece5f93b8a5f41ba692b2",
+          "reviewed_fields": [],
+          "supplemental_quotes": [],
+          "pdf_visual_reviewed": false,
+          "missing_reason": "UNVERIFIED_PREVIOUS_YEAR"
+        },
+        "current": {
+          "value": "지급 중지 후 재개·재신청 불가 및 잔여 지원금 소멸",
+          "source_type": "REVIEWED",
+          "document_id": "DOC-543adbc0ebc09e5ce628",
+          "source_cleaned_sha256": "46972707cc2c7be0f414a8bbe3e30629ccaa31fc7868e34dda40c3c0a0f73be9",
+          "reviewed_fields": [],
+          "supplemental_quotes": [
+            {
+              "evidence_id": "E26_STOP_NO_RESUME",
+              "document_id": "DOC-543adbc0ebc09e5ce628",
+              "page": 11,
+              "quote": "※ 지급 중지 이후 재개시, 재신청은 불가하며, 잔여 지원금은 소멸됨",
+              "source_cleaned_sha256": "46972707cc2c7be0f414a8bbe3e30629ccaa31fc7868e34dda40c3c0a0f73be9",
+              "text_verification": "CLEANED_TEXT_VERIFIED",
+              "pdf_visual_reviewed": false
+            }
+          ],
+          "pdf_visual_reviewed": false,
+          "missing_reason": null
+        }
+      },
+      "recommendation": {
+        "proposed_change_type": "ADDED_CANDIDATE",
+        "previous_value": "기수혜 제한·재전입 안내는 존재하나 같은 포괄적 재개·재신청 불가·잔여금 소멸 문구는 공고에서 확인되지 않음.",
+        "current_value": "지급 중지 후 재개·재신청 불가, 잔여 지원금 소멸.",
+        "explanation": "일반 중지 시점과 독립적으로 중지 후 효과를 표시하는 기존 제안을 유지한다.",
+        "scope_note": "지급 중지 이후 효과. 전년도 기수혜 제한과 동등한지는 별도 의미 검토 필요.",
+        "target_fields": [
+          "previous.value",
+          "current.value",
+          "adjudication_reason"
+        ],
+        "counting_policy": "PRESERVE_BASELINE_NO_ADDITIONAL_COUNT",
+        "unresolved_questions": [
+          "2025 공고 밖 운영 기준에 동일 효과가 있었는지는 미확정이다."
+        ]
+      },
+      "evidence": [
+        {
+          "document_id": "DOC-211f45df17b98569c5f1",
+          "year": 2025,
+          "pdf_sha256": "6288e029484140bff4e7a3a5de64691d8230f07b04bae47d7dbcb25300cd0df4",
+          "page": 5,
+          "quote": "ㅇ 서울시 청년월세지원금 기선정자로 수급 이력이 있는 사람",
+          "verification": "AI_TEXT_OBSERVATION_NOT_HUMAN_ATTESTATION"
+        },
+        {
+          "document_id": "DOC-211f45df17b98569c5f1",
+          "year": 2025,
+          "pdf_sha256": "6288e029484140bff4e7a3a5de64691d8230f07b04bae47d7dbcb25300cd0df4",
+          "page": 9,
+          "quote": "※ 중지 사유가 발생한 다음 달부터 지급 중지됨",
+          "verification": "AI_TEXT_OBSERVATION_NOT_HUMAN_ATTESTATION"
+        },
+        {
+          "document_id": "DOC-543adbc0ebc09e5ce628",
+          "year": 2026,
+          "pdf_sha256": "80de4494292b3d7526749bddf12509843d4ffd9a8ae2d944a32cb33c008e0f1d",
+          "page": 11,
+          "quote": "※ 지급 중지 이후 재개시, 재신청은 불가하며, 잔여 지원금은 소멸됨",
+          "verification": "AI_TEXT_OBSERVATION_NOT_HUMAN_ATTESTATION"
+        }
+      ],
+      "absence_analysis": {
+        "document_id": "DOC-211f45df17b98569c5f1",
+        "pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "method": "PRIOR_AI_FULL_DOCUMENT_TEXT_REVIEW",
+        "conclusion": "NOT_IDENTIFIED_IN_MAIN_NOTICE_ONLY",
+        "human_attested": false
+      },
+      "dependencies": {
+        "baseline_scope_id": "AWARDEES",
+        "change_group_id": "SUPPORT_TERMINATION",
+        "change_key": "SUSPENSION_NO_RESUME",
+        "summary_role": "PRIMARY",
+        "parent_comparison_id": "SUSPENSION_EFFECT",
+        "child_ids": [],
+        "same_change_key_ids": []
+      },
+      "related_comparison_ids": [
+        "SUSPENSION_EFFECT",
+        "PREVIOUS_BENEFICIARY_RESTRICTION"
+      ],
+      "assessment": {
+        "disposition": "RETAIN_PROPOSAL",
+        "severity": "MEDIUM",
+        "verification_status": "AI_SOURCE_ANALYSIS_HUMAN_UNATTESTED",
+        "finalization": "NOT_FINAL"
+      },
+      "event_compatibility": {
+        "automatic_conversion": false,
+        "status": "HUMAN_REVIEW_AND_STAGE_B_REQUIRED",
+        "prerequisites": [
+          "EXPLICIT_HUMAN_REVIEW",
+          "SEPARATE_EXECUTION_APPROVAL"
+        ],
+        "supplemental_source_ids": []
+      }
+    },
+    {
+      "comparison_id": "ADMIN_CONSENT_ALTERNATIVES",
+      "baseline_snapshot": {
+        "comparison_id": "ADMIN_CONSENT_ALTERNATIVES",
+        "label": "행정정보 공동이용 비동의 시 대체서류",
+        "scope_id": "APPLICANT_ALL",
+        "proposed_change_type": "ADDED_CANDIDATE",
+        "review_status": "PENDING_REVIEW",
+        "human_approved": false,
+        "adjudication_reason": "동의서 의무만 표시하지 말고 대체 경로 함께 안내 / 원문 정제본 근거 검토 후보, PDF 미검증",
+        "change_group_id": "DOCUMENT_REQUIREMENTS",
+        "change_key": "DOC_ADMIN_CONSENT",
+        "summary_role": "SUPPORTING",
+        "parent_comparison_id": "DOC_ADMIN_CONSENT",
+        "previous": {
+          "value": null,
+          "source_type": "UNAVAILABLE",
+          "document_id": "DOC-211f45df17b98569c5f1",
+          "source_cleaned_sha256": "fe7dc7afb0c64886683e0eee96f6557c473edd367ceece5f93b8a5f41ba692b2",
+          "reviewed_fields": [],
+          "supplemental_quotes": [],
+          "pdf_visual_reviewed": false,
+          "missing_reason": "UNVERIFIED_PREVIOUS_YEAR"
+        },
+        "current": {
+          "value": "비동의 시 건강보험 자격 확인서·소득금액증명원·주민등록등·초본 별도 제출",
+          "source_type": "REVIEWED",
+          "document_id": "DOC-543adbc0ebc09e5ce628",
+          "source_cleaned_sha256": "46972707cc2c7be0f414a8bbe3e30629ccaa31fc7868e34dda40c3c0a0f73be9",
+          "reviewed_fields": [],
+          "supplemental_quotes": [
+            {
+              "evidence_id": "E26_ADMIN_CONSENT_ALTERNATIVES",
+              "document_id": "DOC-543adbc0ebc09e5ce628",
+              "page": 8,
+              "quote": "④ 행정정보 공동이용 사전동의서 : 주민등록번호 전체 기재, 서명 필수\n※ 비동의 시 공고일 기준 건강보험 자격 확인서, 최근 소득금액증명원, 주민등록등․초본 별도 제출",
+              "source_cleaned_sha256": "46972707cc2c7be0f414a8bbe3e30629ccaa31fc7868e34dda40c3c0a0f73be9",
+              "text_verification": "CLEANED_TEXT_VERIFIED",
+              "pdf_visual_reviewed": false
+            }
+          ],
+          "pdf_visual_reviewed": false,
+          "missing_reason": null
+        }
+      },
+      "recommendation": {
+        "proposed_change_type": "ADDED_CANDIDATE",
+        "previous_value": "해당 비동의 대체서류 묶음은 모집 공고 전체에서 확인되지 않음.",
+        "current_value": "공고일 기준 건강보험 자격 확인서, 최근 소득금액증명원, 주민등록등·초본 별도 제출.",
+        "explanation": "서류 종류에 공고일 기준과 최근 소득금액증명원이라는 시점 조건을 보완한다.",
+        "scope_note": "행정정보 공동이용 비동의자에 한정. 추가자료 요구 가능성을 배제하지 않는다.",
+        "target_fields": [
+          "previous.value",
+          "current.value",
+          "adjudication_reason"
+        ],
+        "counting_policy": "PRESERVE_BASELINE_NO_ADDITIONAL_COUNT",
+        "unresolved_questions": [
+          "2025 공고 밖 관련 절차의 부재까지 확정하지 않는다."
+        ]
+      },
+      "evidence": [
+        {
+          "document_id": "DOC-211f45df17b98569c5f1",
+          "year": 2025,
+          "pdf_sha256": "6288e029484140bff4e7a3a5de64691d8230f07b04bae47d7dbcb25300cd0df4",
+          "page": 6,
+          "quote": "- 지원신청서, 개인정보 수집·이용 및 제3자 제공에 관한 동의서 작성․등록",
+          "verification": "AI_TEXT_OBSERVATION_NOT_HUMAN_ATTESTATION"
+        },
+        {
+          "document_id": "DOC-543adbc0ebc09e5ce628",
+          "year": 2026,
+          "pdf_sha256": "80de4494292b3d7526749bddf12509843d4ffd9a8ae2d944a32cb33c008e0f1d",
+          "page": 8,
+          "quote": "※ 비동의 시 공고일 기준 건강보험 자격 확인서, 최근 소득금액증명원, 주민등록등․초본 별도 제출",
+          "verification": "AI_TEXT_OBSERVATION_NOT_HUMAN_ATTESTATION"
+        }
+      ],
+      "absence_analysis": {
+        "document_id": "DOC-211f45df17b98569c5f1",
+        "pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "method": "PRIOR_AI_FULL_DOCUMENT_TEXT_REVIEW",
+        "conclusion": "NOT_IDENTIFIED_IN_MAIN_NOTICE_ONLY",
+        "human_attested": false
+      },
+      "dependencies": {
+        "baseline_scope_id": "APPLICANT_ALL",
+        "change_group_id": "DOCUMENT_REQUIREMENTS",
+        "change_key": "DOC_ADMIN_CONSENT",
+        "summary_role": "SUPPORTING",
+        "parent_comparison_id": "DOC_ADMIN_CONSENT",
+        "child_ids": [],
+        "same_change_key_ids": [
+          "DOC_ADMIN_CONSENT"
+        ]
+      },
+      "related_comparison_ids": [
+        "DOC_ADMIN_CONSENT"
+      ],
+      "assessment": {
+        "disposition": "REVISE_PROPOSAL",
+        "severity": "MEDIUM",
+        "verification_status": "AI_SOURCE_ANALYSIS_HUMAN_UNATTESTED",
+        "finalization": "NOT_FINAL"
+      },
+      "event_compatibility": {
+        "automatic_conversion": false,
+        "status": "HUMAN_REVIEW_AND_STAGE_B_REQUIRED",
+        "prerequisites": [
+          "EXPLICIT_HUMAN_REVIEW",
+          "SEPARATE_EXECUTION_APPROVAL"
+        ],
+        "supplemental_source_ids": []
+      }
+    }
+  ],
+  "related_items": [
+    {
+      "comparison_id": "RENT_CONVERSION_FORMULA",
+      "baseline_snapshot": {
+        "comparison_id": "RENT_CONVERSION_FORMULA",
+        "label": "보증금 월세 환산 계산식",
+        "scope_id": "RENT_ABOVE_600K",
+        "proposed_change_type": "MAINTAINED",
+        "review_status": "PENDING_REVIEW",
+        "human_approved": false,
+        "adjudication_reason": "양쪽 정제 공고에 보증금 × 환산율 ÷ 12개월 계산식이 있음. 산식 형태는 유지, 비율 변화는 #26에서 집계 (재판정 권장안, 원본 PDF 시각 검토 전)",
+        "change_group_id": "RENT_CONVERSION",
+        "change_key": "RENT_CONVERSION_RATE",
+        "summary_role": "CONTEXT",
+        "parent_comparison_id": null,
+        "previous": {
+          "value": "보증금 × 5.0% ÷ 12개월",
+          "source_type": "REVIEWED",
+          "document_id": "DOC-211f45df17b98569c5f1",
+          "source_cleaned_sha256": "fe7dc7afb0c64886683e0eee96f6557c473edd367ceece5f93b8a5f41ba692b2",
+          "reviewed_fields": [
+            {
+              "field_key": "RENT_DEPOSIT_CONVERSION_FORMULA",
+              "label": "보증금 월세 환산액 계산식",
+              "scope": "전체 신청자",
+              "value": "보증금 금액 × 5.0% ÷ 12개월",
+              "evidence": {
+                "page": 3,
+                "quote": "* 보증금 월세 환산액 계산 = 보증금 금액 × 5.0% ÷ 12개월"
+              }
+            }
+          ],
+          "supplemental_quotes": [],
+          "pdf_visual_reviewed": false,
+          "missing_reason": null
+        },
+        "current": {
+          "value": "환산율 4.5% (계산식 근거는 별도 확인 필요)",
+          "source_type": "REVIEWED",
+          "document_id": "DOC-543adbc0ebc09e5ce628",
+          "source_cleaned_sha256": "46972707cc2c7be0f414a8bbe3e30629ccaa31fc7868e34dda40c3c0a0f73be9",
+          "reviewed_fields": [
+            {
+              "field_key": "ELIGIBLE_RENT_CONVERSION_EXCEPTION",
+              "label": "월세 60만원 초과자 보증금 환산 예외",
+              "scope": "월세 60만원 초과 거주 신청인",
+              "value": "임차보증금 8천만원 이하, 월세 60만원 초과 시 보증금 월세 환산액과 월세액 합계 90만원 이하이고 환산율은 4.5% 적용",
+              "evidence": {
+                "page": 4,
+                "quote": "※ 단, 임차보증금은 8천만원 이하면서 월세가 60만원을 초과하는 경우, 보증금 월세 환산액*과 월세액을\n합산하여 90만원 이하면 신청 가능. ‘주택임대차보호법’에 의거 전월세 환산율(’25.12.기준)은 4.5% 적용"
+              }
+            }
+          ],
+          "supplemental_quotes": [
+            {
+              "evidence_id": "E26_RENT_FORMULA",
+              "document_id": "DOC-543adbc0ebc09e5ce628",
+              "page": 4,
+              "quote": "* 보증금 월세 환산액 계산 = 보증금 금액 × 4.5% ÷ 12개월",
+              "source_cleaned_sha256": "46972707cc2c7be0f414a8bbe3e30629ccaa31fc7868e34dda40c3c0a0f73be9",
+              "text_verification": "CLEANED_TEXT_VERIFIED",
+              "pdf_visual_reviewed": false
+            }
+          ],
+          "pdf_visual_reviewed": false,
+          "missing_reason": null
+        }
+      },
+      "recommendation": {
+        "proposed_change_type": "MAINTAINED",
+        "previous_value": "보증금 금액 × 5.0% ÷ 12개월",
+        "current_value": "보증금 금액 × 4.5% ÷ 12개월",
+        "explanation": "2026 p.4 및 기존 보충 인용에 산식이 있다. 계산식 근거 별도 확인 필요라는 값을 정정하되 산식 형태는 유지하고 환산율에서만 변경 집계한다.",
+        "scope_note": "월세 60만원 초과자의 보증금 환산. 지원금 지급 산식과 구분.",
+        "target_fields": [
+          "previous.value",
+          "current.value",
+          "adjudication_reason"
+        ],
+        "counting_policy": "PRESERVE_BASELINE_NO_ADDITIONAL_COUNT",
+        "unresolved_questions": [
+          "환산 예시의 절사 방식을 지원금 지급 규칙으로 확대하지 않는다."
+        ]
+      },
+      "evidence": [
+        {
+          "document_id": "DOC-211f45df17b98569c5f1",
+          "year": 2025,
+          "pdf_sha256": "6288e029484140bff4e7a3a5de64691d8230f07b04bae47d7dbcb25300cd0df4",
+          "page": 3,
+          "quote": "* 보증금 월세 환산액 계산 = 보증금 금액 × 5.0% ÷ 12개월",
+          "verification": "AI_TEXT_OBSERVATION_NOT_HUMAN_ATTESTATION"
+        },
+        {
+          "document_id": "DOC-543adbc0ebc09e5ce628",
+          "year": 2026,
+          "pdf_sha256": "80de4494292b3d7526749bddf12509843d4ffd9a8ae2d944a32cb33c008e0f1d",
+          "page": 4,
+          "quote": "* 보증금 월세 환산액 계산 = 보증금 금액 × 4.5% ÷ 12개월",
+          "verification": "AI_TEXT_OBSERVATION_NOT_HUMAN_ATTESTATION"
+        }
+      ],
+      "absence_analysis": {
+        "document_id": "DOC-211f45df17b98569c5f1",
+        "pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "method": "PRIOR_AI_FULL_DOCUMENT_TEXT_REVIEW",
+        "conclusion": "NOT_APPLICABLE",
+        "human_attested": false
+      },
+      "dependencies": {
+        "baseline_scope_id": "RENT_ABOVE_600K",
+        "change_group_id": "RENT_CONVERSION",
+        "change_key": "RENT_CONVERSION_RATE",
+        "summary_role": "CONTEXT",
+        "parent_comparison_id": null,
+        "child_ids": [],
+        "same_change_key_ids": [
+          "RENT_BASE_MAX",
+          "RENT_CONVERSION_RATE",
+          "TIER_FOUR_EXCEPTION"
+        ]
+      },
+      "related_comparison_ids": [
+        "RENT_CONVERSION_RATE",
+        "RENT_CONVERSION_SUM_CAP"
+      ],
+      "assessment": {
+        "disposition": "REVISE_PROPOSAL",
+        "severity": "MEDIUM",
+        "verification_status": "AI_SOURCE_ANALYSIS_HUMAN_UNATTESTED",
+        "finalization": "NOT_FINAL"
+      },
+      "event_compatibility": {
+        "automatic_conversion": false,
+        "status": "HUMAN_REVIEW_AND_STAGE_B_REQUIRED",
+        "prerequisites": [
+          "EXPLICIT_HUMAN_REVIEW",
+          "SEPARATE_EXECUTION_APPROVAL"
+        ],
+        "supplemental_source_ids": []
+      }
+    },
+    {
+      "comparison_id": "TIER_DISTRIBUTION",
+      "baseline_snapshot": {
+        "comparison_id": "TIER_DISTRIBUTION",
+        "label": "구간별 선정 인원·비율",
+        "scope_id": "ONE_PERSON_TIERS",
+        "proposed_change_type": "UPDATED",
+        "review_status": "PENDING_REVIEW",
+        "human_approved": false,
+        "adjudication_reason": "2025년 총 15,000명 45/30/15/10% vs 2026년 1인 가구 12,000명 35/30/20/15%. 분모 명시 (재판정 권장안, 원본 PDF 시각 검토 전)",
+        "change_group_id": "SELECTION_ALLOCATION",
+        "change_key": "TIER_DISTRIBUTION",
+        "summary_role": "PRIMARY",
+        "parent_comparison_id": null,
+        "previous": {
+          "value": "6,750 / 4,500 / 2,250 / 1,500명 (총 15,000명)",
+          "source_type": "REVIEWED",
+          "document_id": "DOC-211f45df17b98569c5f1",
+          "source_cleaned_sha256": "fe7dc7afb0c64886683e0eee96f6557c473edd367ceece5f93b8a5f41ba692b2",
+          "reviewed_fields": [
+            {
+              "field_key": "SELECTION_TIER_1_QUOTA",
+              "label": "1구간 선정 인원",
+              "scope": "청년 1인 가구",
+              "value": "6,750명",
+              "evidence": {
+                "page": 8,
+                "quote": "6,750명"
+              }
+            },
+            {
+              "field_key": "SELECTION_TIER_2_QUOTA",
+              "label": "2구간 선정 인원",
+              "scope": "청년 1인 가구",
+              "value": "4,500명",
+              "evidence": {
+                "page": 8,
+                "quote": "4,500명"
+              }
+            },
+            {
+              "field_key": "SELECTION_TIER_3_QUOTA",
+              "label": "3구간 선정 인원",
+              "scope": "청년 1인 가구",
+              "value": "2,250명",
+              "evidence": {
+                "page": 8,
+                "quote": "2,250명"
+              }
+            },
+            {
+              "field_key": "SELECTION_TIER_4_QUOTA",
+              "label": "4구간 선정 인원",
+              "scope": "청년 1인 가구",
+              "value": "1,500명",
+              "evidence": {
+                "page": 8,
+                "quote": "1,500명"
+              }
+            }
+          ],
+          "supplemental_quotes": [],
+          "pdf_visual_reviewed": false,
+          "missing_reason": null
+        },
+        "current": {
+          "value": "35% / 30% / 20% / 15% (청년 1인 가구 12,000명)",
+          "source_type": "REVIEWED",
+          "document_id": "DOC-543adbc0ebc09e5ce628",
+          "source_cleaned_sha256": "46972707cc2c7be0f414a8bbe3e30629ccaa31fc7868e34dda40c3c0a0f73be9",
+          "reviewed_fields": [
+            {
+              "field_key": "SELECTION_NUMBER_1PERSON",
+              "label": "선정 인원 - 청년 1인 가구",
+              "scope": "청년 1인 가구",
+              "value": "12,000명",
+              "evidence": {
+                "page": 2,
+                "quote": "- 청년 1인 가구 : 12,000명"
+              }
+            },
+            {
+              "field_key": "SELECTION_CRITERIA_1",
+              "label": "1구간 임차보증금·월세 및 선정비율",
+              "scope": "청년 1인 가구",
+              "value": "임차보증금 5백만원 이하, 월세 40만원 이하, 선정비율 35%",
+              "evidence": {
+                "page": 9,
+                "quote": "1 임차보증금 5백만원 이하이고, 월세 40만원 이하 35%"
+              }
+            },
+            {
+              "field_key": "SELECTION_CRITERIA_2",
+              "label": "2구간 임차보증금·월세 및 선정비율",
+              "scope": "청년 1인 가구",
+              "value": "임차보증금 1천만원 이하, 월세 50만원 이하, 선정비율 30%",
+              "evidence": {
+                "page": 9,
+                "quote": "2 임차보증금 1천만원 이하이고, 월세 50만원 이하 30%"
+              }
+            },
+            {
+              "field_key": "SELECTION_CRITERIA_3",
+              "label": "3구간 임차보증금·월세 및 선정비율",
+              "scope": "청년 1인 가구",
+              "value": "임차보증금 2천만원 이하, 월세 60만원 이하, 선정비율 20%",
+              "evidence": {
+                "page": 9,
+                "quote": "3 임차보증금 2천만원 이하이고, 월세 60만원 이하 20%"
+              }
+            },
+            {
+              "field_key": "SELECTION_CRITERIA_4_RATE",
+              "label": "4구간 선정비율",
+              "scope": "청년 1인 가구(4구간)",
+              "value": "선정비율 15%",
+              "evidence": {
+                "page": 9,
+                "quote": "4 15%"
+              }
+            }
+          ],
+          "supplemental_quotes": [],
+          "pdf_visual_reviewed": false,
+          "missing_reason": null
+        }
+      },
+      "recommendation": {
+        "proposed_change_type": "UPDATED",
+        "previous_value": "45/30/15/10%, 6,750/4,500/2,250/1,500명, 전체 15,000명 기준.",
+        "current_value": "35/30/20/15%, 청년 1인 가구 12,000명 기준.",
+        "explanation": "기존 Phase 4가 이미 분모를 명시하므로 누락 결함이 아닌 보존 검증 대상으로 둔다.",
+        "scope_note": "2025 전체와 2026 청년 1인 가구 비율의 모집단 차이 보존.",
+        "target_fields": [],
+        "counting_policy": "PRESERVE_BASELINE_NO_ADDITIONAL_COUNT",
+        "unresolved_questions": [
+          "실제 선정 인원은 공고 정원·비율과 구분한다."
+        ]
+      },
+      "evidence": [
+        {
+          "document_id": "DOC-211f45df17b98569c5f1",
+          "year": 2025,
+          "pdf_sha256": "6288e029484140bff4e7a3a5de64691d8230f07b04bae47d7dbcb25300cd0df4",
+          "page": 7,
+          "quote": "ㅇ 선정인원 : 15,000명",
+          "verification": "AI_TEXT_OBSERVATION_NOT_HUMAN_ATTESTATION"
+        },
+        {
+          "document_id": "DOC-211f45df17b98569c5f1",
+          "year": 2025,
+          "pdf_sha256": "6288e029484140bff4e7a3a5de64691d8230f07b04bae47d7dbcb25300cd0df4",
+          "page": 8,
+          "quote": "6,750명",
+          "verification": "AI_TEXT_OBSERVATION_NOT_HUMAN_ATTESTATION"
+        },
+        {
+          "document_id": "DOC-543adbc0ebc09e5ce628",
+          "year": 2026,
+          "pdf_sha256": "80de4494292b3d7526749bddf12509843d4ffd9a8ae2d944a32cb33c008e0f1d",
+          "page": 2,
+          "quote": "- 청년 1인 가구 : 12,000명",
+          "verification": "AI_TEXT_OBSERVATION_NOT_HUMAN_ATTESTATION"
+        },
+        {
+          "document_id": "DOC-543adbc0ebc09e5ce628",
+          "year": 2026,
+          "pdf_sha256": "80de4494292b3d7526749bddf12509843d4ffd9a8ae2d944a32cb33c008e0f1d",
+          "page": 9,
+          "quote": "1 임차보증금 5백만원 이하이고, 월세 40만원 이하 35%",
+          "verification": "AI_TEXT_OBSERVATION_NOT_HUMAN_ATTESTATION"
+        }
+      ],
+      "absence_analysis": {
+        "document_id": "DOC-211f45df17b98569c5f1",
+        "pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "method": "PRIOR_AI_FULL_DOCUMENT_TEXT_REVIEW",
+        "conclusion": "NOT_APPLICABLE",
+        "human_attested": false
+      },
+      "dependencies": {
+        "baseline_scope_id": "ONE_PERSON_TIERS",
+        "change_group_id": "SELECTION_ALLOCATION",
+        "change_key": "TIER_DISTRIBUTION",
+        "summary_role": "PRIMARY",
+        "parent_comparison_id": null,
+        "child_ids": [],
+        "same_change_key_ids": []
+      },
+      "related_comparison_ids": [
+        "TARGET_GROUP_QUOTA",
+        "NEW_SPECIAL_APPLICATION_GROUPS"
+      ],
+      "assessment": {
+        "disposition": "RETAIN_PROPOSAL",
+        "severity": "MEDIUM",
+        "verification_status": "AI_SOURCE_ANALYSIS_HUMAN_UNATTESTED",
+        "finalization": "NOT_FINAL"
+      },
+      "event_compatibility": {
+        "automatic_conversion": false,
+        "status": "HUMAN_REVIEW_AND_STAGE_B_REQUIRED",
+        "prerequisites": [
+          "EXPLICIT_HUMAN_REVIEW",
+          "SEPARATE_EXECUTION_APPROVAL"
+        ],
+        "supplemental_source_ids": []
+      }
+    }
+  ],
+  "disposition_counts": {
+    "RETAIN_PROPOSAL": 2,
+    "REVISE_PROPOSAL": 6,
+    "SPLIT_PROPOSAL": 2,
+    "INSUFFICIENT_EVIDENCE": 3
+  },
+  "stage_b_followup": [
+    "REJECTED_IS_NOT_COMPLETE",
+    "EVIDENCED_NONCHANGE_RESOLUTION",
+    "SEPARATE_SUBSTANTIVE_SCHEDULE_WORDING_SUMMARIES"
+  ],
+  "humanApproved": false,
+  "java_import_ready": false
+}
