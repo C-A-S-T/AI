@@ -1,6 +1,6 @@
-"""Read existing Phase 4 comparison results for an authenticated internal preview.
+"""Read existing Phase 4 results for the authenticated policy comparison API.
 
-The response is never an approved policy or a Java import payload. No writes.
+Results are unapproved, are not a Java import payload, and are never written.
 """
 
 from __future__ import annotations
@@ -79,7 +79,7 @@ def _side_evidence(side: dict, document_id: str) -> list[dict]:
     return evidence
 
 
-def load_policy_compare_preview(policy_key: str) -> dict:
+def load_policy_comparison(policy_key: str) -> dict:
     """Return an unapproved comparison without running extraction or writing state."""
     if policy_key != POLICY_KEY:
         raise KeyError("Unknown policy")
@@ -103,7 +103,7 @@ def load_policy_compare_preview(policy_key: str) -> dict:
             or previous_doc == current_doc or not isinstance(items, list)):
         raise ValueError("Comparison is missing document bindings or display items")
 
-    preview_items: list[dict] = []
+    comparison_items: list[dict] = []
     seen: set[str] = set()
     for item in items:
         if not isinstance(item, dict):
@@ -119,7 +119,7 @@ def load_policy_compare_preview(policy_key: str) -> dict:
         if not isinstance(previous, dict) or not isinstance(current, dict):
             raise ValueError("Missing comparison source sides")
 
-        preview_items.append({
+        comparison_items.append({
             "comparisonId": item_id,
             "label": item.get("label"),
             "scopeId": item.get("scope_id"),
@@ -144,7 +144,7 @@ def load_policy_compare_preview(policy_key: str) -> dict:
         "humanApproved": False,
         "javaImportReady": False,
         "sourceProvenanceVerified": False,
-        "warning": "Unapproved policy comparison preview; not authoritative policy guidance.",
-        "totalItems": len(preview_items),
-        "items": preview_items,
+        "warning": "Unapproved policy comparison; not authoritative policy guidance.",
+        "totalItems": len(comparison_items),
+        "items": comparison_items,
     }
