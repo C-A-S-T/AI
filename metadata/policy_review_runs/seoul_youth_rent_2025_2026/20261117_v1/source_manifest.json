@@ -1,0 +1,419 @@
+{
+  "schema_version": 1,
+  "artifact_type": "POLICY_REVIEW_SOURCE_MANIFEST",
+  "run_id": "seoul_youth_rent_2025_2026_20261117_v1",
+  "policy_key": "seoul-youth-rent",
+  "created_at": "2026-11-18T02:34:31+09:00",
+  "documents": [
+    {
+      "document_id": "DOC-211f45df17b98569c5f1",
+      "reference_year": 2025,
+      "announcement_id": "2025-1771",
+      "document_title": "2025년 서울시 청년월세지원 모집 공고",
+      "local_pdf": {
+        "path": "data/raw/youth-rent/2025/2025년 서울시 청년월세지원 모집 공고문.pdf",
+        "sha256": "6288e029484140bff4e7a3a5de64691d8230f07b04bae47d7dbcb25300cd0df4",
+        "size_bytes": 395107,
+        "page_count": 10,
+        "inspected_at": "2026-11-18T02:33:07.276680+09:00"
+      },
+      "official_source": {
+        "source_page_url": "https://housing.seoul.go.kr/site/main/board/notice/12478",
+        "download_url": "https://housing.seoul.go.kr/site/main/file/download/uu/8ae2302eaf1c4ef8bb378287786c3d9e",
+        "page_verification": {
+          "status": "URL_PROVIDED",
+          "checked_at": null,
+          "evidence": null
+        },
+        "attachment_link_verification": {
+          "status": "URL_PROVIDED",
+          "checked_at": null,
+          "evidence": null
+        },
+        "remote_byte_verification": {
+          "status": "NOT_CHECKED",
+          "remote_sha256": null,
+          "checked_at": null,
+          "reason": "SEPARATE_EXECUTION_APPROVAL_REQUIRED"
+        }
+      },
+      "extraction_bindings": {
+        "PARSED": {
+          "role": "PARSED",
+          "document_id": "DOC-211f45df17b98569c5f1"
+        },
+        "CLEANED": {
+          "role": "CLEANED",
+          "document_id": "DOC-211f45df17b98569c5f1"
+        },
+        "REVIEWED": {
+          "role": "REVIEWED",
+          "document_id": "DOC-211f45df17b98569c5f1"
+        }
+      }
+    },
+    {
+      "document_id": "DOC-543adbc0ebc09e5ce628",
+      "reference_year": 2026,
+      "announcement_id": "2026-1440",
+      "document_title": "2026년 서울시 청년월세지원 모집 공고",
+      "local_pdf": {
+        "path": "data/raw/youth-rent/2026/1. 26년 서울시 청년월세지원 모집 공고.pdf",
+        "sha256": "80de4494292b3d7526749bddf12509843d4ffd9a8ae2d944a32cb33c008e0f1d",
+        "size_bytes": 413817,
+        "page_count": 13,
+        "inspected_at": "2026-11-18T02:33:07.276680+09:00"
+      },
+      "official_source": {
+        "source_page_url": "https://housing.seoul.go.kr/site/main/board/notice/12667",
+        "download_url": "https://housing.seoul.go.kr/site/main/file/download/uu/da39f9221c574254a6c8bc52327495f5",
+        "page_verification": {
+          "status": "URL_PROVIDED",
+          "checked_at": null,
+          "evidence": null
+        },
+        "attachment_link_verification": {
+          "status": "URL_PROVIDED",
+          "checked_at": null,
+          "evidence": null
+        },
+        "remote_byte_verification": {
+          "status": "NOT_CHECKED",
+          "remote_sha256": null,
+          "checked_at": null,
+          "reason": "SEPARATE_EXECUTION_APPROVAL_REQUIRED"
+        }
+      },
+      "extraction_bindings": {
+        "PARSED": {
+          "role": "PARSED",
+          "document_id": "DOC-543adbc0ebc09e5ce628"
+        },
+        "CLEANED": {
+          "role": "CLEANED",
+          "document_id": "DOC-543adbc0ebc09e5ce628"
+        },
+        "REVIEWED": {
+          "role": "REVIEWED",
+          "document_id": "DOC-543adbc0ebc09e5ce628"
+        }
+      }
+    }
+  ],
+  "input_artifacts": [
+    {
+      "role": "PDF",
+      "document_id": "DOC-211f45df17b98569c5f1",
+      "policy_key": "seoul-youth-rent",
+      "path_base": "PROJECT",
+      "path": "data/raw/youth-rent/2025/2025년 서울시 청년월세지원 모집 공고문.pdf",
+      "sha256": "6288e029484140bff4e7a3a5de64691d8230f07b04bae47d7dbcb25300cd0df4",
+      "size_bytes": 395107,
+      "metadata": {}
+    },
+    {
+      "role": "PARSED",
+      "document_id": "DOC-211f45df17b98569c5f1",
+      "policy_key": "seoul-youth-rent",
+      "path_base": "PROJECT",
+      "path": "data/parsed/DOC-211f45df17b98569c5f1.json",
+      "sha256": "6675d8e06bd04ebb9afb09cd94f946721ca244e1fb145f2a9d8fc102289e0f94",
+      "size_bytes": 49731,
+      "metadata": {
+        "schema_version": 1,
+        "quality_status": "REVIEW_REQUIRED"
+      }
+    },
+    {
+      "role": "CLEANED",
+      "document_id": "DOC-211f45df17b98569c5f1",
+      "policy_key": "seoul-youth-rent",
+      "path_base": "PROJECT",
+      "path": "data/cleaned/DOC-211f45df17b98569c5f1.json",
+      "sha256": "fe7dc7afb0c64886683e0eee96f6557c473edd367ceece5f93b8a5f41ba692b2",
+      "size_bytes": 50087,
+      "metadata": {
+        "schema_version": 1,
+        "quality_status": "REVIEW_REQUIRED"
+      }
+    },
+    {
+      "role": "REVIEWED",
+      "document_id": "DOC-211f45df17b98569c5f1",
+      "policy_key": "seoul-youth-rent",
+      "path_base": "LOCALAPPDATA",
+      "path": "CAST_AI/policy_compare_reviews/2025/DOC-211f45df17b98569c5f1_v2_REVIEWED.json",
+      "sha256": "2fb59881bb0e4c28e49cf5a042654600b8046d35b8f2b01c9103934a04609de7",
+      "size_bytes": 30317,
+      "metadata": {
+        "schema_version": 1,
+        "status": "REVIEWED"
+      }
+    },
+    {
+      "role": "APPROVAL_MANIFEST",
+      "document_id": "DOC-211f45df17b98569c5f1",
+      "policy_key": "seoul-youth-rent",
+      "path_base": "LOCALAPPDATA",
+      "path": "CAST_AI/policy_compare_reviews/2025/DOC-211f45df17b98569c5f1_v2_approved_manifest.json",
+      "sha256": "82ea65ae193f28865075386757ceb3da0a959eddf1f0311a345957b830f0a070",
+      "size_bytes": 30691,
+      "metadata": {
+        "schema_version": 1,
+        "artifact_type": "POLICY_FIELD_REVIEW",
+        "review_status": "DRAFT"
+      }
+    },
+    {
+      "role": "PDF",
+      "document_id": "DOC-543adbc0ebc09e5ce628",
+      "policy_key": "seoul-youth-rent",
+      "path_base": "PROJECT",
+      "path": "data/raw/youth-rent/2026/1. 26년 서울시 청년월세지원 모집 공고.pdf",
+      "sha256": "80de4494292b3d7526749bddf12509843d4ffd9a8ae2d944a32cb33c008e0f1d",
+      "size_bytes": 413817,
+      "metadata": {}
+    },
+    {
+      "role": "PARSED",
+      "document_id": "DOC-543adbc0ebc09e5ce628",
+      "policy_key": "seoul-youth-rent",
+      "path_base": "PROJECT",
+      "path": "data/parsed/DOC-543adbc0ebc09e5ce628.json",
+      "sha256": "42d0808af04863d2cb3433aeef7e9d55674b49ce91053f2770fe70146bf363ff",
+      "size_bytes": 84849,
+      "metadata": {
+        "schema_version": 1,
+        "quality_status": "REVIEW_REQUIRED"
+      }
+    },
+    {
+      "role": "CLEANED",
+      "document_id": "DOC-543adbc0ebc09e5ce628",
+      "policy_key": "seoul-youth-rent",
+      "path_base": "PROJECT",
+      "path": "data/cleaned/DOC-543adbc0ebc09e5ce628.json",
+      "sha256": "46972707cc2c7be0f414a8bbe3e30629ccaa31fc7868e34dda40c3c0a0f73be9",
+      "size_bytes": 85320,
+      "metadata": {
+        "schema_version": 1,
+        "quality_status": "REVIEW_REQUIRED"
+      }
+    },
+    {
+      "role": "REVIEWED",
+      "document_id": "DOC-543adbc0ebc09e5ce628",
+      "policy_key": "seoul-youth-rent",
+      "path_base": "LOCALAPPDATA",
+      "path": "CAST_AI/policy_compare_reviews/2026/DOC-543adbc0ebc09e5ce628_v2_REVIEWED.json",
+      "sha256": "6bd2e2d72f87f25d7099271f24bfb7ba26236de268df3886f031e6880a3a4a93",
+      "size_bytes": 40908,
+      "metadata": {
+        "schema_version": 1,
+        "status": "REVIEWED"
+      }
+    },
+    {
+      "role": "APPROVAL_MANIFEST",
+      "document_id": "DOC-543adbc0ebc09e5ce628",
+      "policy_key": "seoul-youth-rent",
+      "path_base": "LOCALAPPDATA",
+      "path": "CAST_AI/policy_compare_reviews/2026/DOC-543adbc0ebc09e5ce628_v2_approved_manifest.json",
+      "sha256": "09fd9a466be891f067297a20d9ddd7aec1c39ac71e4ae6d263e3f605ff2f2612",
+      "size_bytes": 46639,
+      "metadata": {
+        "schema_version": 1,
+        "artifact_type": "POLICY_FIELD_REVIEW",
+        "review_status": "DRAFT"
+      }
+    },
+    {
+      "role": "SEMANTIC_MAPPING",
+      "document_id": null,
+      "policy_key": "seoul-youth-rent",
+      "path_base": "PROJECT",
+      "path": "metadata/policy_semantic_mappings/seoul_youth_rent_2025_2026.json",
+      "sha256": "6f798d103b87b0dc00ba2c8bd6b3f4253f53ee6c09449e04947bcf028ad49652",
+      "size_bytes": 71301,
+      "metadata": {
+        "schema_version": 1,
+        "artifact_type": "POLICY_SEMANTIC_MAPPING",
+        "status": "DRAFT_REVIEW_REQUIRED"
+      }
+    },
+    {
+      "role": "RECLASSIFICATION",
+      "document_id": null,
+      "policy_key": "seoul-youth-rent",
+      "path_base": "PROJECT",
+      "path": "metadata/policy_semantic_reviews/seoul_youth_rent_2025_2026_reclassification_draft.json",
+      "sha256": "66db42aac9029318db8c6246ebec513d922476db52ba30fa98ce37b0a4575c8f",
+      "size_bytes": 53262,
+      "metadata": {
+        "schema_version": 1,
+        "artifact_type": "POLICY_SEMANTIC_ADJUDICATION_DRAFT",
+        "status": "DRAFT_REVIEW_REQUIRED"
+      }
+    },
+    {
+      "role": "SUPPLEMENTAL",
+      "document_id": null,
+      "policy_key": "seoul-youth-rent",
+      "path_base": "PROJECT",
+      "path": "metadata/policy_semantic_reviews/seoul_youth_rent_2025_2026_supplemental_evidence.json",
+      "sha256": "7e10ff77b725c01e30a66bfa07447bbeec46e30aa9ca29937621b942982863ef",
+      "size_bytes": 15814,
+      "metadata": {
+        "schema_version": 1,
+        "artifact_type": "POLICY_SUPPLEMENTAL_EVIDENCE_DRAFT",
+        "status": "DRAFT_REVIEW_REQUIRED"
+      }
+    },
+    {
+      "role": "PHASE4_NOTES",
+      "document_id": null,
+      "policy_key": "seoul-youth-rent",
+      "path_base": "PROJECT",
+      "path": "metadata/policy_semantic_reviews/seoul_youth_rent_2025_2026_phase4_review_notes.json",
+      "sha256": "a8b769e7a8e7c9afddd9a879449ae3532b226df12de6472e2764243d43bf7146",
+      "size_bytes": 15555,
+      "metadata": {
+        "schema_version": 1,
+        "artifact_type": "POLICY_REVIEW_PROJECTION_NOTES_DRAFT",
+        "status": "DRAFT_REVIEW_REQUIRED"
+      }
+    },
+    {
+      "role": "PHASE5_DRAFT",
+      "document_id": null,
+      "policy_key": "seoul-youth-rent",
+      "path_base": "PROJECT",
+      "path": "metadata/policy_semantic_reviews/seoul_youth_rent_2025_2026_phase5_review_draft.json",
+      "sha256": "8c7d566ee9a105ad1b9416f9df458e4d0db8e33838c500a9ed5b082c9128e37b",
+      "size_bytes": 626,
+      "metadata": {
+        "schema_version": 1,
+        "artifact_type": "POLICY_REVIEW_DECISIONS_DRAFT",
+        "status": "DRAFT_REVIEW_REQUIRED"
+      }
+    },
+    {
+      "role": "DOCUMENTS",
+      "document_id": null,
+      "policy_key": "seoul-youth-rent",
+      "path_base": "PROJECT",
+      "path": "metadata/documents.json",
+      "sha256": "b3bfba3d1f2e71fac5c8f98629732547b3c64fa6ffe9f2192695dd13848546e1",
+      "size_bytes": 3672,
+      "metadata": {
+        "schema_version": 1
+      }
+    },
+    {
+      "role": "SOURCES",
+      "document_id": null,
+      "policy_key": "seoul-youth-rent",
+      "path_base": "PROJECT",
+      "path": "metadata/sources.json",
+      "sha256": "b1d9d266044192cf9ee313479a066cc25fb23e7d871082fee027c5ad44d6002e",
+      "size_bytes": 1199,
+      "metadata": {}
+    },
+    {
+      "role": "PHASE3",
+      "document_id": null,
+      "policy_key": "seoul-youth-rent",
+      "path_base": "LOCALAPPDATA",
+      "path": "CAST_AI/policy_compare_reviews/2026/seoul_youth_rent_2025_2026_SEMANTIC_ADJUDICATION_REVIEW_REQUIRED.json",
+      "sha256": "65713d53c0b77906c6bb96998df1a1cdf5cce4185310df6bf81f05be2090b906",
+      "size_bytes": 391427,
+      "metadata": {
+        "schema_version": 1,
+        "status": "REVIEW_REQUIRED"
+      }
+    },
+    {
+      "role": "PHASE4",
+      "document_id": null,
+      "policy_key": "seoul-youth-rent",
+      "path_base": "LOCALAPPDATA",
+      "path": "CAST_AI/policy_compare_reviews/2026/seoul_youth_rent_2025_2026_PRESENTATION_REVIEW_REQUIRED.json",
+      "sha256": "250363ecfec5934df1cb621034609b7a796a37e2add530506dbbe332dd8a61a3",
+      "size_bytes": 300333,
+      "metadata": {
+        "schema_version": 1,
+        "artifact_type": "POLICY_PRESENTATION_REVIEW_DRAFT",
+        "status": "REVIEW_REQUIRED"
+      }
+    },
+    {
+      "role": "PHASE5_REPORT",
+      "document_id": null,
+      "policy_key": "seoul-youth-rent",
+      "path_base": "LOCALAPPDATA",
+      "path": "CAST_AI/policy_compare_reviews/2026/seoul_youth_rent_2025_2026_POLICY_APPROVAL_GATE_REPORT.json",
+      "sha256": "4c1a10c6eb586b14335c5aae77cfcf59a195e60a9c2dfed16e82aca4a6365f33",
+      "size_bytes": 24901,
+      "metadata": {
+        "schema_version": 1,
+        "artifact_type": "POLICY_APPROVAL_GATE_REPORT",
+        "status": "REVIEW_REQUIRED"
+      }
+    }
+  ],
+  "review_scope": {
+    "focused": {
+      "DOC-211f45df17b98569c5f1": [
+        1,
+        4,
+        8,
+        10
+      ],
+      "DOC-543adbc0ebc09e5ce628": [
+        5,
+        8,
+        9,
+        10,
+        12,
+        13
+      ]
+    },
+    "full": {
+      "DOC-211f45df17b98569c5f1": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "DOC-543adbc0ebc09e5ce628": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ]
+    }
+  },
+  "trust_policy": {
+    "ai_analysis": "NOT_PERFORMED",
+    "human_attestation": "NOT_RECORDED",
+    "authenticated_approval": "NOT_GRANTED"
+  },
+  "status": "REVIEW_REQUIRED",
+  "humanApproved": false,
+  "java_import_ready": false
+}

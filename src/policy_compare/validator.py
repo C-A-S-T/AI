@@ -63,10 +63,18 @@ def evidence_is_present(field: PolicyField, cleaned: dict) -> bool:
     return False
 
 
-def validate_fields(fields: list[PolicyField], cleaned: dict) -> None:
+AI_MAX_FIELDS = 60
+REVIEWED_MAX_FIELDS = 80
+
+
+def validate_fields(
+    fields: list[PolicyField], cleaned: dict, *, max_fields: int = AI_MAX_FIELDS,
+) -> None:
+    if type(max_fields) is not int or max_fields not in (AI_MAX_FIELDS, REVIEWED_MAX_FIELDS):
+        raise ValueError("Unsupported field validation limit")
     if not fields:
         raise ValueError("No grounded policy fields; manual review needed")
-    if len(fields) > 60:
+    if len(fields) > max_fields:
         raise ValueError("Too many extracted fields")
     seen = set()
     for field in fields:

@@ -1,0 +1,906 @@
+{
+  "schema_version": 1,
+  "artifact_type": "POLICY_COMPARISON_REASSESSMENT_CANDIDATES",
+  "status": "REVIEW_PLANNING_ONLY_NOT_AN_EVENT",
+  "policy_key": "seoul-youth-rent",
+  "source_proposal_run_id": "seoul_youth_rent_2025_2026_20261120_correction_v1",
+  "source_proposal_relative_path": "metadata/policy_review_runs/seoul_youth_rent_2025_2026/20261120_correction_v1/correction_proposals.json",
+  "source_proposal_sha256": "93b87c9fcaa24a47c2f436156a570d8d68e105a97ecd24a49313dca9b8dcfbd8",
+  "baseline_bindings": {
+    "source_manifest_sha256": "a916e643d17b56b24ebf21e3fa0c3ba27b0cab65fa889bfc2752efb15e2ef9f9",
+    "page_analysis_sha256": "faa5970b4aa9bbf41cfdee0aad916a3dd806b61fd43ed7f94a3390bdfbb5d34e",
+    "phase3_result_sha256": "65713d53c0b77906c6bb96998df1a1cdf5cce4185310df6bf81f05be2090b906",
+    "phase4_result_sha256": "250363ecfec5934df1cb621034609b7a796a37e2add530506dbbe332dd8a61a3",
+    "initial_draft_sha256": "7acc1dbf9c0e07034ec661c7fc90f8aa4835d8dae92af583086000060b6761db"
+  },
+  "generated_for_review_on": "2026-11-20",
+  "scope": {
+    "p0_items": 13,
+    "related_items": 2,
+    "total_items": 15,
+    "phase4_comparisons_baseline": 82,
+    "no_new_comparison_ids": true,
+    "no_existing_comparison_types_changed": true,
+    "actual_v2_events_created": 0,
+    "actual_revisions_created": 0
+  },
+  "recommendation_counts": {
+    "INCONCLUSIVE": 3,
+    "ADDED_CANDIDATE": 7,
+    "SPLIT_REQUIRED": 2,
+    "UPDATED": 2,
+    "MAINTAINED": 1
+  },
+  "trust": {
+    "ai_analysis": "PROPOSAL_ONLY",
+    "human_attestation": "NOT_RECORDED",
+    "authenticated_approval": "NOT_GRANTED",
+    "gate_trust_updated": false,
+    "humanApproved": false,
+    "java_import_ready": false
+  },
+  "evidence_catalog": [
+    {
+      "evidence_id": "NOTICE_2025_OFFICIAL",
+      "source_kind": "OFFICIAL_NOTICE_PDF",
+      "year": 2025,
+      "url": "https://housing.seoul.go.kr/site/main/board/notice/12478",
+      "document_id": "DOC-211f45df17b98569c5f1",
+      "expected_local_sha256": "6288e029484140bff4e7a3a5de64691d8230f07b04bae47d7dbcb25300cd0df4",
+      "verification": "PDF_TEXT_REVIEWED_FROM_USER_ACCESSIBLE_COPY_NOT_HUMAN_ATTESTED",
+      "eligible_as_existing_v2_pdf_source": true
+    },
+    {
+      "evidence_id": "NOTICE_2026_OFFICIAL",
+      "source_kind": "OFFICIAL_NOTICE_PDF",
+      "year": 2026,
+      "url": "https://housing.seoul.go.kr/site/main/board/notice/12667",
+      "document_id": "DOC-543adbc0ebc09e5ce628",
+      "expected_local_sha256": "80de4494292b3d7526749bddf12509843d4ffd9a8ae2d944a32cb33c008e0f1d",
+      "verification": "PDF_TEXT_REVIEWED_FROM_USER_ACCESSIBLE_COPY_NOT_HUMAN_ATTESTED",
+      "eligible_as_existing_v2_pdf_source": true
+    },
+    {
+      "evidence_id": "FAQ_2025_Q9_PUBLIC_COPY",
+      "source_kind": "PUBLIC_THIRD_PARTY_COPY_OF_OFFICIAL_FAQ",
+      "year": 2025,
+      "question_number": "Q9",
+      "url": "https://www.goodil.or.kr/index.php?act=procFileOutput&file_key=69d75a06jzng7j32jzq-xeqMy1rl5gmrqqMEXim27b3pJ9bX&file_srl=14523&module=file",
+      "official_notice_attachment_listing": "https://housing.seoul.go.kr/site/main/board/notice/12478",
+      "verification": "PUBLIC_COPY_TEXT_OBSERVED_OFFICIAL_ATTACHMENT_BYTE_IDENTITY_NOT_VERIFIED",
+      "sha256": null,
+      "eligible_as_existing_v2_pdf_source": false
+    },
+    {
+      "evidence_id": "FAQ_2026_Q14_OFFICIAL",
+      "source_kind": "OFFICIAL_HTML_FAQ",
+      "year": 2026,
+      "question_number": "Q14",
+      "url": "https://housing.seoul.go.kr/site/main/board/faq_mr/12652",
+      "verification": "OFFICIAL_WEB_PAGE_TEXT_OBSERVED",
+      "sha256": null,
+      "eligible_as_existing_v2_pdf_source": false
+    },
+    {
+      "evidence_id": "FAQ_2025_Q45_PRIOR_RECORD",
+      "source_kind": "PRIOR_RECORDED_SUPPLEMENTAL_FAQ",
+      "year": 2025,
+      "question_number": "Q45",
+      "url": "https://housing.seoul.go.kr/site/main/file/download/uu/63d9bfeaf7c54c2c9eca09d9c5d77b38",
+      "verification": "PRIOR_SESSION_BYTES_OBSERVED_NOT_REVALIDATED_THIS_BATCH",
+      "sha256": "4f49dc33335e5a87a055d4fd6a4cf39cbd7c88a6ff728b2567403a4fe19b468f",
+      "eligible_as_existing_v2_pdf_source": false
+    },
+    {
+      "evidence_id": "FAQ_2026_Q51_PRIOR_RECORD",
+      "source_kind": "PRIOR_RECORDED_SUPPLEMENTAL_FAQ",
+      "year": 2026,
+      "question_number": "Q51",
+      "url": "https://housing.seoul.go.kr/site/main/file/download/uu/ba90cf52ce02456e9ce2f43303d81914",
+      "verification": "PRIOR_SESSION_BYTES_OBSERVED_NOT_REVALIDATED_THIS_BATCH",
+      "sha256": "749d68eab00c69096a33df572dac58b80d0cd40b88cd63f71d58449e0790f4dc",
+      "eligible_as_existing_v2_pdf_source": false
+    }
+  ],
+  "items": [
+    {
+      "group": "A",
+      "comparison_id": "RENT_BELOW_CAP_PAYMENT",
+      "original_bucket": "P0",
+      "label": "월세 20만원 미만 지급 산정",
+      "baseline_proposed_change_type": "INCONCLUSIVE",
+      "original_recommended_type": "INCONCLUSIVE",
+      "review_candidate_type": "INCONCLUSIVE",
+      "original_ai_disposition": "INSUFFICIENT_EVIDENCE",
+      "finding_summary": "기본 월세 지원 원칙은 양 연도 공통이나, 108,000원 계약자의 실제 지급액과 입력 절사 적용 관계는 자료만으로 확정 불가.",
+      "evidence_status": "UNRESOLVED",
+      "pdf_page_hints": [
+        {
+          "evidence_id": "NOTICE_2025_OFFICIAL",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "evidence_id": "NOTICE_2026_OFFICIAL",
+          "pages": [
+            2
+          ]
+        }
+      ],
+      "supplemental_evidence_ids": [
+        "FAQ_2025_Q45_PRIOR_RECORD",
+        "FAQ_2026_Q51_PRIOR_RECORD"
+      ],
+      "reviewer_checklist": [
+        "2025년 공고의 108,000원 예시와 2025 지급 공지의 차이 정리",
+        "2026년 FAQ Q51 입력 예시와 지급 공지를 구분",
+        "지원금 실제 절사 적용을 추가 자료로 확인할 수 없으면 보류"
+      ],
+      "unresolved_questions": [
+        "FAQ는 입력 안내이다. 2026 실제 지급 산식과 동일하다고 확정할 수 없으며 별도 정정문은 확인하지 못했다."
+      ],
+      "dependencies": {
+        "baseline_scope_id": "AWARDEES",
+        "change_group_id": "GROUP_RENT_BELOW_CAP_PAYMENT",
+        "change_key": "RENT_BELOW_CAP_PAYMENT",
+        "summary_role": "REVIEW_ONLY",
+        "parent_comparison_id": null,
+        "child_ids": [],
+        "same_change_key_ids": []
+      },
+      "counting_policy": "PRESERVE_BASELINE_NO_ADDITIONAL_COUNT",
+      "proposed_v2_next_path": "NEEDS_MORE_EVIDENCE",
+      "v2_event_eligible": false,
+      "v2_event_eligible_reason": "사람의 실제 검토, 원문 페이지 확인, 필요한 부재/정정 요건 및 검토 인증이 완료되지 않았음",
+      "requires_separate_contract_review": false
+    },
+    {
+      "group": "A",
+      "comparison_id": "RENT_CONVERSION_FORMULA",
+      "original_bucket": "RELATED",
+      "label": "보증금 월세 환산 계산식",
+      "baseline_proposed_change_type": "MAINTAINED",
+      "original_recommended_type": "MAINTAINED",
+      "review_candidate_type": "MAINTAINED",
+      "original_ai_disposition": "REVISE_PROPOSAL",
+      "finding_summary": "보증금×환산율÷12개월 산식 형태는 공통. 환산율 5.0%→4.5%, 월세 초과시 합산 한도 93만→90만원 변경은 별도 변경 항목으로 취급.",
+      "evidence_status": "DIRECT_PDF_SUPPORT",
+      "pdf_page_hints": [
+        {
+          "evidence_id": "NOTICE_2025_OFFICIAL",
+          "pages": [
+            3
+          ]
+        },
+        {
+          "evidence_id": "NOTICE_2026_OFFICIAL",
+          "pages": [
+            4
+          ]
+        }
+      ],
+      "supplemental_evidence_ids": [],
+      "reviewer_checklist": [
+        "산식 구조 유지와 환산율 변경을 구분",
+        "계산식만 MAINTAINED; 한도와 비율을 유지로 해석하지 않기"
+      ],
+      "unresolved_questions": [
+        "환산 예시의 절사 방식을 지원금 지급 규칙으로 확대하지 않는다."
+      ],
+      "dependencies": {
+        "baseline_scope_id": "RENT_ABOVE_600K",
+        "change_group_id": "RENT_CONVERSION",
+        "change_key": "RENT_CONVERSION_RATE",
+        "summary_role": "CONTEXT",
+        "parent_comparison_id": null,
+        "child_ids": [],
+        "same_change_key_ids": [
+          "RENT_BASE_MAX",
+          "RENT_CONVERSION_RATE",
+          "TIER_FOUR_EXCEPTION"
+        ]
+      },
+      "counting_policy": "PRESERVE_BASELINE_NO_ADDITIONAL_COUNT",
+      "proposed_v2_next_path": "REVIEW_MAINTAINED",
+      "v2_event_eligible": false,
+      "v2_event_eligible_reason": "사람의 실제 검토, 원문 페이지 확인, 필요한 부재/정정 요건 및 검토 인증이 완료되지 않았음",
+      "requires_separate_contract_review": false
+    },
+    {
+      "group": "B",
+      "comparison_id": "ONE_PERSON_INCOME_THRESHOLDS",
+      "original_bucket": "P0",
+      "label": "1인 가구 기준 금액 표",
+      "baseline_proposed_change_type": "INCONCLUSIVE",
+      "original_recommended_type": "UPDATED",
+      "review_candidate_type": "UPDATED",
+      "original_ai_disposition": "REVISE_PROPOSAL",
+      "finding_summary": "2025년 건강보험료 기반 판정과 2026년 소득금액증명원 기반 판정, 중위소득 48% 초과~150% 이하의 범위 차이를 구분.",
+      "evidence_status": "DIRECT_PDF_SUPPORT",
+      "pdf_page_hints": [
+        {
+          "evidence_id": "NOTICE_2025_OFFICIAL",
+          "pages": [
+            3,
+            4
+          ]
+        },
+        {
+          "evidence_id": "NOTICE_2026_OFFICIAL",
+          "pages": [
+            5
+          ]
+        }
+      ],
+      "supplemental_evidence_ids": [],
+      "reviewer_checklist": [
+        "판정 기준 단위(보험료/월 소득) 혼동 금지",
+        "피부양자와 적용 가구원 수 조건 확인",
+        "기존 INCONCLUSIVE에서 UPDATED로 전환 시 채택된 정정 필요"
+      ],
+      "unresolved_questions": [
+        "개별 신청인의 적용 가구원 수·피부양자 판단은 이 비교만으로 확정하지 않는다."
+      ],
+      "dependencies": {
+        "baseline_scope_id": "INCOME_TABLE",
+        "change_group_id": "GROUP_ONE_PERSON_INCOME_THRESHOLDS",
+        "change_key": "ONE_PERSON_INCOME_THRESHOLDS",
+        "summary_role": "REVIEW_ONLY",
+        "parent_comparison_id": null,
+        "child_ids": [],
+        "same_change_key_ids": []
+      },
+      "counting_policy": "PRESERVE_BASELINE_NO_ADDITIONAL_COUNT",
+      "proposed_v2_next_path": "REVIEW_UPDATED_WITH_CORRECTION",
+      "v2_event_eligible": false,
+      "v2_event_eligible_reason": "사람의 실제 검토, 원문 페이지 확인, 필요한 부재/정정 요건 및 검토 인증이 완료되지 않았음",
+      "requires_separate_contract_review": false
+    },
+    {
+      "group": "B",
+      "comparison_id": "NEW_SPECIAL_APPLICATION_GROUPS",
+      "original_bucket": "P0",
+      "label": "2026 신설 특별 신청 대상",
+      "baseline_proposed_change_type": "ADDED_CANDIDATE",
+      "original_recommended_type": "ADDED_CANDIDATE",
+      "review_candidate_type": "ADDED_CANDIDATE",
+      "original_ai_disposition": "REVISE_PROPOSAL",
+      "finding_summary": "2026년 별도 특별 신청유형·정원(전세사기피해자, 한부모가족, 청년 신혼부부, 청년안심주택 민간임대)을 확인. 민간임대 거주 자체의 최초 지원을 주장하지 않음.",
+      "evidence_status": "PDF_DIFFERENCE_ABSENCE_UNATTESTED",
+      "pdf_page_hints": [
+        {
+          "evidence_id": "NOTICE_2025_OFFICIAL",
+          "pages": [
+            2,
+            5
+          ]
+        },
+        {
+          "evidence_id": "NOTICE_2026_OFFICIAL",
+          "pages": [
+            1,
+            2,
+            3
+          ]
+        }
+      ],
+      "supplemental_evidence_ids": [],
+      "reviewer_checklist": [
+        "2025년 10페이지에서 동등한 별도 유형·정원 부재 확인",
+        "기존 HOUSEHOLD_ELIGIBILITY와 중복 집계 방지",
+        "특별유형별 자격·정원 조건 보존"
+      ],
+      "unresolved_questions": [
+        "모든 개별 자격의 최초 신설·공고 밖 전년도 제도 부재를 포괄적으로 확정하지 않는다."
+      ],
+      "dependencies": {
+        "baseline_scope_id": "SPECIAL_GROUPS",
+        "change_group_id": "APPLICATION_GROUPS",
+        "change_key": "HOUSEHOLD_ELIGIBILITY",
+        "summary_role": "SUPPORTING",
+        "parent_comparison_id": null,
+        "child_ids": [],
+        "same_change_key_ids": [
+          "DOC_SPECIAL_FRAUD",
+          "DOC_SPECIAL_SINGLE_PARENT",
+          "HOUSEHOLD_ELIGIBILITY",
+          "NEWLYWED_RESIDENCE"
+        ]
+      },
+      "counting_policy": "PRESERVE_BASELINE_NO_ADDITIONAL_COUNT",
+      "proposed_v2_next_path": "REVIEW_ADDED_AFTER_ABSENCE",
+      "v2_event_eligible": false,
+      "v2_event_eligible_reason": "사람의 실제 검토, 원문 페이지 확인, 필요한 부재/정정 요건 및 검토 인증이 완료되지 않았음",
+      "requires_separate_contract_review": false
+    },
+    {
+      "group": "B",
+      "comparison_id": "TIER_DISTRIBUTION",
+      "original_bucket": "RELATED",
+      "label": "구간별 선정 인원·비율",
+      "baseline_proposed_change_type": "UPDATED",
+      "original_recommended_type": "UPDATED",
+      "review_candidate_type": "UPDATED",
+      "original_ai_disposition": "RETAIN_PROPOSAL",
+      "finding_summary": "선정구간 비율 45/30/15/10%→35/30/20/15%; 2026년 적용 분모는 1인 가구 정원 12,000명.",
+      "evidence_status": "DIRECT_PDF_SUPPORT",
+      "pdf_page_hints": [
+        {
+          "evidence_id": "NOTICE_2025_OFFICIAL",
+          "pages": [
+            7,
+            8
+          ]
+        },
+        {
+          "evidence_id": "NOTICE_2026_OFFICIAL",
+          "pages": [
+            2,
+            9
+          ]
+        }
+      ],
+      "supplemental_evidence_ids": [],
+      "reviewer_checklist": [
+        "2025년 전체 15,000명과 2026년 1인 가구 12,000명 분모 차이 유지",
+        "실제 최종 선정 인원과 공고 정원 구분"
+      ],
+      "unresolved_questions": [
+        "실제 선정 인원은 공고 정원·비율과 구분한다."
+      ],
+      "dependencies": {
+        "baseline_scope_id": "ONE_PERSON_TIERS",
+        "change_group_id": "SELECTION_ALLOCATION",
+        "change_key": "TIER_DISTRIBUTION",
+        "summary_role": "PRIMARY",
+        "parent_comparison_id": null,
+        "child_ids": [],
+        "same_change_key_ids": []
+      },
+      "counting_policy": "PRESERVE_BASELINE_NO_ADDITIONAL_COUNT",
+      "proposed_v2_next_path": "REVIEW_UPDATED",
+      "v2_event_eligible": false,
+      "v2_event_eligible_reason": "사람의 실제 검토, 원문 페이지 확인, 필요한 부재/정정 요건 및 검토 인증이 완료되지 않았음",
+      "requires_separate_contract_review": false
+    },
+    {
+      "group": "C",
+      "comparison_id": "PREVIOUS_BENEFICIARY_RESTRICTION",
+      "original_bucket": "P0",
+      "label": "기존 수혜 이력·타 사업 중복지원",
+      "baseline_proposed_change_type": "INCONCLUSIVE",
+      "original_recommended_type": "INCONCLUSIVE",
+      "review_candidate_type": "INCONCLUSIVE",
+      "original_ai_disposition": "INSUFFICIENT_EVIDENCE",
+      "finding_summary": "서울시 기수혜 제한과 국토부 사업 종료 예외는 양 연도 공통. 자치구 사업 선정자(2025)와 수혜 중인 자(2026)의 실제 적용 범위는 불명확.",
+      "evidence_status": "UNRESOLVED",
+      "pdf_page_hints": [
+        {
+          "evidence_id": "NOTICE_2025_OFFICIAL",
+          "pages": [
+            1,
+            5
+          ]
+        },
+        {
+          "evidence_id": "NOTICE_2026_OFFICIAL",
+          "pages": [
+            1,
+            6
+          ]
+        }
+      ],
+      "supplemental_evidence_ids": [],
+      "reviewer_checklist": [
+        "자치구 선정 후 미지급·포기·종료자의 2025년 처리 규칙 미확인 표기",
+        "서울시 생애 1회 기수혜 제한과 자치구 제한 구분",
+        "추가 명확한 근거 없으면 INCONCLUSIVE 유지"
+      ],
+      "unresolved_questions": [
+        "자치구 선정 후 미지급자·수급 종료자에 대한 2025 실무 적용 범위 확인 필요."
+      ],
+      "dependencies": {
+        "baseline_scope_id": "APPLICANT_ALL",
+        "change_group_id": "GROUP_PREVIOUS_BENEFICIARY_RESTRICTION",
+        "change_key": "PREVIOUS_BENEFICIARY_RESTRICTION",
+        "summary_role": "REVIEW_ONLY",
+        "parent_comparison_id": null,
+        "child_ids": [],
+        "same_change_key_ids": []
+      },
+      "counting_policy": "PRESERVE_BASELINE_NO_ADDITIONAL_COUNT",
+      "proposed_v2_next_path": "NEEDS_MORE_EVIDENCE",
+      "v2_event_eligible": false,
+      "v2_event_eligible_reason": "사람의 실제 검토, 원문 페이지 확인, 필요한 부재/정정 요건 및 검토 인증이 완료되지 않았음",
+      "requires_separate_contract_review": false
+    },
+    {
+      "group": "C",
+      "comparison_id": "SIMILAR_SUPPORT_EXCLUSION",
+      "original_bucket": "P0",
+      "label": "유사사업 동시 수혜 제한",
+      "baseline_proposed_change_type": "INCONCLUSIVE",
+      "original_recommended_type": "INCONCLUSIVE",
+      "review_candidate_type": "INCONCLUSIVE",
+      "original_ai_disposition": "INSUFFICIENT_EVIDENCE",
+      "finding_summary": "신청 시점 유사사업 동시 수혜 제한 및 종료 예외는 양 연도에 존재. 2025 FAQ Q9와 2026 FAQ Q14는 중복 신청 허용 안내가 상이하지만 이는 별도 범위의 발견 사항.",
+      "evidence_status": "UNRESOLVED",
+      "pdf_page_hints": [
+        {
+          "evidence_id": "NOTICE_2025_OFFICIAL",
+          "pages": [
+            5
+          ]
+        },
+        {
+          "evidence_id": "NOTICE_2026_OFFICIAL",
+          "pages": [
+            6
+          ]
+        }
+      ],
+      "supplemental_evidence_ids": [
+        "FAQ_2025_Q9_PUBLIC_COPY",
+        "FAQ_2026_Q14_OFFICIAL"
+      ],
+      "reviewer_checklist": [
+        "동시 신청과 동시 수혜의 정책 의미 분리",
+        "2025 FAQ Q9 공개 사본의 공식 원본 바이트 동일성 미검증 보존",
+        "FAQ 발견 사항을 기존 PDF의 source_references로 가장하지 않기",
+        "자치구 선정자·수혜 중 표현 차이의 실무 범위 미확정 표기"
+      ],
+      "unresolved_questions": [
+        "2025년 선정자 제한과 종료 예외의 실무 적용 범위는 별도 확인 필요."
+      ],
+      "dependencies": {
+        "baseline_scope_id": "APPLICANT_ALL",
+        "change_group_id": "GROUP_SIMILAR_SUPPORT_EXCLUSION",
+        "change_key": "SIMILAR_SUPPORT_EXCLUSION",
+        "summary_role": "REVIEW_ONLY",
+        "parent_comparison_id": null,
+        "child_ids": [],
+        "same_change_key_ids": []
+      },
+      "counting_policy": "PRESERVE_BASELINE_NO_ADDITIONAL_COUNT",
+      "proposed_v2_next_path": "NEEDS_MORE_EVIDENCE",
+      "v2_event_eligible": false,
+      "v2_event_eligible_reason": "사람의 실제 검토, 원문 페이지 확인, 필요한 부재/정정 요건 및 검토 인증이 완료되지 않았음",
+      "requires_separate_contract_review": true,
+      "separate_faq_finding": {
+        "finding_id": "FAQ_DUPLICATE_APPLICATION_GUIDANCE_2025_2026",
+        "not_a_comparison_id": true,
+        "not_an_added_sixteenth_proposal": true,
+        "topic": "다른 월세지원 사업의 중복 신청 안내",
+        "previous_guidance": "2025 FAQ Q9에서 중복 신청 불가 안내",
+        "current_guidance": "2026 FAQ Q14에서 신청기간 중복 시 신청 가능하나 실제 동시 수혜 불가 안내",
+        "candidate_change_type": "UPDATED",
+        "status": "SUPPLEMENTAL_SCOPE_NOT_PART_OF_BASELINE_COMPARISON",
+        "notice_pdf_change_asserted": false,
+        "v2_event_eligible": false,
+        "reason": "현재 동시 수혜 제한 비교와 별개 주제이며 공식 FAQ가 기존 v2 고정 PDF 문서 집합 밖에 있음",
+        "evidence_ids": [
+          "FAQ_2025_Q9_PUBLIC_COPY",
+          "FAQ_2026_Q14_OFFICIAL"
+        ]
+      }
+    },
+    {
+      "group": "C",
+      "comparison_id": "GOV_SUPPORT_REFUND_ON_OVERLAP",
+      "original_bucket": "P0",
+      "label": "국토부 사업 추가 선정 시 기지급 지원금 환수",
+      "baseline_proposed_change_type": "ADDED_CANDIDATE",
+      "original_recommended_type": "ADDED_CANDIDATE",
+      "review_candidate_type": "ADDED_CANDIDATE",
+      "original_ai_disposition": "REVISE_PROPOSAL",
+      "finding_summary": "2026년 서울시 선정·지급 후 당해 국토부 최종 선정에 따른 기지급액 전액 환수 문구를 특정하여 비교; 2025년 일반 부정 신청 환수와 구별.",
+      "evidence_status": "PDF_DIFFERENCE_ABSENCE_UNATTESTED",
+      "pdf_page_hints": [
+        {
+          "evidence_id": "NOTICE_2025_OFFICIAL",
+          "pages": [
+            9
+          ]
+        },
+        {
+          "evidence_id": "NOTICE_2026_OFFICIAL",
+          "pages": [
+            6
+          ]
+        }
+      ],
+      "supplemental_evidence_ids": [],
+      "reviewer_checklist": [
+        "2025년 전체 공고에서 동등한 순서·범위의 환수 규칙 검토",
+        "동일 연도·선정→지급→국토부 최종 선정 순서 유지",
+        "일반 환수 규칙 자체를 신규라고 주장하지 않기"
+      ],
+      "unresolved_questions": [
+        "역순 선정·지급이나 다른 연도로 확대하지 않는다."
+      ],
+      "dependencies": {
+        "baseline_scope_id": "APPLICANT_ALL",
+        "change_group_id": "SUPPORT_TERMINATION",
+        "change_key": "GOV_SUPPORT_REFUND_ON_OVERLAP",
+        "summary_role": "PRIMARY",
+        "parent_comparison_id": "PREVIOUS_BENEFICIARY_RESTRICTION",
+        "child_ids": [],
+        "same_change_key_ids": []
+      },
+      "counting_policy": "PRESERVE_BASELINE_NO_ADDITIONAL_COUNT",
+      "proposed_v2_next_path": "REVIEW_ADDED_AFTER_ABSENCE",
+      "v2_event_eligible": false,
+      "v2_event_eligible_reason": "사람의 실제 검토, 원문 페이지 확인, 필요한 부재/정정 요건 및 검토 인증이 완료되지 않았음",
+      "requires_separate_contract_review": false
+    },
+    {
+      "group": "C",
+      "comparison_id": "SIMILAR_SUPPORT_SAME_MONTH_STOP",
+      "original_bucket": "P0",
+      "label": "유사사업 동시수혜 발생 월 지원 중단",
+      "baseline_proposed_change_type": "ADDED_CANDIDATE",
+      "original_recommended_type": "ADDED_CANDIDATE",
+      "review_candidate_type": "ADDED_CANDIDATE",
+      "original_ai_disposition": "RETAIN_PROPOSAL",
+      "finding_summary": "2026년 유사사업 동시 수혜 발생 월 지급 중지 예외를 2025년 일반 익월 중지와 구별.",
+      "evidence_status": "PDF_DIFFERENCE_ABSENCE_UNATTESTED",
+      "pdf_page_hints": [
+        {
+          "evidence_id": "NOTICE_2025_OFFICIAL",
+          "pages": [
+            9
+          ]
+        },
+        {
+          "evidence_id": "NOTICE_2026_OFFICIAL",
+          "pages": [
+            11
+          ]
+        }
+      ],
+      "supplemental_evidence_ids": [],
+      "reviewer_checklist": [
+        "2025년 전체 공고의 당월 중지 동등 예외 검토",
+        "2026년 일반 익월 중지와 유사사업 당월 중지 차이 표시",
+        "SUSPENSION_EFFECT 자식 연계 확인"
+      ],
+      "unresolved_questions": [
+        "최종 ADDED 판단에는 사람의 전년도 전체 검토와 부재 확인이 필요하다."
+      ],
+      "dependencies": {
+        "baseline_scope_id": "AWARDEES",
+        "change_group_id": "SUPPORT_TERMINATION",
+        "change_key": "SIMILAR_SUPPORT_SAME_MONTH_STOP",
+        "summary_role": "PRIMARY",
+        "parent_comparison_id": "SUSPENSION_EFFECT",
+        "child_ids": [],
+        "same_change_key_ids": []
+      },
+      "counting_policy": "PRESERVE_BASELINE_NO_ADDITIONAL_COUNT",
+      "proposed_v2_next_path": "REVIEW_ADDED_AFTER_ABSENCE",
+      "v2_event_eligible": false,
+      "v2_event_eligible_reason": "사람의 실제 검토, 원문 페이지 확인, 필요한 부재/정정 요건 및 검토 인증이 완료되지 않았음",
+      "requires_separate_contract_review": false
+    },
+    {
+      "group": "C",
+      "comparison_id": "SUSPENSION_EFFECT",
+      "original_bucket": "P0",
+      "label": "지원 중단 시점과 재개",
+      "baseline_proposed_change_type": "SPLIT_REQUIRED",
+      "original_recommended_type": "SPLIT_REQUIRED",
+      "review_candidate_type": "SPLIT_REQUIRED",
+      "original_ai_disposition": "SPLIT_PROPOSAL",
+      "finding_summary": "지원 중지 규칙을 두 자식(동시 수혜 당월 중지·재개 불가)으로 구분하고 부모는 실질 변경 건수에 포함하지 않음.",
+      "evidence_status": "SPLIT_DEPENDENCIES_PENDING",
+      "pdf_page_hints": [
+        {
+          "evidence_id": "NOTICE_2025_OFFICIAL",
+          "pages": [
+            9
+          ]
+        },
+        {
+          "evidence_id": "NOTICE_2026_OFFICIAL",
+          "pages": [
+            11
+          ]
+        }
+      ],
+      "supplemental_evidence_ids": [],
+      "reviewer_checklist": [
+        "자식 두 항목 각각 REVIEW_ACCEPTED 필요",
+        "부모용 SPLIT_RESOLUTION 정정 채택 필요",
+        "부모 REVIEW_ONLY_SPLIT 및 중복 집계 금지"
+      ],
+      "unresolved_questions": [
+        "2025 공고 밖 운영 기준의 재개 제한까지 확인한 것은 아니다."
+      ],
+      "dependencies": {
+        "baseline_scope_id": "AWARDEES",
+        "change_group_id": "SUPPORT_TERMINATION",
+        "change_key": "SUSPENSION_EFFECT",
+        "summary_role": "REVIEW_ONLY",
+        "parent_comparison_id": null,
+        "child_ids": [
+          "SIMILAR_SUPPORT_SAME_MONTH_STOP",
+          "SUSPENSION_NO_RESUME"
+        ],
+        "same_change_key_ids": []
+      },
+      "counting_policy": "PRESERVE_BASELINE_NO_ADDITIONAL_COUNT",
+      "proposed_v2_next_path": "REVIEW_ONLY_SPLIT_AFTER_CHILDREN",
+      "v2_event_eligible": false,
+      "v2_event_eligible_reason": "사람의 실제 검토, 원문 페이지 확인, 필요한 부재/정정 요건 및 검토 인증이 완료되지 않았음",
+      "requires_separate_contract_review": false
+    },
+    {
+      "group": "C",
+      "comparison_id": "SUSPENSION_NO_RESUME",
+      "original_bucket": "P0",
+      "label": "지원 중단 후 재개 불가·잔여 지원금 소멸",
+      "baseline_proposed_change_type": "ADDED_CANDIDATE",
+      "original_recommended_type": "ADDED_CANDIDATE",
+      "review_candidate_type": "ADDED_CANDIDATE",
+      "original_ai_disposition": "RETAIN_PROPOSAL",
+      "finding_summary": "2026년 지급 중지 후 재개·재신청 불가 및 잔여금 소멸을 별도 조항으로 다룸. 2025년 운영상 동일 효과 여부는 미확정.",
+      "evidence_status": "PDF_DIFFERENCE_ABSENCE_UNATTESTED",
+      "pdf_page_hints": [
+        {
+          "evidence_id": "NOTICE_2025_OFFICIAL",
+          "pages": [
+            5,
+            9
+          ]
+        },
+        {
+          "evidence_id": "NOTICE_2026_OFFICIAL",
+          "pages": [
+            11
+          ]
+        }
+      ],
+      "supplemental_evidence_ids": [],
+      "reviewer_checklist": [
+        "2025년 전체 공고에서 동등한 재개 불가 규칙 부재 확인",
+        "공고 밖 기존 운영 규칙의 존재 가능성 명시",
+        "SUSPENSION_EFFECT 자식 연계 확인"
+      ],
+      "unresolved_questions": [
+        "2025 공고 밖 운영 기준에 동일 효과가 있었는지는 미확정이다."
+      ],
+      "dependencies": {
+        "baseline_scope_id": "AWARDEES",
+        "change_group_id": "SUPPORT_TERMINATION",
+        "change_key": "SUSPENSION_NO_RESUME",
+        "summary_role": "PRIMARY",
+        "parent_comparison_id": "SUSPENSION_EFFECT",
+        "child_ids": [],
+        "same_change_key_ids": []
+      },
+      "counting_policy": "PRESERVE_BASELINE_NO_ADDITIONAL_COUNT",
+      "proposed_v2_next_path": "REVIEW_ADDED_AFTER_ABSENCE",
+      "v2_event_eligible": false,
+      "v2_event_eligible_reason": "사람의 실제 검토, 원문 페이지 확인, 필요한 부재/정정 요건 및 검토 인증이 완료되지 않았음",
+      "requires_separate_contract_review": false
+    },
+    {
+      "group": "D",
+      "comparison_id": "DOC_LEASE_ALTERNATIVES",
+      "original_bucket": "P0",
+      "label": "확정일자 대체 서류",
+      "baseline_proposed_change_type": "SPLIT_REQUIRED",
+      "original_recommended_type": "SPLIT_REQUIRED",
+      "review_candidate_type": "SPLIT_REQUIRED",
+      "original_ai_disposition": "SPLIT_PROPOSAL",
+      "finding_summary": "주택·고시원 기존 대체자료 조합과 전대차 계약서 요구 변화·기숙사 확인서 명시를 분리한다.",
+      "evidence_status": "SPLIT_DEPENDENCIES_PENDING",
+      "pdf_page_hints": [
+        {
+          "evidence_id": "NOTICE_2025_OFFICIAL",
+          "pages": [
+            6,
+            7
+          ]
+        },
+        {
+          "evidence_id": "NOTICE_2026_OFFICIAL",
+          "pages": [
+            7,
+            8
+          ]
+        }
+      ],
+      "supplemental_evidence_ids": [],
+      "reviewer_checklist": [
+        "SUBLET_DOC_REQUIRED_ITEMS 개별 검토",
+        "DORMITORY_CONFIRMATION 개별 검토",
+        "SPLIT_RESOLUTION 채택 및 부모 REVIEW_ONLY_SPLIT",
+        "공고 외 보완서류 요구 불가능으로 확대해석 금지"
+      ],
+      "unresolved_questions": [
+        "공고 밖 전년도 기숙사 안내 및 추가 증빙 가능성은 별도 확인한다."
+      ],
+      "dependencies": {
+        "baseline_scope_id": "SPECIAL_DOCUMENTS",
+        "change_group_id": "DOCUMENT_REQUIREMENTS",
+        "change_key": "DOC_LEASE_ALTERNATIVES",
+        "summary_role": "REVIEW_ONLY",
+        "parent_comparison_id": null,
+        "child_ids": [
+          "SUBLET_DOC_REQUIRED_ITEMS",
+          "DORMITORY_CONFIRMATION"
+        ],
+        "same_change_key_ids": []
+      },
+      "counting_policy": "PRESERVE_BASELINE_NO_ADDITIONAL_COUNT",
+      "proposed_v2_next_path": "REVIEW_ONLY_SPLIT_AFTER_CHILDREN",
+      "v2_event_eligible": false,
+      "v2_event_eligible_reason": "사람의 실제 검토, 원문 페이지 확인, 필요한 부재/정정 요건 및 검토 인증이 완료되지 않았음",
+      "requires_separate_contract_review": false
+    },
+    {
+      "group": "D",
+      "comparison_id": "DOC_ADMIN_CONSENT",
+      "original_bucket": "P0",
+      "label": "행정정보 공동이용 동의서",
+      "baseline_proposed_change_type": "ADDED_CANDIDATE",
+      "original_recommended_type": "ADDED_CANDIDATE",
+      "review_candidate_type": "ADDED_CANDIDATE",
+      "original_ai_disposition": "REVISE_PROPOSAL",
+      "finding_summary": "2026년 행정정보 공동이용 사전동의서의 별도 필수서류 명시를 일반 개인정보 동의와 구분하며 비동의 대체 경로를 보존.",
+      "evidence_status": "PDF_DIFFERENCE_ABSENCE_UNATTESTED",
+      "pdf_page_hints": [
+        {
+          "evidence_id": "NOTICE_2025_OFFICIAL",
+          "pages": [
+            6
+          ]
+        },
+        {
+          "evidence_id": "NOTICE_2026_OFFICIAL",
+          "pages": [
+            7,
+            8
+          ]
+        }
+      ],
+      "supplemental_evidence_ids": [],
+      "reviewer_checklist": [
+        "2025년 10페이지에서 동일 별도 동의서 제출 요구 부재 확인",
+        "2025년 별지·온라인 절차까지 부재 확정하지 않기",
+        "ADMIN_CONSENT_ALTERNATIVES와 중복 변경 집계 금지"
+      ],
+      "unresolved_questions": [
+        "2025년 시스템·별지 동의 절차까지 최초 신설 여부를 확정하지 않는다."
+      ],
+      "dependencies": {
+        "baseline_scope_id": "APPLICANT_ALL",
+        "change_group_id": "DOCUMENT_REQUIREMENTS",
+        "change_key": "DOC_ADMIN_CONSENT",
+        "summary_role": "PRIMARY",
+        "parent_comparison_id": null,
+        "child_ids": [],
+        "same_change_key_ids": [
+          "ADMIN_CONSENT_ALTERNATIVES"
+        ]
+      },
+      "counting_policy": "PRESERVE_BASELINE_NO_ADDITIONAL_COUNT",
+      "proposed_v2_next_path": "REVIEW_ADDED_AFTER_ABSENCE",
+      "v2_event_eligible": false,
+      "v2_event_eligible_reason": "사람의 실제 검토, 원문 페이지 확인, 필요한 부재/정정 요건 및 검토 인증이 완료되지 않았음",
+      "requires_separate_contract_review": false
+    },
+    {
+      "group": "D",
+      "comparison_id": "ADMIN_CONSENT_ALTERNATIVES",
+      "original_bucket": "P0",
+      "label": "행정정보 공동이용 비동의 시 대체서류",
+      "baseline_proposed_change_type": "ADDED_CANDIDATE",
+      "original_recommended_type": "ADDED_CANDIDATE",
+      "review_candidate_type": "ADDED_CANDIDATE",
+      "original_ai_disposition": "REVISE_PROPOSAL",
+      "finding_summary": "2026년 사전동의 비동의 시 건강보험 자격확인서·최근 소득금액증명원·주민등록등초본 별도 제출 경로를 보존.",
+      "evidence_status": "PDF_DIFFERENCE_ABSENCE_UNATTESTED",
+      "pdf_page_hints": [
+        {
+          "evidence_id": "NOTICE_2025_OFFICIAL",
+          "pages": [
+            6
+          ]
+        },
+        {
+          "evidence_id": "NOTICE_2026_OFFICIAL",
+          "pages": [
+            8
+          ]
+        }
+      ],
+      "supplemental_evidence_ids": [],
+      "reviewer_checklist": [
+        "비동의를 신청 자체 불가능으로 오해하지 않기",
+        "서류별 시점과 발급 기준 유지",
+        "DOC_ADMIN_CONSENT의 SUPPORTING으로 중복 집계 금지"
+      ],
+      "unresolved_questions": [
+        "2025 공고 밖 관련 절차의 부재까지 확정하지 않는다."
+      ],
+      "dependencies": {
+        "baseline_scope_id": "APPLICANT_ALL",
+        "change_group_id": "DOCUMENT_REQUIREMENTS",
+        "change_key": "DOC_ADMIN_CONSENT",
+        "summary_role": "SUPPORTING",
+        "parent_comparison_id": "DOC_ADMIN_CONSENT",
+        "child_ids": [],
+        "same_change_key_ids": [
+          "DOC_ADMIN_CONSENT"
+        ]
+      },
+      "counting_policy": "PRESERVE_BASELINE_NO_ADDITIONAL_COUNT",
+      "proposed_v2_next_path": "REVIEW_ADDED_AFTER_ABSENCE",
+      "v2_event_eligible": false,
+      "v2_event_eligible_reason": "사람의 실제 검토, 원문 페이지 확인, 필요한 부재/정정 요건 및 검토 인증이 완료되지 않았음",
+      "requires_separate_contract_review": false
+    },
+    {
+      "group": "D",
+      "comparison_id": "OBJECTION_DOCUMENT_LIMITATION",
+      "original_bucket": "P0",
+      "label": "필수서류 누락 시 이의신청 보완 제한",
+      "baseline_proposed_change_type": "ADDED_CANDIDATE",
+      "original_recommended_type": "ADDED_CANDIDATE",
+      "review_candidate_type": "ADDED_CANDIDATE",
+      "original_ai_disposition": "REVISE_PROPOSAL",
+      "finding_summary": "2026년 필수 4종 미제출로 서류심사 탈락한 경우에 한정하여 이의신청 추가자료 보완 불가를 설명.",
+      "evidence_status": "PDF_DIFFERENCE_ABSENCE_UNATTESTED",
+      "pdf_page_hints": [
+        {
+          "evidence_id": "NOTICE_2025_OFFICIAL",
+          "pages": [
+            8
+          ]
+        },
+        {
+          "evidence_id": "NOTICE_2026_OFFICIAL",
+          "pages": [
+            7,
+            10
+          ]
+        }
+      ],
+      "supplemental_evidence_ids": [],
+      "reviewer_checklist": [
+        "미제출과 경미한 오류·소득 소명을 구별",
+        "2025년 전체 공고에 동등한 제한 문구 존재 여부 확인",
+        "일반 이의신청 전면 금지로 확대하지 않기"
+      ],
+      "unresolved_questions": [
+        "경미한 오류와 미제출의 실무 구분은 원문만으로 확정하지 않는다."
+      ],
+      "dependencies": {
+        "baseline_scope_id": "OBJECTORS",
+        "change_group_id": "DOCUMENT_REQUIREMENTS",
+        "change_key": "OBJECTION_DOCUMENT_LIMITATION",
+        "summary_role": "PRIMARY",
+        "parent_comparison_id": null,
+        "child_ids": [],
+        "same_change_key_ids": []
+      },
+      "counting_policy": "PRESERVE_BASELINE_NO_ADDITIONAL_COUNT",
+      "proposed_v2_next_path": "REVIEW_ADDED_AFTER_ABSENCE",
+      "v2_event_eligible": false,
+      "v2_event_eligible_reason": "사람의 실제 검토, 원문 페이지 확인, 필요한 부재/정정 요건 및 검토 인증이 완료되지 않았음",
+      "requires_separate_contract_review": false
+    }
+  ],
+  "review_caveats": [
+    "이 JSON은 사람 검토 보조 자료이다. v2 이벤트, revision, 공식 정책 승인 결과가 아니다.",
+    "review_candidate_type에 ADDED_CANDIDATE, INCONCLUSIVE, SPLIT_REQUIRED가 남아 있어도 최종 v2 이벤트에 그대로 쓰지 않는다.",
+    "2025 FAQ Q9는 공개 사본 내용으로 관찰했으며 서울시 원본 첨부파일과 바이트 동일성은 확인되지 않았다.",
+    "FAQ는 기존 고정 PDF source_references의 문서 ID/페이지인 것처럼 기록해서는 안 된다.",
+    "원본 15건의 추천 유형과 변경 집계는 유지한다. 별도 FAQ 발견을 제16항목으로 생성하지 않는다.",
+    "출처 페이지 힌트는 사람의 원문 페이지 검토를 대신하지 않는다.",
+    "공고상 미기재 사실은 전체 정책 실무에서의 부재를 의미하지 않는다."
+  ]
+}

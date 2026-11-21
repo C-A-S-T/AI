@@ -1,0 +1,1200 @@
+{
+  "schema_version": 1,
+  "artifact_type": "POLICY_SEMANTIC_ADJUDICATION_DRAFT",
+  "status": "DRAFT_REVIEW_REQUIRED",
+  "human_approved": false,
+  "java_import_ready": false,
+  "policy_key": "seoul-youth-rent",
+  "previous_document_id": "DOC-211f45df17b98569c5f1",
+  "current_document_id": "DOC-543adbc0ebc09e5ce628",
+  "baseline_result_sha256": "b41f5de02f0e4e5c478e0892505e0ba86d69a64ac2b1b219f6e5644acc06350c",
+  "supplemental_evidence_sha256": "7e10ff77b725c01e30a66bfa07447bbeec46e30aa9ca29937621b942982863ef",
+  "items": [
+    {
+      "comparison_id": "PROGRAM_TITLE",
+      "original_type": "WORDING_ONLY",
+      "proposed_type": "WORDING_ONLY",
+      "review_status": "PENDING_REVIEW",
+      "reason": "공고 연도만 바뀌며 사업명 의미는 동일 (재판정 권장안, 원본 PDF 시각 검토 전)",
+      "previous_supplemental_ids": [],
+      "current_supplemental_ids": [],
+      "change_group_id": "GROUP_PROGRAM_TITLE",
+      "change_key": "PROGRAM_TITLE",
+      "summary_role": "CONTEXT",
+      "split_children": []
+    },
+    {
+      "comparison_id": "BASIC_ELIGIBLE_AGE",
+      "original_type": "MAINTAINED",
+      "proposed_type": "MAINTAINED",
+      "review_status": "PENDING_REVIEW",
+      "reason": "신청 연령 19~39세 동일. 출생연도는 공고연도에 맞게 1년 이동 (재판정 권장안, 원본 PDF 시각 검토 전)",
+      "previous_supplemental_ids": [],
+      "current_supplemental_ids": [],
+      "change_group_id": "GROUP_BASIC_ELIGIBLE_AGE",
+      "change_key": "BASIC_ELIGIBLE_AGE",
+      "summary_role": "CONTEXT",
+      "split_children": []
+    },
+    {
+      "comparison_id": "VETERAN_AGE_EXTENSION",
+      "original_type": "ADDED_CANDIDATE",
+      "proposed_type": "ADDED_CANDIDATE",
+      "review_status": "PENDING_REVIEW",
+      "reason": "2026년 의무복무 제대군인 최대 42세 상한 연장. 2025년 정제 공고에는 대응 조항 없음 (재판정 권장안, 원본 PDF 시각 검토 전)",
+      "previous_supplemental_ids": [],
+      "current_supplemental_ids": [],
+      "change_group_id": "APPLICATION_GROUPS",
+      "change_key": "VETERAN_AGE_EXTENSION",
+      "summary_role": "PRIMARY",
+      "split_children": []
+    },
+    {
+      "comparison_id": "RESIDENCE_REGISTRATION",
+      "original_type": "MAINTAINED",
+      "proposed_type": "MAINTAINED",
+      "review_status": "PENDING_REVIEW",
+      "reason": "서울 실제 거주·전입신고 및 임차인 본인 신청 원칙 동일 (재판정 권장안, 원본 PDF 시각 검토 전)",
+      "previous_supplemental_ids": [],
+      "current_supplemental_ids": [],
+      "change_group_id": "GROUP_RESIDENCE_REGISTRATION",
+      "change_key": "RESIDENCE_REGISTRATION",
+      "summary_role": "CONTEXT",
+      "split_children": []
+    },
+    {
+      "comparison_id": "PREVIOUS_BENEFICIARY_RESTRICTION",
+      "original_type": "INCONCLUSIVE",
+      "proposed_type": "INCONCLUSIVE",
+      "review_status": "PENDING_REVIEW",
+      "reason": "서울시 기수혜 제한은 공통이나 자치구 사업의 선정자/수혜중 기준 차이 확인 필요. 2025년에도 국토부 지원 종료 시 신청 가능 (재판정 권장안, 원본 PDF 시각 검토 전)",
+      "previous_supplemental_ids": [],
+      "current_supplemental_ids": [],
+      "change_group_id": "GROUP_PREVIOUS_BENEFICIARY_RESTRICTION",
+      "change_key": "PREVIOUS_BENEFICIARY_RESTRICTION",
+      "summary_role": "REVIEW_ONLY",
+      "split_children": []
+    },
+    {
+      "comparison_id": "MONTHLY_SUPPORT_CAP",
+      "original_type": "MAINTAINED",
+      "proposed_type": "MAINTAINED",
+      "review_status": "PENDING_REVIEW",
+      "reason": "월 최대 20만원·총 240만원·12개월·생애 1회 동일 (재판정 권장안, 원본 PDF 시각 검토 전)",
+      "previous_supplemental_ids": [],
+      "current_supplemental_ids": [],
+      "change_group_id": "GROUP_MONTHLY_SUPPORT_CAP",
+      "change_key": "MONTHLY_SUPPORT_CAP",
+      "summary_role": "CONTEXT",
+      "split_children": []
+    },
+    {
+      "comparison_id": "RENT_BELOW_CAP_PAYMENT",
+      "original_type": "INCONCLUSIVE",
+      "proposed_type": "INCONCLUSIVE",
+      "review_status": "PENDING_REVIEW",
+      "reason": "월세액 지급 원칙은 동일. 2025년 지원액 천원 절사 표현이 2026년 지원액 문단에는 없음. 2026년 p.4 천원 절사는 환산 예시와 구분 (재판정 권장안, 원본 PDF 시각 검토 전)",
+      "previous_supplemental_ids": [],
+      "current_supplemental_ids": [],
+      "change_group_id": "GROUP_RENT_BELOW_CAP_PAYMENT",
+      "change_key": "RENT_BELOW_CAP_PAYMENT",
+      "summary_role": "REVIEW_ONLY",
+      "split_children": []
+    },
+    {
+      "comparison_id": "MANAGEMENT_FEE_EXCLUSION",
+      "original_type": "MAINTAINED",
+      "proposed_type": "MAINTAINED",
+      "review_status": "PENDING_REVIEW",
+      "reason": "관리비는 지원금에서 제외 (재판정 권장안, 원본 PDF 시각 검토 전)",
+      "previous_supplemental_ids": [],
+      "current_supplemental_ids": [],
+      "change_group_id": "GROUP_MANAGEMENT_FEE_EXCLUSION",
+      "change_key": "MANAGEMENT_FEE_EXCLUSION",
+      "summary_role": "CONTEXT",
+      "split_children": []
+    },
+    {
+      "comparison_id": "HOUSING_VOUCHER_OFFSET",
+      "original_type": "MAINTAINED",
+      "proposed_type": "MAINTAINED",
+      "review_status": "PENDING_REVIEW",
+      "reason": "서울형 주택바우처 수령액 차감 지급 동일 (재판정 권장안, 원본 PDF 시각 검토 전)",
+      "previous_supplemental_ids": [],
+      "current_supplemental_ids": [],
+      "change_group_id": "GROUP_HOUSING_VOUCHER_OFFSET",
+      "change_key": "HOUSING_VOUCHER_OFFSET",
+      "summary_role": "CONTEXT",
+      "split_children": []
+    },
+    {
+      "comparison_id": "SUPPORT_MONTHS",
+      "original_type": "MAINTAINED",
+      "proposed_type": "MAINTAINED",
+      "review_status": "PENDING_REVIEW",
+      "reason": "최종 선정 후 12개월 지급 동일. #6과 서비스 표시 중복 주의 (재판정 권장안, 원본 PDF 시각 검토 전)",
+      "previous_supplemental_ids": [],
+      "current_supplemental_ids": [],
+      "change_group_id": "GROUP_SUPPORT_MONTHS",
+      "change_key": "SUPPORT_MONTHS",
+      "summary_role": "CONTEXT",
+      "split_children": []
+    },
+    {
+      "comparison_id": "APPLICATION_WINDOW",
+      "original_type": "ANNUAL_SCHEDULE",
+      "proposed_type": "ANNUAL_SCHEDULE",
+      "review_status": "PENDING_REVIEW",
+      "reason": "신청일은 2025년 6월과 2026년 5월로 상이하나 사업별 일정 정보 (재판정 권장안, 원본 PDF 시각 검토 전)",
+      "previous_supplemental_ids": [],
+      "current_supplemental_ids": [],
+      "change_group_id": "GROUP_APPLICATION_WINDOW",
+      "change_key": "APPLICATION_WINDOW",
+      "summary_role": "CONTEXT",
+      "split_children": []
+    },
+    {
+      "comparison_id": "APPLICATION_CHANNEL",
+      "original_type": "MAINTAINED",
+      "proposed_type": "MAINTAINED",
+      "review_status": "PENDING_REVIEW",
+      "reason": "서울주거포털 온라인 신청 및 방문·우편 불가 모두 2025년 p.6과 2026년 p.7에 명시 (재판정 권장안, 원본 PDF 시각 검토 전)",
+      "previous_supplemental_ids": [
+        "E25_ONLINE_ONLY"
+      ],
+      "current_supplemental_ids": [],
+      "change_group_id": "GROUP_APPLICATION_CHANNEL",
+      "change_key": "APPLICATION_CHANNEL",
+      "summary_role": "CONTEXT",
+      "split_children": []
+    },
+    {
+      "comparison_id": "TOTAL_SELECTION_CAPACITY",
+      "original_type": "MAINTAINED",
+      "proposed_type": "MAINTAINED",
+      "review_status": "PENDING_REVIEW",
+      "reason": "총 선정인원 15,000명 동일 (재판정 권장안, 원본 PDF 시각 검토 전)",
+      "previous_supplemental_ids": [],
+      "current_supplemental_ids": [],
+      "change_group_id": "GROUP_TOTAL_SELECTION_CAPACITY",
+      "change_key": "TOTAL_SELECTION_CAPACITY",
+      "summary_role": "CONTEXT",
+      "split_children": []
+    },
+    {
+      "comparison_id": "TARGET_GROUP_QUOTA",
+      "original_type": "UPDATED",
+      "proposed_type": "UPDATED",
+      "review_status": "PENDING_REVIEW",
+      "reason": "2026년 청년 1인 가구 12,000명, 특별유형 합계 3,000명으로 배분. #18·#62·#72와 중복집계 금지 (재판정 권장안, 원본 PDF 시각 검토 전)",
+      "previous_supplemental_ids": [],
+      "current_supplemental_ids": [],
+      "change_group_id": "SELECTION_ALLOCATION",
+      "change_key": "TARGET_GROUP_QUOTA",
+      "summary_role": "PRIMARY",
+      "split_children": []
+    },
+    {
+      "comparison_id": "SELECTION_METHOD",
+      "original_type": "UPDATED",
+      "proposed_type": "UPDATED",
+      "review_status": "PENDING_REVIEW",
+      "reason": "2026년 특별유형별 추첨 및 미달 시 1인 가구 추가 선정 도입. 기존 4구간 추첨 자체는 유지 (재판정 권장안, 원본 PDF 시각 검토 전)",
+      "previous_supplemental_ids": [],
+      "current_supplemental_ids": [],
+      "change_group_id": "APPLICATION_GROUPS",
+      "change_key": "SELECTION_METHOD",
+      "summary_role": "PRIMARY",
+      "split_children": []
+    },
+    {
+      "comparison_id": "PAYMENT_CADENCE",
+      "original_type": "WORDING_ONLY",
+      "proposed_type": "INCONCLUSIVE",
+      "review_status": "PENDING_REVIEW",
+      "reason": "2025년 격월 25일 전후 vs 2026년 격월 25일. 단순 표현인지 지급일의 운영상 차이인지 미확정 (재판정 권장안, 원본 PDF 시각 검토 전)",
+      "previous_supplemental_ids": [],
+      "current_supplemental_ids": [],
+      "change_group_id": "GROUP_PAYMENT_CADENCE",
+      "change_key": "PAYMENT_CADENCE",
+      "summary_role": "REVIEW_ONLY",
+      "split_children": []
+    },
+    {
+      "comparison_id": "PAYMENT_CALENDAR",
+      "original_type": "ANNUAL_SCHEDULE",
+      "proposed_type": "ANNUAL_SCHEDULE",
+      "review_status": "PENDING_REVIEW",
+      "reason": "2025년 첫 지급 10월, 2026년 첫 지급 8월 예정. #71과 중복 (재판정 권장안, 원본 PDF 시각 검토 전)",
+      "previous_supplemental_ids": [],
+      "current_supplemental_ids": [],
+      "change_group_id": "GROUP_PAYMENT_CALENDAR",
+      "change_key": "PAYMENT_CALENDAR",
+      "summary_role": "CONTEXT",
+      "split_children": []
+    },
+    {
+      "comparison_id": "HOUSEHOLD_ELIGIBILITY",
+      "original_type": "UPDATED",
+      "proposed_type": "UPDATED",
+      "review_status": "PENDING_REVIEW",
+      "reason": "2025년 청년 1인 가구 중심에서 2026년 신청유형 5개로 확대. #72에 상세 유형 포함 (재판정 권장안, 원본 PDF 시각 검토 전)",
+      "previous_supplemental_ids": [],
+      "current_supplemental_ids": [],
+      "change_group_id": "APPLICATION_GROUPS",
+      "change_key": "HOUSEHOLD_ELIGIBILITY",
+      "summary_role": "PRIMARY",
+      "split_children": []
+    },
+    {
+      "comparison_id": "NONYOUTH_CORESIDENT_RULE",
+      "original_type": "INCONCLUSIVE",
+      "proposed_type": "INCONCLUSIVE",
+      "review_status": "PENDING_REVIEW",
+      "reason": "2025년 비청년 세대원 제외와 2026년 청년 형제자매·동거인 허용은 서로 다른 범위. 2025년에도 청년 동거인 허용 문구 있음 (재판정 권장안, 원본 PDF 시각 검토 전)",
+      "previous_supplemental_ids": [
+        "E25_YOUTH_CORESIDENT"
+      ],
+      "current_supplemental_ids": [
+        "E26_YOUTH_CORESIDENT"
+      ],
+      "change_group_id": "GROUP_NONYOUTH_CORESIDENT_RULE",
+      "change_key": "NONYOUTH_CORESIDENT_RULE",
+      "summary_role": "REVIEW_ONLY",
+      "split_children": []
+    },
+    {
+      "comparison_id": "FOREIGN_NATIONAL_APPLICANT",
+      "original_type": "UPDATED",
+      "proposed_type": "UPDATED",
+      "review_status": "PENDING_REVIEW",
+      "reason": "2025년 재외국민 건강보험 가입 시 신청 가능, 2026년 신청인 원칙적 불가. 2026년 외국인·재외국민 배우자 예외는 신청인과 구분 (재판정 권장안, 원본 PDF 시각 검토 전)",
+      "previous_supplemental_ids": [],
+      "current_supplemental_ids": [],
+      "change_group_id": "GROUP_FOREIGN_NATIONAL_APPLICANT",
+      "change_key": "FOREIGN_NATIONAL_APPLICANT",
+      "summary_role": "PRIMARY",
+      "split_children": []
+    },
+    {
+      "comparison_id": "LEASE_APPLICANT_IDENTITY",
+      "original_type": "MAINTAINED",
+      "proposed_type": "MAINTAINED",
+      "review_status": "PENDING_REVIEW",
+      "reason": "계약서상 임차인 본인 신청, 타인 명의 계약 불가 원칙 동일 (재판정 권장안, 원본 PDF 시각 검토 전)",
+      "previous_supplemental_ids": [],
+      "current_supplemental_ids": [],
+      "change_group_id": "GROUP_LEASE_APPLICANT_IDENTITY",
+      "change_key": "LEASE_APPLICANT_IDENTITY",
+      "summary_role": "CONTEXT",
+      "split_children": []
+    },
+    {
+      "comparison_id": "SHARE_HOUSE_SUPPORT",
+      "original_type": "INCONCLUSIVE",
+      "proposed_type": "MAINTAINED",
+      "review_status": "PENDING_REVIEW",
+      "reason": "2026년 정제 공고 p.3에 공유주택 개별 임대차계약 동거인의 동시 신청 허용 명시. 2026 REVIEWED 필드 추출 누락 (재판정 권장안, 원본 PDF 시각 검토 전)",
+      "previous_supplemental_ids": [],
+      "current_supplemental_ids": [
+        "E26_SHARE_HOUSE"
+      ],
+      "change_group_id": "GROUP_SHARE_HOUSE_SUPPORT",
+      "change_key": "SHARE_HOUSE_SUPPORT",
+      "summary_role": "CONTEXT",
+      "split_children": []
+    },
+    {
+      "comparison_id": "LEASE_DEPOSIT_BASE",
+      "original_type": "MAINTAINED",
+      "proposed_type": "MAINTAINED",
+      "review_status": "PENDING_REVIEW",
+      "reason": "기본 임차보증금 8천만원 이하 (재판정 권장안, 원본 PDF 시각 검토 전)",
+      "previous_supplemental_ids": [],
+      "current_supplemental_ids": [],
+      "change_group_id": "GROUP_LEASE_DEPOSIT_BASE",
+      "change_key": "LEASE_DEPOSIT_BASE",
+      "summary_role": "CONTEXT",
+      "split_children": []
+    },
+    {
+      "comparison_id": "RENT_BASE_MAX",
+      "original_type": "MAINTAINED",
+      "proposed_type": "MAINTAINED",
+      "review_status": "PENDING_REVIEW",
+      "reason": "기본 월세 60만원 이하 유지. 초과월세 예외는 #25·#26 별도 (재판정 권장안, 원본 PDF 시각 검토 전)",
+      "previous_supplemental_ids": [],
+      "current_supplemental_ids": [],
+      "change_group_id": "RENT_CONVERSION",
+      "change_key": "RENT_CONVERSION_RATE",
+      "summary_role": "CONTEXT",
+      "split_children": []
+    },
+    {
+      "comparison_id": "RENT_CONVERSION_SUM_CAP",
+      "original_type": "UPDATED",
+      "proposed_type": "UPDATED",
+      "review_status": "PENDING_REVIEW",
+      "reason": "월세 60만원 초과 시 환산월세 합계 한도 93만원에서 90만원으로 변경. #59와 중복 (재판정 권장안, 원본 PDF 시각 검토 전)",
+      "previous_supplemental_ids": [],
+      "current_supplemental_ids": [],
+      "change_group_id": "RENT_CONVERSION",
+      "change_key": "RENT_CONVERSION_SUM_CAP",
+      "summary_role": "PRIMARY",
+      "split_children": []
+    },
+    {
+      "comparison_id": "RENT_CONVERSION_RATE",
+      "original_type": "UPDATED",
+      "proposed_type": "UPDATED",
+      "review_status": "PENDING_REVIEW",
+      "reason": "보증금 월세 환산율 5.0%에서 4.5%로 변경. #27·#59와 중복 (재판정 권장안, 원본 PDF 시각 검토 전)",
+      "previous_supplemental_ids": [],
+      "current_supplemental_ids": [],
+      "change_group_id": "RENT_CONVERSION",
+      "change_key": "RENT_CONVERSION_RATE",
+      "summary_role": "PRIMARY",
+      "split_children": []
+    },
+    {
+      "comparison_id": "RENT_CONVERSION_FORMULA",
+      "original_type": "INCONCLUSIVE",
+      "proposed_type": "MAINTAINED",
+      "review_status": "PENDING_REVIEW",
+      "reason": "양쪽 정제 공고에 보증금 × 환산율 ÷ 12개월 계산식이 있음. 산식 형태는 유지, 비율 변화는 #26에서 집계 (재판정 권장안, 원본 PDF 시각 검토 전)",
+      "previous_supplemental_ids": [],
+      "current_supplemental_ids": [
+        "E26_RENT_FORMULA"
+      ],
+      "change_group_id": "RENT_CONVERSION",
+      "change_key": "RENT_CONVERSION_RATE",
+      "summary_role": "CONTEXT",
+      "split_children": []
+    },
+    {
+      "comparison_id": "HOUSING_TYPES",
+      "original_type": "INCONCLUSIVE",
+      "proposed_type": "MAINTAINED",
+      "review_status": "PENDING_REVIEW",
+      "reason": "2026년 정제 공고 p.4에도 주택 및 준주택(고시원·근린생활시설) 지원 가능. 2026 REVIEWED 필드 누락 (재판정 권장안, 원본 PDF 시각 검토 전)",
+      "previous_supplemental_ids": [],
+      "current_supplemental_ids": [
+        "E26_HOUSING_TYPES"
+      ],
+      "change_group_id": "GROUP_HOUSING_TYPES",
+      "change_key": "HOUSING_TYPES",
+      "summary_role": "CONTEXT",
+      "split_children": []
+    },
+    {
+      "comparison_id": "EXCLUDE_JEONSE",
+      "original_type": "INCONCLUSIVE",
+      "proposed_type": "MAINTAINED",
+      "review_status": "PENDING_REVIEW",
+      "reason": "2026년 정제 공고 p.4에도 월세 없는 전세 계약 신청 불가. 2026 REVIEWED 필드 누락 (재판정 권장안, 원본 PDF 시각 검토 전)",
+      "previous_supplemental_ids": [],
+      "current_supplemental_ids": [
+        "E26_EXCLUDE_JEONSE"
+      ],
+      "change_group_id": "GROUP_EXCLUDE_JEONSE",
+      "change_key": "EXCLUDE_JEONSE",
+      "summary_role": "CONTEXT",
+      "split_children": []
+    },
+    {
+      "comparison_id": "PREPAID_RENT",
+      "original_type": "INCONCLUSIVE",
+      "proposed_type": "MAINTAINED",
+      "review_status": "PENDING_REVIEW",
+      "reason": "2026년 정제 공고 p.4에도 기간 합산 선납 월세 인정. 2026 REVIEWED 필드 누락 (재판정 권장안, 원본 PDF 시각 검토 전)",
+      "previous_supplemental_ids": [],
+      "current_supplemental_ids": [
+        "E26_PREPAID_RENT"
+      ],
+      "change_group_id": "GROUP_PREPAID_RENT",
+      "change_key": "PREPAID_RENT",
+      "summary_role": "CONTEXT",
+      "split_children": []
+    },
+    {
+      "comparison_id": "JOINT_TENANT_SHARE",
+      "original_type": "MAINTAINED",
+      "proposed_type": "MAINTAINED",
+      "review_status": "PENDING_REVIEW",
+      "reason": "공동임차인 분담액 및 미기재 시 인원수 분할 계산 동일 (재판정 권장안, 원본 PDF 시각 검토 전)",
+      "previous_supplemental_ids": [],
+      "current_supplemental_ids": [],
+      "change_group_id": "GROUP_JOINT_TENANT_SHARE",
+      "change_key": "JOINT_TENANT_SHARE",
+      "summary_role": "CONTEXT",
+      "split_children": []
+    },
+    {
+      "comparison_id": "JOINT_TENANT_DUPLICATE",
+      "original_type": "MAINTAINED",
+      "proposed_type": "MAINTAINED",
+      "review_status": "PENDING_REVIEW",
+      "reason": "계약서 1건당 1명과 공동임차인 중복 신청 제한은 동일. 신혼부부 제한은 #73과 연결 (재판정 권장안, 원본 PDF 시각 검토 전)",
+      "previous_supplemental_ids": [],
+      "current_supplemental_ids": [],
+      "change_group_id": "GROUP_JOINT_TENANT_DUPLICATE",
+      "change_key": "JOINT_TENANT_DUPLICATE",
+      "summary_role": "CONTEXT",
+      "split_children": []
+    },
+    {
+      "comparison_id": "INCOME_ELIGIBILITY",
+      "original_type": "UPDATED",
+      "proposed_type": "UPDATED",
+      "review_status": "PENDING_REVIEW",
+      "reason": "소득 상한 150%는 유지하면서 2026년 48% 초과 하한 명시. #60·#61과 중복집계 주의 (재판정 권장안, 원본 PDF 시각 검토 전)",
+      "previous_supplemental_ids": [],
+      "current_supplemental_ids": [],
+      "change_group_id": "INCOME_ELIGIBILITY",
+      "change_key": "INCOME_ELIGIBILITY",
+      "summary_role": "PRIMARY",
+      "split_children": []
+    },
+    {
+      "comparison_id": "INCOME_ASSESSMENT_METHOD",
+      "original_type": "UPDATED",
+      "proposed_type": "UPDATED",
+      "review_status": "PENDING_REVIEW",
+      "reason": "2025년 건강보험료 3개월 평균과 2026년 소득금액증명원 월평균 소득으로 주된 심사자료 변경 (재판정 권장안, 원본 PDF 시각 검토 전)",
+      "previous_supplemental_ids": [],
+      "current_supplemental_ids": [],
+      "change_group_id": "INCOME_VERIFICATION",
+      "change_key": "INCOME_ASSESSMENT_METHOD",
+      "summary_role": "PRIMARY",
+      "split_children": []
+    },
+    {
+      "comparison_id": "INCOME_DEPENDENT_PARENT",
+      "original_type": "INCONCLUSIVE",
+      "proposed_type": "UPDATED",
+      "review_status": "PENDING_REVIEW",
+      "reason": "2025년 피부양자의 부양자 건강보험료 부과액 기준, 2026년 부양자 소득금액 기준. #34의 세부 변화 (재판정 권장안, 원본 PDF 시각 검토 전)",
+      "previous_supplemental_ids": [
+        "E25_PARENT_HEALTH"
+      ],
+      "current_supplemental_ids": [
+        "E26_PARENT_INCOME"
+      ],
+      "change_group_id": "INCOME_VERIFICATION",
+      "change_key": "INCOME_ASSESSMENT_METHOD",
+      "summary_role": "SUPPORTING",
+      "split_children": []
+    },
+    {
+      "comparison_id": "HEALTH_INSURANCE_NURSING_FEE",
+      "original_type": "INCONCLUSIVE",
+      "proposed_type": "INCONCLUSIVE",
+      "review_status": "PENDING_REVIEW",
+      "reason": "2025년 건강보험료 산정에서 장기요양보험료 제외. 2026년 소득금액증명원 방식에는 직접 대응 항목 없어 삭제 단정 불가 (재판정 권장안, 원본 PDF 시각 검토 전)",
+      "previous_supplemental_ids": [],
+      "current_supplemental_ids": [],
+      "change_group_id": "GROUP_HEALTH_INSURANCE_NURSING_FEE",
+      "change_key": "HEALTH_INSURANCE_NURSING_FEE",
+      "summary_role": "REVIEW_ONLY",
+      "split_children": []
+    },
+    {
+      "comparison_id": "ONE_PERSON_INCOME_THRESHOLDS",
+      "original_type": "INCONCLUSIVE",
+      "proposed_type": "INCONCLUSIVE",
+      "review_status": "PENDING_REVIEW",
+      "reason": "2025년 보험료 127,230원과 2026년 소득 기준 1,230,834원 등은 측정 지표와 목적이 달라 직접 금액 비교 불가 (재판정 권장안, 원본 PDF 시각 검토 전)",
+      "previous_supplemental_ids": [],
+      "current_supplemental_ids": [],
+      "change_group_id": "GROUP_ONE_PERSON_INCOME_THRESHOLDS",
+      "change_key": "ONE_PERSON_INCOME_THRESHOLDS",
+      "summary_role": "REVIEW_ONLY",
+      "split_children": []
+    },
+    {
+      "comparison_id": "HOME_OWNERSHIP_EXCLUSION",
+      "original_type": "MAINTAINED",
+      "proposed_type": "MAINTAINED",
+      "review_status": "PENDING_REVIEW",
+      "reason": "본인 주택 소유자 제외 공통 (재판정 권장안, 원본 PDF 시각 검토 전)",
+      "previous_supplemental_ids": [],
+      "current_supplemental_ids": [],
+      "change_group_id": "GROUP_HOME_OWNERSHIP_EXCLUSION",
+      "change_key": "HOME_OWNERSHIP_EXCLUSION",
+      "summary_role": "CONTEXT",
+      "split_children": []
+    },
+    {
+      "comparison_id": "ASSET_EXCLUSION",
+      "original_type": "MAINTAINED",
+      "proposed_type": "MAINTAINED",
+      "review_status": "PENDING_REVIEW",
+      "reason": "일반재산 1억 3천만원 초과 제외 동일 (재판정 권장안, 원본 PDF 시각 검토 전)",
+      "previous_supplemental_ids": [],
+      "current_supplemental_ids": [],
+      "change_group_id": "GROUP_ASSET_EXCLUSION",
+      "change_key": "ASSET_EXCLUSION",
+      "summary_role": "CONTEXT",
+      "split_children": []
+    },
+    {
+      "comparison_id": "VEHICLE_EXCLUSION",
+      "original_type": "MAINTAINED",
+      "proposed_type": "MAINTAINED",
+      "review_status": "PENDING_REVIEW",
+      "reason": "차량시가표준액 2,500만원 이상 제외 동일 (재판정 권장안, 원본 PDF 시각 검토 전)",
+      "previous_supplemental_ids": [],
+      "current_supplemental_ids": [],
+      "change_group_id": "GROUP_VEHICLE_EXCLUSION",
+      "change_key": "VEHICLE_EXCLUSION",
+      "summary_role": "CONTEXT",
+      "split_children": []
+    },
+    {
+      "comparison_id": "BASIC_LIVELIHOOD_EXCLUSION",
+      "original_type": "MAINTAINED",
+      "proposed_type": "MAINTAINED",
+      "review_status": "PENDING_REVIEW",
+      "reason": "생계·의료·주거급여 수급자 제외 동일 (재판정 권장안, 원본 PDF 시각 검토 전)",
+      "previous_supplemental_ids": [],
+      "current_supplemental_ids": [],
+      "change_group_id": "GROUP_BASIC_LIVELIHOOD_EXCLUSION",
+      "change_key": "BASIC_LIVELIHOOD_EXCLUSION",
+      "summary_role": "CONTEXT",
+      "split_children": []
+    },
+    {
+      "comparison_id": "SIMILAR_SUPPORT_EXCLUSION",
+      "original_type": "INCONCLUSIVE",
+      "proposed_type": "INCONCLUSIVE",
+      "review_status": "PENDING_REVIEW",
+      "reason": "중복 수혜 금지 공통이나 2025년 자치구 사업 선정자와 2026년 수혜 중인 자의 적용 범위 차이 남음. #5와 연계 (재판정 권장안, 원본 PDF 시각 검토 전)",
+      "previous_supplemental_ids": [],
+      "current_supplemental_ids": [],
+      "change_group_id": "GROUP_SIMILAR_SUPPORT_EXCLUSION",
+      "change_key": "SIMILAR_SUPPORT_EXCLUSION",
+      "summary_role": "REVIEW_ONLY",
+      "split_children": []
+    },
+    {
+      "comparison_id": "PUBLIC_RENTAL_EXCLUSION",
+      "original_type": "MAINTAINED",
+      "proposed_type": "MAINTAINED",
+      "review_status": "PENDING_REVIEW",
+      "reason": "공공임대주택 거주자 제외, 민간임대 허용 동일. 청년안심주택 민간임대의 특별 배정은 #72 (재판정 권장안, 원본 PDF 시각 검토 전)",
+      "previous_supplemental_ids": [],
+      "current_supplemental_ids": [],
+      "change_group_id": "GROUP_PUBLIC_RENTAL_EXCLUSION",
+      "change_key": "PUBLIC_RENTAL_EXCLUSION",
+      "summary_role": "CONTEXT",
+      "split_children": []
+    },
+    {
+      "comparison_id": "RELATIVE_LANDLORD_EXCLUSION",
+      "original_type": "UPDATED",
+      "proposed_type": "UPDATED",
+      "review_status": "PENDING_REVIEW",
+      "reason": "임대인 제외 대상이 부모에서 배우자 또는 부모로 확대됨 (재판정 권장안, 원본 PDF 시각 검토 전)",
+      "previous_supplemental_ids": [],
+      "current_supplemental_ids": [],
+      "change_group_id": "GROUP_RELATIVE_LANDLORD_EXCLUSION",
+      "change_key": "RELATIVE_LANDLORD_EXCLUSION",
+      "summary_role": "PRIMARY",
+      "split_children": []
+    },
+    {
+      "comparison_id": "OTHER_EXCLUSION",
+      "original_type": "INCONCLUSIVE",
+      "proposed_type": "MAINTAINED",
+      "review_status": "PENDING_REVIEW",
+      "reason": "2026년 정제 공고 p.6에도 사업 취지 미부합 제외 조항 명시. 2026 REVIEWED 필드 누락 (재판정 권장안, 원본 PDF 시각 검토 전)",
+      "previous_supplemental_ids": [],
+      "current_supplemental_ids": [
+        "E26_OTHER_REASON"
+      ],
+      "change_group_id": "GROUP_OTHER_EXCLUSION",
+      "change_key": "OTHER_EXCLUSION",
+      "summary_role": "CONTEXT",
+      "split_children": []
+    },
+    {
+      "comparison_id": "DOC_LEASE_CONTRACT",
+      "original_type": "MAINTAINED",
+      "proposed_type": "MAINTAINED",
+      "review_status": "PENDING_REVIEW",
+      "reason": "확정일자 날인 임대차계약서 원칙 동일. 대체서류 상세는 #47 (재판정 권장안, 원본 PDF 시각 검토 전)",
+      "previous_supplemental_ids": [],
+      "current_supplemental_ids": [],
+      "change_group_id": "GROUP_DOC_LEASE_CONTRACT",
+      "change_key": "DOC_LEASE_CONTRACT",
+      "summary_role": "CONTEXT",
+      "split_children": []
+    },
+    {
+      "comparison_id": "DOC_LEASE_ALTERNATIVES",
+      "original_type": "INCONCLUSIVE",
+      "proposed_type": "SPLIT_REQUIRED",
+      "review_status": "PENDING_REVIEW",
+      "reason": "기본 대체서류 원칙은 유지. 2025 전대차 증빙 3종 → 2026 전대차 목록 2종, 기숙사 별도 요건 명시. 각각 독립 검토 권장 (재판정 권장안, 원본 PDF 시각 검토 전)",
+      "previous_supplemental_ids": [
+        "E25_HOUSE_ALTS",
+        "E25_GOSIWON_DOCS",
+        "E25_SUBLET_DOCS"
+      ],
+      "current_supplemental_ids": [
+        "E26_HOUSE_ALTS",
+        "E26_GOSIWON_DOCS",
+        "E26_SUBLET_DOCS",
+        "E26_DORMITORY"
+      ],
+      "change_group_id": "DOCUMENT_REQUIREMENTS",
+      "change_key": "DOC_LEASE_ALTERNATIVES",
+      "summary_role": "REVIEW_ONLY",
+      "split_children": [
+        "SUBLET_DOC_REQUIRED_ITEMS",
+        "DORMITORY_CONFIRMATION"
+      ]
+    },
+    {
+      "comparison_id": "DOC_RENT_TRANSFER",
+      "original_type": "ANNUAL_SCHEDULE",
+      "proposed_type": "ANNUAL_SCHEDULE",
+      "review_status": "PENDING_REVIEW",
+      "reason": "최근 3개월 월세 이체내역 원칙 유지. 제출 대상 월 2025.3~5 → 2026.2~4 (재판정 권장안, 원본 PDF 시각 검토 전)",
+      "previous_supplemental_ids": [],
+      "current_supplemental_ids": [],
+      "change_group_id": "GROUP_DOC_RENT_TRANSFER",
+      "change_key": "DOC_RENT_TRANSFER",
+      "summary_role": "CONTEXT",
+      "split_children": []
+    },
+    {
+      "comparison_id": "DOC_RENT_ALTERNATIVES",
+      "original_type": "INCONCLUSIVE",
+      "proposed_type": "MAINTAINED",
+      "review_status": "PENDING_REVIEW",
+      "reason": "보증금 잔금 이체·최근 1개월분·월차임 납부확인서 대체방법이 양쪽 공고에 모두 명시. 세부 마스킹 규정은 별도 (재판정 권장안, 원본 PDF 시각 검토 전)",
+      "previous_supplemental_ids": [
+        "E25_RENT_TRANSFER_ALTS"
+      ],
+      "current_supplemental_ids": [
+        "E26_RENT_TRANSFER_ALTS"
+      ],
+      "change_group_id": "GROUP_DOC_RENT_ALTERNATIVES",
+      "change_key": "DOC_RENT_ALTERNATIVES",
+      "summary_role": "CONTEXT",
+      "split_children": []
+    },
+    {
+      "comparison_id": "DOC_FAMILY_CERTIFICATE",
+      "original_type": "MAINTAINED",
+      "proposed_type": "MAINTAINED",
+      "review_status": "PENDING_REVIEW",
+      "reason": "본인 기준 상세 가족관계증명서 및 공고일 이후 발급 동일 (재판정 권장안, 원본 PDF 시각 검토 전)",
+      "previous_supplemental_ids": [],
+      "current_supplemental_ids": [],
+      "change_group_id": "GROUP_DOC_FAMILY_CERTIFICATE",
+      "change_key": "DOC_FAMILY_CERTIFICATE",
+      "summary_role": "CONTEXT",
+      "split_children": []
+    },
+    {
+      "comparison_id": "DOC_ADMIN_CONSENT",
+      "original_type": "ADDED_CANDIDATE",
+      "proposed_type": "ADDED_CANDIDATE",
+      "review_status": "PENDING_REVIEW",
+      "reason": "2026년 행정정보 공동이용 사전동의서가 필수서류 4번째에 추가. 비동의 시 대체서류 제출 예외도 반드시 같이 안내 (재판정 권장안, 원본 PDF 시각 검토 전)",
+      "previous_supplemental_ids": [],
+      "current_supplemental_ids": [
+        "E26_ADMIN_CONSENT_ALTERNATIVES"
+      ],
+      "change_group_id": "DOCUMENT_REQUIREMENTS",
+      "change_key": "DOC_ADMIN_CONSENT",
+      "summary_role": "PRIMARY",
+      "split_children": []
+    },
+    {
+      "comparison_id": "DOC_SPECIAL_SINGLE_PARENT",
+      "original_type": "ADDED_CANDIDATE",
+      "proposed_type": "ADDED_CANDIDATE",
+      "review_status": "PENDING_REVIEW",
+      "reason": "2026년 한부모가족 특별 신청유형 증명서. #72와 연계해 표시 (재판정 권장안, 원본 PDF 시각 검토 전)",
+      "previous_supplemental_ids": [],
+      "current_supplemental_ids": [],
+      "change_group_id": "APPLICATION_GROUPS",
+      "change_key": "HOUSEHOLD_ELIGIBILITY",
+      "summary_role": "SUPPORTING",
+      "split_children": []
+    },
+    {
+      "comparison_id": "DOC_SPECIAL_FRAUD",
+      "original_type": "ADDED_CANDIDATE",
+      "proposed_type": "ADDED_CANDIDATE",
+      "review_status": "PENDING_REVIEW",
+      "reason": "2026년 전세사기피해자 특별 신청유형 결정문. #72와 연계해 표시 (재판정 권장안, 원본 PDF 시각 검토 전)",
+      "previous_supplemental_ids": [],
+      "current_supplemental_ids": [],
+      "change_group_id": "APPLICATION_GROUPS",
+      "change_key": "HOUSEHOLD_ELIGIBILITY",
+      "summary_role": "SUPPORTING",
+      "split_children": []
+    },
+    {
+      "comparison_id": "DOC_SPECIAL_VETERAN",
+      "original_type": "ADDED_CANDIDATE",
+      "proposed_type": "ADDED_CANDIDATE",
+      "review_status": "PENDING_REVIEW",
+      "reason": "2026년 제대군인 연령 연장 증빙 필요. #3의 세부 제출조건 (재판정 권장안, 원본 PDF 시각 검토 전)",
+      "previous_supplemental_ids": [],
+      "current_supplemental_ids": [],
+      "change_group_id": "APPLICATION_GROUPS",
+      "change_key": "VETERAN_AGE_EXTENSION",
+      "summary_role": "SUPPORTING",
+      "split_children": []
+    },
+    {
+      "comparison_id": "TIER_ONE_RENT",
+      "original_type": "MAINTAINED",
+      "proposed_type": "MAINTAINED",
+      "review_status": "PENDING_REVIEW",
+      "reason": "선정 1구간 보증금 500만원·월세 40만원 이하 기준 동일. 선정비율은 #62 (재판정 권장안, 원본 PDF 시각 검토 전)",
+      "previous_supplemental_ids": [],
+      "current_supplemental_ids": [],
+      "change_group_id": "GROUP_TIER_ONE_RENT",
+      "change_key": "TIER_ONE_RENT",
+      "summary_role": "CONTEXT",
+      "split_children": []
+    },
+    {
+      "comparison_id": "TIER_TWO_RENT",
+      "original_type": "MAINTAINED",
+      "proposed_type": "MAINTAINED",
+      "review_status": "PENDING_REVIEW",
+      "reason": "선정 2구간 보증금 1천만원·월세 50만원 이하 기준 동일. 선정비율은 #62 (재판정 권장안, 원본 PDF 시각 검토 전)",
+      "previous_supplemental_ids": [],
+      "current_supplemental_ids": [],
+      "change_group_id": "GROUP_TIER_TWO_RENT",
+      "change_key": "TIER_TWO_RENT",
+      "summary_role": "CONTEXT",
+      "split_children": []
+    },
+    {
+      "comparison_id": "TIER_THREE_RENT",
+      "original_type": "MAINTAINED",
+      "proposed_type": "MAINTAINED",
+      "review_status": "PENDING_REVIEW",
+      "reason": "선정 3구간 보증금 2천만원·월세 60만원 이하 기준 동일. 선정비율은 #62 (재판정 권장안, 원본 PDF 시각 검토 전)",
+      "previous_supplemental_ids": [],
+      "current_supplemental_ids": [],
+      "change_group_id": "GROUP_TIER_THREE_RENT",
+      "change_key": "TIER_THREE_RENT",
+      "summary_role": "CONTEXT",
+      "split_children": []
+    },
+    {
+      "comparison_id": "TIER_FOUR_RENT",
+      "original_type": "MAINTAINED",
+      "proposed_type": "MAINTAINED",
+      "review_status": "PENDING_REVIEW",
+      "reason": "선정 4구간 기본 보증금 8천만원·월세 60만원 이하 동일. 초과월세 예외는 #59 (재판정 권장안, 원본 PDF 시각 검토 전)",
+      "previous_supplemental_ids": [],
+      "current_supplemental_ids": [],
+      "change_group_id": "GROUP_TIER_FOUR_RENT",
+      "change_key": "TIER_FOUR_RENT",
+      "summary_role": "CONTEXT",
+      "split_children": []
+    },
+    {
+      "comparison_id": "TIER_FOUR_EXCEPTION",
+      "original_type": "UPDATED",
+      "proposed_type": "UPDATED",
+      "review_status": "PENDING_REVIEW",
+      "reason": "4구간 월세 초과 예외의 환산율·상한 변화. #25·#26과 동일 변경효과이므로 독립 집계 금지 (재판정 권장안, 원본 PDF 시각 검토 전)",
+      "previous_supplemental_ids": [],
+      "current_supplemental_ids": [],
+      "change_group_id": "RENT_CONVERSION",
+      "change_key": "RENT_CONVERSION_RATE",
+      "summary_role": "SUPPORTING",
+      "split_children": []
+    },
+    {
+      "comparison_id": "TIER_ONE_TO_THREE_INCOME",
+      "original_type": "UPDATED",
+      "proposed_type": "UPDATED",
+      "review_status": "PENDING_REVIEW",
+      "reason": "1~3구간 120% 이하 → 48% 초과~120% 이하로 소득 하한 도입. #33의 세부 적용 (재판정 권장안, 원본 PDF 시각 검토 전)",
+      "previous_supplemental_ids": [],
+      "current_supplemental_ids": [],
+      "change_group_id": "INCOME_ELIGIBILITY",
+      "change_key": "INCOME_ELIGIBILITY",
+      "summary_role": "SUPPORTING",
+      "split_children": []
+    },
+    {
+      "comparison_id": "TIER_FOUR_INCOME",
+      "original_type": "UPDATED",
+      "proposed_type": "UPDATED",
+      "review_status": "PENDING_REVIEW",
+      "reason": "4구간 150% 이하 → 48% 초과~150% 이하로 하한 도입. #33의 세부 적용 (재판정 권장안, 원본 PDF 시각 검토 전)",
+      "previous_supplemental_ids": [],
+      "current_supplemental_ids": [],
+      "change_group_id": "INCOME_ELIGIBILITY",
+      "change_key": "INCOME_ELIGIBILITY",
+      "summary_role": "SUPPORTING",
+      "split_children": []
+    },
+    {
+      "comparison_id": "TIER_DISTRIBUTION",
+      "original_type": "UPDATED",
+      "proposed_type": "UPDATED",
+      "review_status": "PENDING_REVIEW",
+      "reason": "2025년 총 15,000명 45/30/15/10% vs 2026년 1인 가구 12,000명 35/30/20/15%. 분모 명시 (재판정 권장안, 원본 PDF 시각 검토 전)",
+      "previous_supplemental_ids": [],
+      "current_supplemental_ids": [],
+      "change_group_id": "SELECTION_ALLOCATION",
+      "change_key": "TIER_DISTRIBUTION",
+      "summary_role": "PRIMARY",
+      "split_children": []
+    },
+    {
+      "comparison_id": "REVIEW_ANNOUNCEMENT",
+      "original_type": "ANNUAL_SCHEDULE",
+      "proposed_type": "ANNUAL_SCHEDULE",
+      "review_status": "PENDING_REVIEW",
+      "reason": "심사결과 예정 2025년 8월 → 2026년 7월 (재판정 권장안, 원본 PDF 시각 검토 전)",
+      "previous_supplemental_ids": [],
+      "current_supplemental_ids": [],
+      "change_group_id": "GROUP_REVIEW_ANNOUNCEMENT",
+      "change_key": "REVIEW_ANNOUNCEMENT",
+      "summary_role": "CONTEXT",
+      "split_children": []
+    },
+    {
+      "comparison_id": "FINAL_ANNOUNCEMENT",
+      "original_type": "ANNUAL_SCHEDULE",
+      "proposed_type": "ANNUAL_SCHEDULE",
+      "review_status": "PENDING_REVIEW",
+      "reason": "최종선정 발표 예정 2025년 9월 초 → 2026년 7월 말 (재판정 권장안, 원본 PDF 시각 검토 전)",
+      "previous_supplemental_ids": [],
+      "current_supplemental_ids": [],
+      "change_group_id": "GROUP_FINAL_ANNOUNCEMENT",
+      "change_key": "FINAL_ANNOUNCEMENT",
+      "summary_role": "CONTEXT",
+      "split_children": []
+    },
+    {
+      "comparison_id": "AWARDEE_BANK_ACCOUNT",
+      "original_type": "MAINTAINED",
+      "proposed_type": "MAINTAINED",
+      "review_status": "PENDING_REVIEW",
+      "reason": "신한 청년드림통장 개설, 미개설 시 선정 취소 동일 (재판정 권장안, 원본 PDF 시각 검토 전)",
+      "previous_supplemental_ids": [],
+      "current_supplemental_ids": [],
+      "change_group_id": "GROUP_AWARDEE_BANK_ACCOUNT",
+      "change_key": "AWARDEE_BANK_ACCOUNT",
+      "summary_role": "CONTEXT",
+      "split_children": []
+    },
+    {
+      "comparison_id": "AWARDEE_BANK_ACCOUNT_EXISTING",
+      "original_type": "INCONCLUSIVE",
+      "proposed_type": "MAINTAINED",
+      "review_status": "PENDING_REVIEW",
+      "reason": "2025년 정제 공고 p.9에도 기존 청년드림통장 정상거래 확인·사용불가 시 취소 명시. 2025 REVIEWED 필드 누락 (재판정 권장안, 원본 PDF 시각 검토 전)",
+      "previous_supplemental_ids": [
+        "E25_BANK_EXISTING"
+      ],
+      "current_supplemental_ids": [
+        "E26_BANK_EXISTING"
+      ],
+      "change_group_id": "GROUP_AWARDEE_BANK_ACCOUNT_EXISTING",
+      "change_key": "AWARDEE_BANK_ACCOUNT_EXISTING",
+      "summary_role": "CONTEXT",
+      "split_children": []
+    },
+    {
+      "comparison_id": "SUSPENSION_CONDITIONS",
+      "original_type": "MAINTAINED",
+      "proposed_type": "MAINTAINED",
+      "review_status": "PENDING_REVIEW",
+      "reason": "주요 중지 사유 자체는 공통. 유사사업 수혜가 발생한 월부터 중지하는 2026년 예외는 별도 새 비교항목 권장 (재판정 권장안, 원본 PDF 시각 검토 전)",
+      "previous_supplemental_ids": [],
+      "current_supplemental_ids": [
+        "E26_STOP_SAME_MONTH"
+      ],
+      "change_group_id": "SUPPORT_TERMINATION",
+      "change_key": "SUSPENSION_CONDITIONS",
+      "summary_role": "CONTEXT",
+      "split_children": []
+    },
+    {
+      "comparison_id": "SUSPENSION_EFFECT",
+      "original_type": "MAINTAINED",
+      "proposed_type": "SPLIT_REQUIRED",
+      "review_status": "PENDING_REVIEW",
+      "reason": "다음 달 중지 일반 원칙은 유지. 2026년 재개·재신청 불가 및 잔여금 소멸 문구는 신설 후보. 유사사업 중복 수혜 발생월 중지 예외도 별도 (재판정 권장안, 원본 PDF 시각 검토 전)",
+      "previous_supplemental_ids": [
+        "E25_STOP_NEXT_MONTH"
+      ],
+      "current_supplemental_ids": [
+        "E26_STOP_NEXT_MONTH",
+        "E26_STOP_NO_RESUME"
+      ],
+      "change_group_id": "SUPPORT_TERMINATION",
+      "change_key": "SUSPENSION_EFFECT",
+      "summary_role": "REVIEW_ONLY",
+      "split_children": [
+        "SIMILAR_SUPPORT_SAME_MONTH_STOP",
+        "SUSPENSION_NO_RESUME"
+      ]
+    },
+    {
+      "comparison_id": "LEASE_CHANGE_REPORT",
+      "original_type": "WORDING_ONLY",
+      "proposed_type": "WORDING_ONLY",
+      "review_status": "PENDING_REVIEW",
+      "reason": "주소지 또는 임대차계약 변경 시 변경 신청 의무는 동일. 기존 자동 UPDATED 오탐 (재판정 권장안, 원본 PDF 시각 검토 전)",
+      "previous_supplemental_ids": [],
+      "current_supplemental_ids": [],
+      "change_group_id": "GROUP_LEASE_CHANGE_REPORT",
+      "change_key": "LEASE_CHANGE_REPORT",
+      "summary_role": "CONTEXT",
+      "split_children": []
+    },
+    {
+      "comparison_id": "LEASE_CHANGE_EFFECT",
+      "original_type": "INCONCLUSIVE",
+      "proposed_type": "MAINTAINED",
+      "review_status": "PENDING_REVIEW",
+      "reason": "2025년 정제 공고 p.9에도 변경 발생월 종전 계약·익월 신규 계약 적용. 2025 REVIEWED 필드 누락 (재판정 권장안, 원본 PDF 시각 검토 전)",
+      "previous_supplemental_ids": [
+        "E25_CHANGE_EFFECT"
+      ],
+      "current_supplemental_ids": [
+        "E26_CHANGE_EFFECT"
+      ],
+      "change_group_id": "GROUP_LEASE_CHANGE_EFFECT",
+      "change_key": "LEASE_CHANGE_EFFECT",
+      "summary_role": "CONTEXT",
+      "split_children": []
+    },
+    {
+      "comparison_id": "ANNUAL_PROCESS_TIMELINE",
+      "original_type": "ANNUAL_SCHEDULE",
+      "proposed_type": "ANNUAL_SCHEDULE",
+      "review_status": "PENDING_REVIEW",
+      "reason": "공고별 전체 진행 일정 차이. #11·#17·#63·#64와 합산 금지 (재판정 권장안, 원본 PDF 시각 검토 전)",
+      "previous_supplemental_ids": [],
+      "current_supplemental_ids": [],
+      "change_group_id": "GROUP_ANNUAL_PROCESS_TIMELINE",
+      "change_key": "ANNUAL_PROCESS_TIMELINE",
+      "summary_role": "CONTEXT",
+      "split_children": []
+    },
+    {
+      "comparison_id": "NEW_SPECIAL_APPLICATION_GROUPS",
+      "original_type": "ADDED_CANDIDATE",
+      "proposed_type": "ADDED_CANDIDATE",
+      "review_status": "PENDING_REVIEW",
+      "reason": "2026년 한부모·전세사기피해자·신혼부부·청년안심주택 민간임대 별도 신청유형 및 배정. 기존 민간임대 신청 가능 자체는 신규가 아님 (재판정 권장안, 원본 PDF 시각 검토 전)",
+      "previous_supplemental_ids": [],
+      "current_supplemental_ids": [],
+      "change_group_id": "APPLICATION_GROUPS",
+      "change_key": "HOUSEHOLD_ELIGIBILITY",
+      "summary_role": "SUPPORTING",
+      "split_children": []
+    },
+    {
+      "comparison_id": "NEWLYWED_RESIDENCE",
+      "original_type": "ADDED_CANDIDATE",
+      "proposed_type": "ADDED_CANDIDATE",
+      "review_status": "PENDING_REVIEW",
+      "reason": "2026년 신혼부부 양측 청년·같은 주소·무자녀·혼인신고 및 중복신청 제한의 유형별 요건. #72 세부 조건 (재판정 권장안, 원본 PDF 시각 검토 전)",
+      "previous_supplemental_ids": [],
+      "current_supplemental_ids": [],
+      "change_group_id": "APPLICATION_GROUPS",
+      "change_key": "HOUSEHOLD_ELIGIBILITY",
+      "summary_role": "SUPPORTING",
+      "split_children": []
+    },
+    {
+      "comparison_id": "OBJECTION_PERIOD",
+      "original_type": "INCONCLUSIVE",
+      "proposed_type": "MAINTAINED",
+      "review_status": "PENDING_REVIEW",
+      "reason": "2025년 정제 공고 p.8과 2026년 p.10에 이의신청 통보 후 10일 이내 명시. 2025 REVIEWED 필드 누락 (재판정 권장안, 원본 PDF 시각 검토 전)",
+      "previous_supplemental_ids": [
+        "E25_OBJECTION_PERIOD"
+      ],
+      "current_supplemental_ids": [
+        "E26_OBJECTION_PERIOD"
+      ],
+      "change_group_id": "GROUP_OBJECTION_PERIOD",
+      "change_key": "OBJECTION_PERIOD",
+      "summary_role": "CONTEXT",
+      "split_children": []
+    },
+    {
+      "comparison_id": "OBJECTION_DOCUMENT_LIMITATION",
+      "original_type": "INCONCLUSIVE",
+      "proposed_type": "ADDED_CANDIDATE",
+      "review_status": "PENDING_REVIEW",
+      "reason": "2026년 필수서류 누락 시 이의신청에서 추가 보완 불가 명시. 2025년의 10일 소명 기한 규정과 동일하지 않음 (재판정 권장안, 원본 PDF 시각 검토 전)",
+      "previous_supplemental_ids": [],
+      "current_supplemental_ids": [
+        "E26_OBJECTION_DOC_LIMIT"
+      ],
+      "change_group_id": "DOCUMENT_REQUIREMENTS",
+      "change_key": "OBJECTION_DOCUMENT_LIMITATION",
+      "summary_role": "PRIMARY",
+      "split_children": []
+    }
+  ],
+  "derived_items": [
+    {
+      "comparison_id": "GOV_SUPPORT_REFUND_ON_OVERLAP",
+      "parent_comparison_id": "PREVIOUS_BENEFICIARY_RESTRICTION",
+      "label": "국토부 사업 추가 선정 시 기지급 지원금 환수",
+      "scope_id": "APPLICANT_ALL",
+      "proposed_type": "ADDED_CANDIDATE",
+      "review_status": "PENDING_REVIEW",
+      "reason": "2025 동일 문구 부재 여부는 최종 공고 PDF 확인 필요 / 원문 정제본 근거 검토 후보, PDF 미검증",
+      "previous_refs": [],
+      "current_refs": [],
+      "previous_supplemental_ids": [],
+      "current_supplemental_ids": [
+        "E26_GOV_REFUND"
+      ],
+      "previous_display_value": null,
+      "current_display_value": "서울시 지원금 수령 후 당해 국토부 청년월세 최종 선정 시 기존 서울시 지원금 전액 환수",
+      "change_group_id": "SUPPORT_TERMINATION",
+      "change_key": "GOV_SUPPORT_REFUND_ON_OVERLAP",
+      "summary_role": "PRIMARY"
+    },
+    {
+      "comparison_id": "SIMILAR_SUPPORT_SAME_MONTH_STOP",
+      "parent_comparison_id": "SUSPENSION_EFFECT",
+      "label": "유사사업 동시수혜 발생 월 지원 중단",
+      "scope_id": "AWARDEES",
+      "proposed_type": "ADDED_CANDIDATE",
+      "review_status": "PENDING_REVIEW",
+      "reason": "일반 중단 규칙(익월)과 예외 규칙을 분리 / 원문 정제본 근거 검토 후보, PDF 미검증",
+      "previous_refs": [],
+      "current_refs": [],
+      "previous_supplemental_ids": [],
+      "current_supplemental_ids": [
+        "E26_STOP_SAME_MONTH"
+      ],
+      "previous_display_value": null,
+      "current_display_value": "동시 수혜 발생 월부터 지급 중지",
+      "change_group_id": "SUPPORT_TERMINATION",
+      "change_key": "SIMILAR_SUPPORT_SAME_MONTH_STOP",
+      "summary_role": "PRIMARY"
+    },
+    {
+      "comparison_id": "SUSPENSION_NO_RESUME",
+      "parent_comparison_id": "SUSPENSION_EFFECT",
+      "label": "지원 중단 후 재개 불가·잔여 지원금 소멸",
+      "scope_id": "AWARDEES",
+      "proposed_type": "ADDED_CANDIDATE",
+      "review_status": "PENDING_REVIEW",
+      "reason": "일반 중단 시점 유지와 새 규정 후보를 분리 / 원문 정제본 근거 검토 후보, PDF 미검증",
+      "previous_refs": [],
+      "current_refs": [],
+      "previous_supplemental_ids": [],
+      "current_supplemental_ids": [
+        "E26_STOP_NO_RESUME"
+      ],
+      "previous_display_value": null,
+      "current_display_value": "지급 중지 후 재개·재신청 불가 및 잔여 지원금 소멸",
+      "change_group_id": "SUPPORT_TERMINATION",
+      "change_key": "SUSPENSION_NO_RESUME",
+      "summary_role": "PRIMARY"
+    },
+    {
+      "comparison_id": "SUBLET_DOC_REQUIRED_ITEMS",
+      "parent_comparison_id": "DOC_LEASE_ALTERNATIVES",
+      "label": "전대차 계약 제출서류 목록",
+      "scope_id": "SUBLET",
+      "proposed_type": "UPDATED",
+      "review_status": "PENDING_REVIEW",
+      "reason": "2026 목록에서 제외된 자료가 전 상황에서 불필요한 것은 아님 / 원문 정제본 근거 검토 후보, PDF 미검증",
+      "previous_refs": [],
+      "current_refs": [],
+      "previous_supplemental_ids": [
+        "E25_SUBLET_DOCS"
+      ],
+      "current_supplemental_ids": [
+        "E26_SUBLET_DOCS"
+      ],
+      "previous_display_value": "전대차계약서·전대인의 계약서·건축물대장/현황도 목록 명시",
+      "current_display_value": "전대차계약서·전대인의 계약서 2종 목록 명시",
+      "change_group_id": "DOCUMENT_REQUIREMENTS",
+      "change_key": "SUBLET_DOC_REQUIRED_ITEMS",
+      "summary_role": "PRIMARY"
+    },
+    {
+      "comparison_id": "DORMITORY_CONFIRMATION",
+      "parent_comparison_id": "DOC_LEASE_ALTERNATIVES",
+      "label": "기숙사 기관 날인 입실확인서",
+      "scope_id": "DORMITORY",
+      "proposed_type": "ADDED_CANDIDATE",
+      "review_status": "PENDING_REVIEW",
+      "reason": "2025 대응 조항 여부 PDF 확인 필요 / 원문 정제본 근거 검토 후보, PDF 미검증",
+      "previous_refs": [],
+      "current_refs": [],
+      "previous_supplemental_ids": [],
+      "current_supplemental_ids": [
+        "E26_DORMITORY"
+      ],
+      "previous_display_value": null,
+      "current_display_value": "기관 날인된 입실확인서 제출",
+      "change_group_id": "DOCUMENT_REQUIREMENTS",
+      "change_key": "DORMITORY_CONFIRMATION",
+      "summary_role": "PRIMARY"
+    },
+    {
+      "comparison_id": "ADMIN_CONSENT_ALTERNATIVES",
+      "parent_comparison_id": "DOC_ADMIN_CONSENT",
+      "label": "행정정보 공동이용 비동의 시 대체서류",
+      "scope_id": "APPLICANT_ALL",
+      "proposed_type": "ADDED_CANDIDATE",
+      "review_status": "PENDING_REVIEW",
+      "reason": "동의서 의무만 표시하지 말고 대체 경로 함께 안내 / 원문 정제본 근거 검토 후보, PDF 미검증",
+      "previous_refs": [],
+      "current_refs": [],
+      "previous_supplemental_ids": [],
+      "current_supplemental_ids": [
+        "E26_ADMIN_CONSENT_ALTERNATIVES"
+      ],
+      "previous_display_value": null,
+      "current_display_value": "비동의 시 건강보험 자격 확인서·소득금액증명원·주민등록등·초본 별도 제출",
+      "change_group_id": "DOCUMENT_REQUIREMENTS",
+      "change_key": "DOC_ADMIN_CONSENT",
+      "summary_role": "SUPPORTING"
+    },
+    {
+      "comparison_id": "PDF_UPLOAD_REQUIREMENT",
+      "parent_comparison_id": "DOC_LEASE_CONTRACT",
+      "label": "제출서류 PDF 파일 형식",
+      "scope_id": "APPLICANT_ALL",
+      "proposed_type": "UPDATED",
+      "review_status": "PENDING_REVIEW",
+      "reason": "권고에서 제출 지침으로 표현 강화; 실제 시스템 예외 운영은 별도 확인 / 원문 정제본 근거 검토 후보, PDF 미검증",
+      "previous_refs": [],
+      "current_refs": [],
+      "previous_supplemental_ids": [
+        "E25_RECOMMENDED_PDF"
+      ],
+      "current_supplemental_ids": [
+        "E26_MANDATORY_PDF"
+      ],
+      "previous_display_value": "가급적 PDF 파일 제출 권장",
+      "current_display_value": "PDF 파일로 제출",
+      "change_group_id": "DOCUMENT_REQUIREMENTS",
+      "change_key": "PDF_UPLOAD_REQUIREMENT",
+      "summary_role": "PRIMARY"
+    }
+  ],
+  "mapping_canonical_sha256": "19607fccb09f6085e0e918988a6b9795f71b1630f537c5b7f51a58fb92ef4306"
+}
