@@ -1,14 +1,20 @@
 
 import asyncio
 import logging
+import os
 from contextlib import asynccontextmanager, suppress
 
-from fastapi import FastAPI
+from fastapi import Depends, FastAPI
 from pydantic import BaseModel, Field
 
 from src.services.research_job_processor import (
     process_next_research_job,
     process_next_callback,
+)
+from src.services.research_job_protection import (
+    JobProtectionConfigError,
+    load_job_protection_policy,
+    workers_enabled,
 )
 
 from src.routers.research_jobs import (
@@ -17,6 +23,7 @@ from src.routers.research_jobs import (
 from src.routers.policy_compare import router as policy_compare_router
 
 from src.services.generation_service import run_generation
+from src.services.ai_auth import verify_ai_service_token
 from src.retrieval.pipeline import retrieve_evidence
 
 from src.schemas.generation import (
@@ -115,6 +122,27 @@ async def lifespan(app: FastAPI):
     is active.
     """
 
+    # Parse the explicit worker switch and protection policy BEFORE task creation.
+    # Invalid protection leaves health/other APIs available but starts no workers.
+    try:
+        enabled = workers_enabled()
+        policy = load_job_protection_policy() if enabled else None
+    except JobProtectionConfigError as exc:
+        logger.error("Automatic AI workers disabled: %s", exc)
+        enabled = False
+        policy = None
+
+    if not enabled:
+        logger.info("C.A.S.T. automatic AI workers are disabled")
+        yield
+        return
+
+    logger.info(
+        "Automatic AI protection validated: cutover=%s protected_count=%s",
+        policy.cutover_at.isoformat(),
+        len(policy.protected_job_ids),
+    )
+
     workers = [
         asyncio.create_task(
             research_job_worker(),
@@ -211,7 +239,6 @@ def health_check():
 # 7. AI Answer Generation API
 # ==========================================
 
-@app.post("/generate")
 def generate_answer(
     request: GenerateRequest,
 ):
@@ -259,6 +286,34 @@ def generate_answer(
             for claim in result.claims
         ],
     }
+
+
+# Legacy direct-context generation is not part of the production RAG pipeline.
+# Never expose it by merely setting a flag in a production environment.
+def _legacy_generate_enabled() -> bool:
+    switch = os.getenv("CAST_AI_ENABLE_LEGACY_GENERATE", "false").strip().lower()
+    if switch not in ("true", "false"):
+        logger.warning("Legacy /generate disabled: invalid opt-in value")
+        return False
+    if switch != "true":
+        return False
+
+    environment = os.getenv("CAST_AI_ENV", "production").strip().lower()
+    if environment not in ("local", "development", "test"):
+        logger.warning("Legacy /generate disabled: non-development environment")
+        return False
+    return True
+
+
+# Register only in explicit development or test mode. No entry in OpenAPI
+# or FastAPI's routing table when the route is disabled.
+if _legacy_generate_enabled():
+    app.add_api_route(
+        "/generate",
+        generate_answer,
+        methods=["POST"],
+        dependencies=[Depends(verify_ai_service_token)],
+    )
 
 
 # ==========================================

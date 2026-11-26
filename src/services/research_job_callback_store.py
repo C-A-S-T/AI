@@ -7,6 +7,10 @@ from uuid import UUID
 from psycopg.types.json import Jsonb
 
 from src.services.ai_database import get_ai_db_connection
+from src.services.research_job_protection import (
+    AUTO_JOB_PROTECTION_SQL,
+    load_job_protection_policy,
+)
 
 
 MAX_CALLBACK_ATTEMPTS = 10
@@ -21,12 +25,17 @@ def save_callback_payload(
 ) -> bool:
     """Save AI outcome and callback in one transaction."""
 
+
     ai_status = "COMPLETED" if ai_succeeded else "FAILED"
+
+    policy = load_job_protection_policy()
+    protection_sql = "AND (" + AUTO_JOB_PROTECTION_SQL + ")"
+    protection_params = policy.sql_parameters()
 
     with get_ai_db_connection() as conn:
         with conn.cursor() as cur:
             cur.execute(
-                """
+                f"""
                 UPDATE ai.research_job
                 SET status = %s,
                     last_error = CASE
@@ -42,6 +51,7 @@ def save_callback_payload(
                 WHERE job_id = %s
                   AND status = 'PROCESSING'
                   AND callback_payload IS NULL
+                  {protection_sql}
                 RETURNING job_id
                 """,
                 (
@@ -49,6 +59,7 @@ def save_callback_payload(
                     ai_succeeded,
                     Jsonb(payload),
                     job_id,
+                    *protection_params,
                 ),
             )
 
@@ -56,16 +67,19 @@ def save_callback_payload(
 
 
 def claim_pending_callback() -> dict | None:
-    """Claim one due callback with row-level locking."""
+    """Claim one eligible due callback with row-level locking."""
+
+    policy = load_job_protection_policy()
 
     with get_ai_db_connection() as conn:
         with conn.cursor() as cur:
             cur.execute(
-                """
+                f"""
                 WITH next_callback AS (
                     SELECT job_id
                     FROM ai.research_job
                     WHERE callback_payload IS NOT NULL
+                      AND ({AUTO_JOB_PROTECTION_SQL})
                       AND callback_attempt_count < %s
                       AND (
                           (
@@ -98,6 +112,7 @@ def claim_pending_callback() -> dict | None:
                     job.callback_attempt_count
                 """,
                 (
+                    *policy.sql_parameters(),
                     MAX_CALLBACK_ATTEMPTS,
                     SENDING_TIMEOUT_SECONDS,
                 ),
@@ -122,10 +137,15 @@ def mark_callback_delivered(
 ) -> bool:
     """Mark delivered only for the current attempt."""
 
+
+    policy = load_job_protection_policy()
+    protection_sql = "AND (" + AUTO_JOB_PROTECTION_SQL + ")"
+    protection_params = policy.sql_parameters()
+
     with get_ai_db_connection() as conn:
         with conn.cursor() as cur:
             cur.execute(
-                """
+                f"""
                 UPDATE ai.research_job
                 SET callback_status = 'DELIVERED',
                     callback_next_retry_at = NULL,
@@ -134,9 +154,10 @@ def mark_callback_delivered(
                 WHERE job_id = %s
                   AND callback_status = 'SENDING'
                   AND callback_attempt_count = %s
+                  {protection_sql}
                 RETURNING job_id
                 """,
-                (job_id, attempt_count),
+                (job_id, attempt_count, *protection_params),
             )
 
             return cur.fetchone() is not None
@@ -149,6 +170,7 @@ def mark_callback_delivery_failed(
     permanent: bool = False,
 ) -> bool:
     """Schedule retry or mark delivery permanently failed."""
+
 
     safe_message = (
         error_message or "Callback delivery failed"
@@ -176,10 +198,14 @@ def mark_callback_delivery_failed(
         + timedelta(seconds=delay)
     )
 
+    policy = load_job_protection_policy()
+    protection_sql = "AND (" + AUTO_JOB_PROTECTION_SQL + ")"
+    protection_params = policy.sql_parameters()
+
     with get_ai_db_connection() as conn:
         with conn.cursor() as cur:
             cur.execute(
-                """
+                f"""
                 UPDATE ai.research_job
                 SET callback_status = %s,
                     callback_next_retry_at = %s,
@@ -188,6 +214,7 @@ def mark_callback_delivery_failed(
                 WHERE job_id = %s
                   AND callback_status = 'SENDING'
                   AND callback_attempt_count = %s
+                  {protection_sql}
                 RETURNING job_id
                 """,
                 (
@@ -196,6 +223,7 @@ def mark_callback_delivery_failed(
                     safe_message,
                     job_id,
                     attempt_count,
+                    *protection_params,
                 ),
             )
 
@@ -203,12 +231,14 @@ def mark_callback_delivery_failed(
 
 
 def recover_exhausted_callbacks() -> int:
-    """Close abandoned deliveries that exhausted retry attempts."""
+    """Close eligible abandoned deliveries that exhausted retries."""
+
+    policy = load_job_protection_policy()
 
     with get_ai_db_connection() as conn:
         with conn.cursor() as cur:
             cur.execute(
-                """
+                f"""
                 UPDATE ai.research_job
                 SET callback_status = 'FAILED_PERMANENT',
                     callback_next_retry_at = NULL,
@@ -216,11 +246,13 @@ def recover_exhausted_callbacks() -> int:
                         'Maximum callback attempts reached',
                     updated_at = CURRENT_TIMESTAMP
                 WHERE callback_status = 'SENDING'
+                  AND ({AUTO_JOB_PROTECTION_SQL})
                   AND callback_attempt_count >= %s
                   AND updated_at <= CURRENT_TIMESTAMP
                       - (%s * INTERVAL '1 second')
                 """,
                 (
+                    *policy.sql_parameters(),
                     MAX_CALLBACK_ATTEMPTS,
                     SENDING_TIMEOUT_SECONDS,
                 ),

@@ -5,7 +5,7 @@ from typing import Any
 
 from src.retrieval.hybrid import hybrid_retrieve_chunks
 from src.retrieval.reranker import rerank_chunks
-from src.retrieval.storage import load_embeddings
+from src.retrieval.document_approval import load_searchable_embeddings
 
 
 def retrieve_evidence(
@@ -21,7 +21,7 @@ def retrieve_evidence(
     if candidate_k < top_k:
         raise ValueError("candidate_k must be >= top_k")
 
-    embedded_chunks = load_embeddings(document_id)
+    embedded_chunks = load_searchable_embeddings(document_id)
 
     if not embedded_chunks:
         return []
