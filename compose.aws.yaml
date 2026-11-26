@@ -1,0 +1,9 @@
+services:
+  ai:
+    networks:
+      - cast_private
+
+networks:
+  cast_private:
+    external: true
+    name: cast-aws_cast_private

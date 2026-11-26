@@ -32,7 +32,14 @@ logger = logging.getLogger(__name__)
 def process_next_research_job() -> bool:
     """Generate AI results and persist their callback."""
 
-    job = claim_pending_research_job()
+    return _process_claimed_research_job(
+        claim_pending_research_job()
+    )
+
+
+def _process_claimed_research_job(
+    job: dict | None,
+) -> bool:
 
     if job is None:
         return False
@@ -91,7 +98,14 @@ def process_next_callback() -> bool:
 
     recover_exhausted_callbacks()
 
-    callback = claim_pending_callback()
+    return _process_claimed_callback(
+        claim_pending_callback()
+    )
+
+
+def _process_claimed_callback(
+    callback: dict | None,
+) -> bool:
 
     if callback is None:
         return False

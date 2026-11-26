@@ -2,7 +2,8 @@
 
 from src.retrieval.hybrid import hybrid_retrieve_chunks
 from src.retrieval.reranker import rerank_chunks
-from src.retrieval.storage import EMBEDDINGS_DIR, load_embeddings
+from src.retrieval.storage import EMBEDDINGS_DIR
+from src.retrieval.document_approval import load_searchable_embeddings
 
 
 def retrieve_all_documents(
@@ -18,7 +19,11 @@ def retrieve_all_documents(
     all_chunks = []
 
     for path in sorted(EMBEDDINGS_DIR.glob("*.json")):
-        all_chunks.extend(load_embeddings(path.stem))
+        all_chunks.extend(
+            load_searchable_embeddings(
+                path.stem,
+            )
+        )
 
     if not all_chunks:
         return []

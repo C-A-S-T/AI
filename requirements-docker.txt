@@ -1,0 +1,10 @@
+-r requirements.txt
+-r requirements-policy-compare.txt
+fastapi==0.162.2
+uvicorn==0.54.0
+psycopg[binary]==3.3.9
+httpx==0.28.1
+pydantic==2.14.3
+python-dotenv==1.2.4
+kiwipiepy==0.24.1
+rank-bm25==0.2.2
