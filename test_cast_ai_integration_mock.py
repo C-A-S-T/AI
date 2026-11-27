@@ -24,7 +24,10 @@ def sample_result():
     )
     claim = SimpleNamespace(
         content="지원 금액은 30만 원이다.", claim_type="AMOUNT",
-        verification_status="SUPPORTED", evidence=[evidence],
+        verification_status="SUPPORTED",
+        verification_reason="문서에서 월 30만 원의 지원 금액을 확인했습니다.",
+        verification_method="LLM",
+        evidence=[evidence],
     )
     return SimpleNamespace(answer="지원 금액은 30만 원입니다.", summary="월 지원 금액 안내", claims=[claim])
 
@@ -52,6 +55,11 @@ class CallbackMapperTests(unittest.TestCase):
         verification = payload["claims"][0]["verification"]
         self.assertEqual(verification["method"], "LLM")
         self.assertEqual(verification["llmResult"], verification["status"])
+        self.assertEqual(
+            verification["reason"],
+            "문서에서 월 30만 원의 지원 금액을 확인했습니다.",
+        )
+        self.assertIsNone(verification["ruleResult"])
         self.assertEqual(payload["claims"][0]["citations"][0]["source"]["aiDocumentId"], 10)
 
     def test_failure_payload_matches_contract(self):
@@ -65,13 +73,15 @@ class CallbackMapperTests(unittest.TestCase):
     def test_claim_limit_is_rejected(self):
         result = sample_result()
         result.claims = [result.claims[0]] * 501
-        with self.assertRaises(ValueError):
+        with self.assertRaisesRegex(ValueError, "Too many claims"):
             mapper.build_java_callback(JOB_ID, result)
 
     def test_citation_limit_is_rejected(self):
         result = sample_result()
         result.claims[0].evidence *= 101
-        with self.assertRaises(ValueError):
+        with self.assertRaisesRegex(
+            ValueError, "Too many citations for claim"
+        ):
             mapper.build_java_callback(JOB_ID, result)
 
 
@@ -85,7 +95,19 @@ class JobProcessorTests(unittest.TestCase):
              patch.object(processor, "save_callback_payload", return_value=True) as save, \
              patch.object(processor, "send_java_callback") as send:
             self.assertTrue(processor.process_next_research_job())
-            generate.assert_called_once_with(task_id=42, question="지원 금액은?")
+            generate.assert_called_once()
+            call = generate.call_args
+            reporter = call.kwargs["progress_reporter"]
+            self.assertIsInstance(
+                reporter, processor.ResearchProgressReporter
+            )
+            self.assertEqual(reporter.task_id, 42)
+            self.assertEqual(reporter.job_id, JOB_ID)
+            generate.assert_called_once_with(
+                task_id=42,
+                question="지원 금액은?",
+                progress_reporter=reporter,
+            )
             save.assert_called_once_with(job_id=JOB_ID, payload=payload, ai_succeeded=True)
             send.assert_not_called()
 
