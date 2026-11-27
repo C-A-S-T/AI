@@ -82,6 +82,48 @@ def test_policy_comparison_returns_comparison_and_pdf_evidence(comparison_client
     assert "preview" not in body["warning"].lower()
 
 
+def test_research_impact_groups_candidates_without_changing_original_items(comparison_client):
+    client, artifact_path = comparison_client
+    artifact = json.loads(artifact_path.read_text(encoding="utf-8"))
+    original = artifact["comparisons"][0]["displayItems"][0]
+    definitions = [
+        ("a", "PRIMARY", "UPDATED", "group-a"),
+        ("b", "PRIMARY", "ADDED_CANDIDATE", "group-a"),
+        ("c", "SUPPORTING", "UPDATED", "group-a"),
+        ("d", "CONTEXT", "ANNUAL_SCHEDULE", "group-b"),
+        ("e", "PRIMARY", "UPDATED", "group-c"),
+        ("f", "REVIEW_ONLY", "INCONCLUSIVE", "group-d"),
+    ]
+    artifact["comparisons"][0]["displayItems"] = [
+        dict(original, comparison_id=id_, summary_role=role, proposed_change_type=kind, change_group_id=group)
+        for id_, role, kind, group in definitions
+    ]
+    artifact_path.write_text(json.dumps(artifact), encoding="utf-8")
+    before = artifact_path.read_bytes()
+    response = client.get(BASE_URL, headers=HEADERS)
+    assert response.status_code == 200
+    body = response.json()
+    assert body["totalItems"] == 6
+    assert body["reviewStatus"] == "REVIEW_REQUIRED"
+    assert body["humanApproved"] is False
+    assert body["javaImportReady"] is False
+    assert body["sourceProvenanceVerified"] is False
+    impact = body["researchImpact"]
+    assert impact["requiresRecheck"] is True
+    assert impact["significantChangeCount"] == 3
+    assert impact["changeGroupCount"] == 2
+    assert impact["groups"][0]["items"] == body["items"][:2]
+    assert impact["groups"][0]["supportingItems"] == [body["items"][2]]
+    assert artifact_path.read_bytes() == before
+
+
+def test_no_primary_candidates_returns_empty_impact(comparison_client):
+    client, _ = comparison_client
+    assert client.get(BASE_URL, headers=HEADERS).json()["researchImpact"] == {
+        "requiresRecheck": False, "significantChangeCount": 0, "changeGroupCount": 0, "groups": [],
+    }
+
+
 def test_legacy_preview_path_returns_identical_data(comparison_client):
     client, _ = comparison_client
     current = client.get(BASE_URL, headers=HEADERS)

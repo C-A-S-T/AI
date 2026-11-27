@@ -79,6 +79,34 @@ def _side_evidence(side: dict, document_id: str) -> list[dict]:
     return evidence
 
 
+def _research_impact(items: list[dict]) -> dict:
+    """Common review guidance, not a confirmed change or personal assessment."""
+    groups: dict[str, dict] = {}
+    eligible = ("UPDATED", "ADDED_CANDIDATE")
+    for item in items:
+        if item.get("summaryRole") != "PRIMARY" or item.get("proposedChangeType") not in eligible:
+            continue
+        group_id = item.get("changeGroupId")
+        if not isinstance(group_id, str) or not group_id.strip():
+            raise ValueError("Primary comparison item has no group")
+        group = groups.setdefault(group_id, {
+            "changeGroupId": group_id, "items": [], "supportingItems": [],
+        })
+        group["items"].append(item)
+    for item in items:
+        if (item.get("summaryRole") == "SUPPORTING"
+                and item.get("proposedChangeType") in eligible
+                and isinstance(item.get("changeGroupId"), str)
+                and item["changeGroupId"] in groups):
+            groups[item["changeGroupId"]]["supportingItems"].append(item)
+    return {
+        "requiresRecheck": bool(groups),
+        "significantChangeCount": sum(len(group["items"]) for group in groups.values()),
+        "changeGroupCount": len(groups),
+        "groups": list(groups.values()),
+    }
+
+
 def load_policy_comparison(policy_key: str) -> dict:
     """Return an unapproved comparison without running extraction or writing state."""
     if policy_key != POLICY_KEY:
@@ -147,4 +175,5 @@ def load_policy_comparison(policy_key: str) -> dict:
         "warning": "Unapproved policy comparison; not authoritative policy guidance.",
         "totalItems": len(comparison_items),
         "items": comparison_items,
+        "researchImpact": _research_impact(comparison_items),
     }
