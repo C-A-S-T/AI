@@ -70,6 +70,8 @@ class ClaimResult(BaseModel):
     content: str = Field(min_length=1)
     claim_type: ClaimType
     verification_status: VerificationStatus
+    verification_reason: str | None = None
+    verification_method: str = Field(default="LLM", pattern=r"^(RULE|LLM)$")
     evidence: list[EvidenceResult] = Field(
         default_factory=list
     )

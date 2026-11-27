@@ -31,7 +31,7 @@ def extract_claims(answer: str) -> list[ClaimResult]:
     """
 
     if not answer.strip():
-        return []
+        raise ValueError("Claim extraction requires a nonempty answer")
 
     response = client.chat.completions.create(
         model=MODEL,
@@ -119,16 +119,16 @@ def extract_claims(answer: str) -> list[ClaimResult]:
         result = json.loads(
             response.choices[0].message.content or "{}"
         )
-    except (json.JSONDecodeError, TypeError):
-        return []
+    except (json.JSONDecodeError, TypeError) as exc:
+        raise ValueError("Invalid claim extraction JSON") from exc
 
     if not isinstance(result, dict):
-        return []
+        raise ValueError("Claim extraction response must be an object")
 
-    raw_claims = result.get("claims", [])
+    raw_claims = result.get("claims")
 
     if not isinstance(raw_claims, list):
-        return []
+        raise ValueError("Claim extraction requires a claims array")
 
     claims = []
     seen_contents = set()
@@ -136,21 +136,21 @@ def extract_claims(answer: str) -> list[ClaimResult]:
     for item in raw_claims:
 
         if not isinstance(item, dict):
-            continue
+            raise ValueError("Claim item must be an object")
 
         content = item.get("content", "")
         claim_type = item.get("claim_type", "")
 
         if not isinstance(content, str):
-            continue
+            raise ValueError("Claim content must be a string")
 
         content = content.strip()
 
         if not content:
-            continue
+            raise ValueError("Claim content cannot be empty")
 
-        if claim_type not in VALID_CLAIM_TYPES:
-            continue
+        if not isinstance(claim_type, str) or claim_type not in VALID_CLAIM_TYPES:
+            raise ValueError("Invalid claim type")
 
         # 동일한 Claim 중복 제거
         if content in seen_contents:

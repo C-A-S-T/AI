@@ -57,6 +57,18 @@ def build_java_callback(
                 f"{claim.verification_status}"
             )
 
+        reason = claim.verification_reason
+        if not isinstance(reason, str) or not reason.strip():
+            raise ValueError("Verification reason is missing or invalid")
+
+        reason = reason.strip()
+
+        method = claim.verification_method
+        if method not in ("RULE", "LLM"):
+            raise ValueError("Invalid verification method")
+        if method == "RULE" and claim.verification_status != "INSUFFICIENT":
+            raise ValueError("Invalid rule verification status")
+
         if len(claim.evidence) > MAX_CITATIONS_PER_CLAIM:
             raise ValueError(
                 "Too many citations for claim: "
@@ -124,10 +136,10 @@ def build_java_callback(
             "aiRunId": None,
             "verification": {
                 "status": claim.verification_status,
-                "reason": "RAG evidence verification result",
-                "method": "LLM",
-                "ruleResult": None,
-                "llmResult": claim.verification_status,
+                "reason": reason,
+                "method": method,
+                "ruleResult": claim.verification_status if method == "RULE" else None,
+                "llmResult": claim.verification_status if method == "LLM" else None,
                 "confidence": None,
             },
             "citations": citations,
