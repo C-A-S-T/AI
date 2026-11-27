@@ -11,10 +11,14 @@ def run_rag_generation(
     task_id: int,
     question: str,
     top_k: int = 5,
+    progress_reporter=None,
 ) -> GenerateResponse:
     """Generate a verified answer using retrieved PDF evidence."""
 
     print("[RAG 1/3] 관련 문서 검색 중...")
+
+    if progress_reporter is not None:
+        progress_reporter.report(2)
 
     retrieved = retrieve_all_documents(
         question=question,
@@ -30,6 +34,9 @@ def run_rag_generation(
 
     print("[RAG 2/3] PostgreSQL 근거 연결 중...")
 
+    if progress_reporter is not None:
+        progress_reporter.report(3)
+
     mapped_chunks = map_retrieved_chunks(retrieved)
 
     print(f"DB 연결 완료: {len(mapped_chunks)}개")
@@ -41,6 +48,7 @@ def run_rag_generation(
         question=question,
         context="",
         retrieved_chunks=mapped_chunks,
+        **({"progress_reporter": progress_reporter} if progress_reporter is not None else {}),
     )
 
     return deduplicate_evidence(result)
