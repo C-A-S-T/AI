@@ -26,6 +26,8 @@ from src.services.research_job_callback_store import (
     recover_exhausted_callbacks,
 )
 
+from src.services.research_progress_reporter import ResearchProgressReporter
+
 logger = logging.getLogger(__name__)
 
 
@@ -47,10 +49,17 @@ def _process_claimed_research_job(
     job_id = job["job_id"]
     task_id = job["task_id"]
 
+    reporter = None
+    try:
+        reporter = ResearchProgressReporter(task_id, job_id)
+    except Exception:
+        logger.warning("Progress reporter initialization failed")
+
     try:
         result = run_rag_generation(
             task_id=task_id,
             question=job["question"],
+            progress_reporter=reporter,
         )
 
         payload = build_java_callback(job_id, result)
@@ -67,6 +76,9 @@ def _process_claimed_research_job(
             "AI processing failed",
         )
         ai_succeeded = False
+    finally:
+        if reporter is not None:
+            reporter.close()
 
     # Database errors are NOT AI inference errors.
     # Let the worker log them instead of sending

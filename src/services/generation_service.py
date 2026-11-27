@@ -182,6 +182,7 @@ def run_generation(
     chunk_id: int | None = None,
     page_number: int | None = None,
     retrieved_chunks: list[RetrievedChunk] | None = None,
+    progress_reporter=None,
 ) -> GenerateResponse:
     """
     C.A.S.T. AI 답변 생성 파이프라인.
@@ -224,6 +225,9 @@ def run_generation(
 
     print("[2/4] Claim 추출 중...")
 
+    if progress_reporter is not None:
+        progress_reporter.report(4)
+
     claims = extract_claims(answer)
 
     # --------------------------------------
@@ -231,6 +235,9 @@ def run_generation(
     # --------------------------------------
 
     print("[3/4] Claim 사실 검증 중...")
+
+    if claims and progress_reporter is not None:
+        progress_reporter.report(5)
 
     verified_claims = []
 
@@ -256,6 +263,9 @@ def run_generation(
     print("[4/4] AI 답변 요약 중...")
 
     summary = summarize_answer(answer)
+
+    if progress_reporter is not None and summary and summary.strip():
+        progress_reporter.report(5 if claims else 4, summary)
 
     # --------------------------------------
     # 6. 최종 결과 반환
